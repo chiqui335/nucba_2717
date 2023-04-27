@@ -1,0 +1,103 @@
+<!--aplicar css: sobre la etiqueta con el atributo style=
+en el head con <head>
+buscar un archivo con <link?>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>                                                                      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <style>
+        h1{
+            color: red;
+         }                       /*siempre que se pueda evitar esto */ 
+        p{
+            color: blue;
+        }
+    </style> -->
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 style="color: red">primer clase de css</h1>
+    <h1 style="color: aqua;">primer clase de css</h1>
+    <p>Este es un ejemplo</p> -->
+    <h4>texto</h4>
+
+    <p id="selectorId">SELECTORID</p>
+    <p class="selectorclase">SELECTORCLASE</p>
+
+    <h2>COMBINADOR DE DESCENDIENTES</h2>
+    <div class="code">
+         .clase etiqueta #id{ ... }     <!-- dentro de la clase, voy a tener X etiqueta, y X id -->
+    </div>
+<!-- 
+    .elementopadre p {
+        color: red;                     ES DECIR: Adentro de .elementopadre hay un <p>, a esos p ponele color red
+    }                                   el color afecta a los <p> que sean HIJOS de elementopadre -->
+
+    <h2>COMBINADOR DE HIJOS</h2>
+    <div class="code">
+        .clase > p { ... }
+    </div>
+
+    <h2>COMBINADOR DE HERMANOS ADYACENTES</h2>
+    <div class="code">
+        .clase + p { ... }
+    </div>
+
+    <h2>COMBINADOR GENERAL DE HERMANOS</h2>
+    <div class="code">
+        .clase ~ p { ... }
+    </div>
+
+    <h3>unidades de medida absolutas</h3>
+    <div class="caja">
+        100px
+    </div>
+
+    <div class="caja-mediana">200px</div>
+
+    <h3>unidades relativas</h3>
+
+    <div class="caja-mediana">
+        <p class="em">texto en em</p>
+    </div>
+
+    <div class="caja-mediana">
+        <p class="rem">texto en rem</p>
+    </div>
+
+    <div class="caja-mediana">
+        <div class="porcentaje"></div>
+    </div>
+    <!-- vh o VIEWPORT HEIGHT es el 100% del ALTO de la pantalla del navegador-->
+    <!-- vh o VIEWPORT WIDTH es el 100% del ANCHO de la pantalla del navegador-->
+
+    CAJAS
+
+    <div class="caja-mediana">
+        <div class="vh">viewport HEIGHT</div>
+    </div>
+
+    <div class="caja-mediana">
+        <div class="vw">viewport width</div>
+    </div>
+
+    <div class="caja bg-img"> </div>
+
+    <div class="caja bg-repeat"> </div>
+
+    <div class="caja bg-attach"></div>
+
+    <div class="caja bg-position"></div>
+
+    <div class="caja bg-size"></div>
+
+    <div class="color">
+        <p>Bienvenidos a nucba</p>
+    </div>
+</body>
+</html> 
