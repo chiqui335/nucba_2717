@@ -122,7 +122,17 @@
             git push origin main: envio lo que ESTA AGREGADO (add) Y COMITEADO (commit -m "descripcion de los cambios")
             git pull origin main: Github me envia lo que esta subido
             git clone (aca pongo el link que esta en la pestaña de 'code' en el repositorio de github, de ultima mirar nucba 1.2 1:16:00 aprox)
-            RECOMEDADO EL CLONE EN VEZ DEL ZIP PORQUE ASI NO TENGO QUE ANDAR HACIENDO TODO LO DE GIT DENUEVO-->
+            RECOMEDADO EL CLONE EN VEZ DEL ZIP PORQUE ASI NO TENGO QUE ANDAR HACIENDO TODO LO DE GIT DENUEVO
+            git branch: cea un branch (rama)
+            git merge: permite tomar las lineas independientes de desarrollo creadas por git branch e integrarlas en una sola rama-->
+
+            <!-- ramas: 
+                    main: el 'entorno' lo que el usuario final ve
+                    develop: 'entorno' de desarrollo, se usa para que el usuario final no vaya viendo los cambios que se hace a la pagina, es decir, 
+                    el entorno develop no afecta al entorno main
+                        features: son ramas del develop, no afectan al develop, agregados a alguna funcion del develop para no tener que rehacer todo
+                        una vez que se termina la feature se usa "git merge" para unir/fusionar las ramas
+                head: es un apuntador movil que refiere al ultimo commit (actualizacion) solo de la rama actual-->
         </form>
     </body>
 </html>
