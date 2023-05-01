@@ -134,7 +134,20 @@
                         features: son ramas del develop, no afectan al develop, agregados a alguna funcion del develop para no tener que rehacer todo
                         una vez que se termina la feature se usa "git merge" para unir/fusionar las ramas
                 head: es un apuntador movil que refiere al ultimo commit (actualizacion) solo de la rama actual
-                git push --set-upstream origin nombredelarama: lo uso para crear la rama en el github (pusheo la rama con lo que tenia la rama en si)-->
+                git push --set-upstream origin nombredelarama: lo uso para crear la rama en el github (pusheo la rama con lo que tenia la rama en si)
+            SI HAY DISTINTAS COSAS EN LAS MISMAS LINEAS DE COMANDOS APARECE ASI:
+        
+<<<<<<<<< HEAD (la rama donde estoy parado)
+            linea de codigo
+==========
+            linea de codigo
+            linea de codigo
+>>>>>>>>>> [rama que me entra en conflicto]
+
+            Y QUE HAGO?
+            click en source control en la barra a la izquierda (ctrl+shift+G)
+            clickeo el archivo con conflicto que esta en MERGE CHANGES, miro los cambios y en los 3 puntos (a la derecha del Theirs/yours)
+            clickear "accept all changes from left/right" y despues accept merge-->
 
         </form>
     </body>
