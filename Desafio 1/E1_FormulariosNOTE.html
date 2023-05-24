@@ -13,33 +13,35 @@
     <main>
         <form action="">
             <div>
-                <label for="nombre">Nombre: </label><input type="text">
+                <label for="nombre">Nombre: </label><input type="text" id="nombre">
             </div>
             <br>
             <div>
-                <label for="apellido">Apellido: </label><input type="text" name="" id="">
+                <label for="apellido">Apellido: </label><input type="text" name="" id="apellido">
             </div>
             <br>
             <div>
                 Modalidad de cursada:
-                <input type="radio"><label for="Ondemand">On-Demand</label>
-                <input type="radio"><label for="Envivo">En vivo</label>
+                <input type="radio" id="ondemand" name="modalidad">
+                <label for="ondemand">On-Demand</label>
+                <input type="radio" id="envivo" name="modalidad">
+                <label for="envivo">En vivo</label>
             </div>
             <br>
             <div>
-                <label for="correo">Correo: </label><input type="email">
+                <label for="correo">Correo: </label><input type="email" id="correo">
             </div>
             <br>
             <div>
-                <input type="checkbox"><label for="sirecibo">Deseo recibir información sobre nuevos posteos en la plataforma de Nucba</label>
+                <input type="checkbox" id="info"><label for="info">Deseo recibir información sobre nuevos posteos en la plataforma de Nucba</label>
             </div>
             <br>
             <div>
-                <input type="checkbox"><label for="norecibo">Deseo recibir información sobre nuevos posteos en la plataforma de Nucba</label>
+                <input type="checkbox" id="terminos"><label for="terminos">Acepto los terminos y condiciones, estoy listo para afrontar la carrera</label>
             </div>
             <div>
-                <button>Enviar</button>
-                <input type="button" value="Enviar">
+                <button type="submit">Enviar</button>
+                <input type="submit" value="Enviar">
             </div>
         </form>
     </main>
