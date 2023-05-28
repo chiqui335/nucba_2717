@@ -1,9 +1,38 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
 .logo {
     width: 100px;
     height: auto;
+    border-radius: 1.5rem;
 }
 
-.option {
+
+.option1 {
     text-decoration: none;
+    position: absolute;
+    right: 35%
 }
 
+.option2{
+    text-decoration: none;
+    position: absolute;
+    right: 25%;
+}
+
+.option3{
+    text-decoration: none;
+    position: absolute;
+    right: 15%;
+}
+
+.option4{
+    text-decoration: none;
+    position: absolute;
+    right: 5%;
+}
