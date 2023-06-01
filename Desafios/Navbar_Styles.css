@@ -3,7 +3,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-
 }
 
 .logo {
@@ -12,6 +11,10 @@
     border-radius: 1.5rem;
 }
 
+.nav-options{
+    list-style: none;
+    display: flex;
+}
 
 .option1 {
     text-decoration: none;
@@ -36,3 +39,9 @@
     position: absolute;
     right: 5%;
 }
+
+.barra {
+    
+  
+}
+
