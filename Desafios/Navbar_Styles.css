@@ -22,9 +22,9 @@
     position: absolute;
     right: 35%;
     color: rgba(0, 136, 41, 0.699);
-    font-size: larger;
+    font-size: 30px;
     font-weight: bold;
-    font-family: ;
+    font-family: 'Oswald', sans-serif;
 }
 
 .option2{
@@ -32,8 +32,9 @@
     position: absolute;
     right: 25%;
     color: rgba(0, 136, 41, 0.699);
-    font-size: larger;
+    font-size: 30px;
     font-weight: bold;
+    font-family: 'Oswald', sans-serif;
 }
 
 .option3{
@@ -41,8 +42,9 @@
     position: absolute;
     right: 15%;
     color: rgba(0, 136, 41, 0.699);
-    font-size: larger;
+    font-size: 30px;
     font-weight: bold;
+    font-family: 'Oswald', sans-serif;
 }
 
 .option4{
@@ -50,6 +52,7 @@
     position: absolute;
     right: 5%;
     color: rgba(0, 136, 41, 0.699);
-    font-size: larger;
+    font-size: 30px;
     font-weight: bold;
+    font-family: 'Oswald', sans-serif;
 }
