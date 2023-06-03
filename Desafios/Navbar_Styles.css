@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-image: linear-gradient(to bottom, rgba(153, 24, 165, 0.699), rgb(255, 255, 255));
 }
 
 .logo {
@@ -19,29 +20,36 @@
 .option1 {
     text-decoration: none;
     position: absolute;
-    right: 35%
+    right: 35%;
+    color: rgba(0, 136, 41, 0.699);
+    font-size: larger;
+    font-weight: bold;
+    font-family: ;
 }
 
 .option2{
     text-decoration: none;
     position: absolute;
     right: 25%;
+    color: rgba(0, 136, 41, 0.699);
+    font-size: larger;
+    font-weight: bold;
 }
 
 .option3{
     text-decoration: none;
     position: absolute;
     right: 15%;
+    color: rgba(0, 136, 41, 0.699);
+    font-size: larger;
+    font-weight: bold;
 }
 
 .option4{
     text-decoration: none;
     position: absolute;
     right: 5%;
+    color: rgba(0, 136, 41, 0.699);
+    font-size: larger;
+    font-weight: bold;
 }
-
-.barra {
-    
-  
-}
-
