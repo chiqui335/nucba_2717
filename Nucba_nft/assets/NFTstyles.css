@@ -1,0 +1,30 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.navbar-list{
+    display: flex;
+    list-style: none;
+    gap: 100px; 
+    color: gray;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+.logonav{
+    height: 50px;
+    background-color: black;
+    border-radius: 1rem;
+}
+
+.buy-cart{
+    height: 50px;
+}
