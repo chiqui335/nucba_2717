@@ -4,12 +4,30 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/* NAVBAR */
+
+.header{
+    background-color: grey;
+}
+
 .navbar-list{
     display: flex;
     list-style: none;
-    gap: 100px; 
+    gap: 40px; 
     color: gray;
+}
+
+.navbar-list a{
+    color: black;
+    font-size: 15px;
+}
+
+.navbar-list li:first-child > a{
+    color: red;
+    font-weight: 600;
 }
 
 .header{
@@ -26,5 +44,155 @@
 }
 
 .buy-cart{
-    height: 50px;
+    height: 30px;
+    width: auto;
+    weight: auto;
+    background-color: darkorchid;
+    border-radius: 0.5rem;
+    border-color: aqua;
+    
+}
+
+/* main */
+main{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* hero */
+
+#hero{
+    margin-top: 65px;
+    padding: 70px 0;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.hero-info h1{
+    font-size: 48px;
+    width: 80%;
+    min-width: 500px;
+    font-weight: 800;
+    color: aquamarine;
+}
+
+.hero-info p{
+    font-size: 14px;
+    width: 70%;
+    color: lightblue;
+}
+
+/* como se lee: hay una classe llamada
+HERO-INFO, dentro de esa clase hay un P, y dentro
+de esos p va a haber de hijo directo
+(es decir dentro de ese p) un SPAN */
+
+.hero-info p > span{ 
+    font-weight: 800;
+}
+
+.hero-info a{
+    color: white;
+    background-color: rgba(0, 89, 255, 0.979);
+    width: 120px;
+    padding: 8px 0px;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    text-align: center;
+}
+
+.hero-card{
+    width: 300px;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px
+}
+
+.hero-card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.hero-card-top h3{
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-card-top span{
+    background-color: chocolate;
+    text-align: center;
+    width: 50px;
+    padding: 3px 0px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.hero-card-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hero-card-creator{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hero-card-creator img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.creator-info p:first-child, 
+.hero-card-price p{
+    color: gray;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.hero-card-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-card-price span,
+.creator-info p:last-child{
+    font-size: 14px;
+}
+
+.hero-card-price span{
+    font-weight: 700;
 }
