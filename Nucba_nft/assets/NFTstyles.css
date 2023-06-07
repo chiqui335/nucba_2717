@@ -46,7 +46,7 @@
 .buy-cart{
     height: 30px;
     width: auto;
-    weight: auto;
+    font-weight: auto;
     background-color: darkorchid;
     border-radius: 0.5rem;
     border-color: aqua;
@@ -130,7 +130,7 @@ de esos p va a haber de hijo directo
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
+}   
 
 .hero-card-top{
     display: flex;
@@ -196,3 +196,54 @@ de esos p va a haber de hijo directo
 .hero-card-price span{
     font-weight: 700;
 }
+
+/* Info "cards" */
+
+.title-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px; /* les pongo espacio entre arriba y abajo */
+    max-width: 1200px;
+    gap: 80px;
+    font-size: 20px;
+}
+
+.nft-pros{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nft-pros-card{
+    width: 300px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    background-color: rgb(43, 43, 43);
+    border-radius: 12px;
+    padding: 40px 30px;
+}
+
+.nft-pros-card img{
+    height: 50px;
+}
+
+.nft-pros-card h3{
+    font-weight: 600px;
+    font-size: 18px;
+}
+
+.nft-pros-card p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Discover */
+
