@@ -85,7 +85,6 @@ main{
 .hero-info h1{
     font-size: 48px;
     width: 80%;
-    min-width: 500px;
     font-weight: 800;
     color: aquamarine;
 }
@@ -247,3 +246,45 @@ de esos p va a haber de hijo directo
 
 /* Discover */
 
+.discover-info{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 20px;
+    padding: 80px 30px;
+    max-width: 1200px;
+}
+
+.discover-info h2{
+    font-weight: 900;
+    font-size: 32px;
+    max-width: 40%;
+}
+
+.discover-info-text{
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    gap: 20px;
+    max-width: 50%;
+}
+
+.discover-info-text a{
+    text-decoration: underline;
+    color: white;
+}
+
+.discover-cards{
+    display: flex;
+    gap: 20px;
+    border-radius: 30px;
+    padding: 40px 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.discover-cards img{
+    width: 300px; 
+    border-radius: 15px;
+}
