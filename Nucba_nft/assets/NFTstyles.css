@@ -272,6 +272,7 @@ de esos p va a haber de hijo directo
 .discover-info-text a{
     text-decoration: underline;
     color: white;
+    font-weight: 600;
 }
 
 .discover-cards{
@@ -286,5 +287,5 @@ de esos p va a haber de hijo directo
 
 .discover-cards img{
     width: 300px; 
-    border-radius: 15px;
+    border-radius: 15px; 
 }
