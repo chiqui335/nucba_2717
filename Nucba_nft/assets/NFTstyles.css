@@ -286,6 +286,42 @@ de esos p va a haber de hijo directo
 }
 
 .discover-cards img{
-    width: 300px; 
+     width: 30%;  /* con esto hago que siempre se mantengan alineadas
+                    las img no importa el tamaño de la pantalla */
     border-radius: 15px; 
+}
+
+/* Products */
+
+#products h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.products-filter{
+    padding: 50px;
+}
+
+.products-filter-button{
+    background-color: rgb(0, 0, 133);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.products-filter-button:active{
+    background-color: rgb(0, 146, 146);
+    color: black;
+}
+
+.products-filter-button img{
+    height: 24px;
 }
