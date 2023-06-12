@@ -293,6 +293,7 @@ de esos p va a haber de hijo directo
 
 /* Products */
 
+
 #products h2{
     display: flex;
     justify-content: center;
@@ -303,6 +304,7 @@ de esos p va a haber de hijo directo
 
 .products-filter{
     padding: 50px;
+    gap: 15px;
 }
 
 .products-filter-button{
@@ -323,5 +325,51 @@ button.products-filter-button:active{
 }
 
 .products-filter-button img{
-    height: 24px;
+    height: 20px;
+}
+
+/* products */
+
+.product-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 0;
+    max-width: 1200px;
+}
+
+
+.card-bid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(44, 83, 141);
+    border-radius: 15px;
+}
+
+.card-bid img{
+    width: 90%;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-top,
+.product-mid,
+.product-bot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
