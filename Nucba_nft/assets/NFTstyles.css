@@ -291,7 +291,7 @@ de esos p va a haber de hijo directo
     border-radius: 15px; 
 }
 
-/* Products */
+/* Products filter */
 
 
 #products h2{
@@ -363,6 +363,7 @@ button.products-filter-button:active{
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+    padding: 0 20px;
 }
 
 .product-top,
@@ -371,5 +372,55 @@ button.products-filter-button:active{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+}
+
+.product-top img,
+.product-mid img,
+.product-bot img{
+    height: 100px;
+    width: auto;
+}
+
+.product-top h3{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.product-top p,
+.product-user p{
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+}
+
+.product-user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-mid span{
+    font-weight: 800px;
+}
+
+.product-bid{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bid-time{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.bid-button{
+    background-color: rgb(18, 145, 230);
+    border: none;
+    padding: 10px 35px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
 }
