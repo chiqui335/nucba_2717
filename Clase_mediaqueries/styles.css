@@ -32,3 +32,14 @@ body {
   .content {
     padding: 20px;
   }
+
+/* hasta esta medida de ancho, mostrame las cosas que ponga dentro de esta media, de esta manera. */
+  @media (max-width:992px){
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(to right, red, violet);
+      padding: 60px;
+      color: #fff;
+    }
+  }
