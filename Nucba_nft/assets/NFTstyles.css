@@ -51,7 +51,7 @@
     background-color: darkorchid;
     border-radius: 0.5rem;
     border-color: aqua;
-    
+    cursor: pointer;
 }
 
 /* main */
@@ -424,4 +424,165 @@ button.products-filter-button:active{
     border-radius: 10px;
     color: white;
     cursor: pointer;
+}
+
+/* buy cart */
+
+.cart{
+    position: absolute; 
+    top: 65px;  /* Porque el header ocupaba  65px de alto */
+    right: 0;
+    padding: 50px 30px;
+    background: rgb(82, 106, 236);
+    border-left: 1px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: calc(100vh - 65px);
+    /*  como se lee:
+    calculo el 100% del viewport
+    height MENOS 65px porque el 
+    header mide 65 px */
+    z-index: 2;
+    overflow-y: scroll; /* ESTO SE USA PARA QUE EN LA PESTAÑA
+    DEL CART SE PUEDA SCROLLEAR PARA VER
+    TODAS LAS COMPRAS */
+    display: none;
+}
+
+/* estilar la barra de scroll: */
+
+.cart::-webkit-scrollbar{
+    display: none;
+}
+
+.cart h2{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cart-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid rgb(0, 255, 64);
+    border-radius: 10px; 
+    padding: 20px;
+}
+
+.cart-items img{
+    height: 65px;
+    width: 65px;
+}
+
+.item-title{
+    color: wheat;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.item-bid{
+    color: gray;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.item-price{
+    background: linear-gradient(to right,
+    cyan, pink);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.item-handler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.quantity-handler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: wheat;
+    font-weight: 400;
+}
+
+.up{
+    border: 1px solid blue;
+}
+
+.down{
+    border: 1px solid blue;
+    background-color: #4949a5;
+}
+
+.btn-add{
+    background-color: rgb(18, 145, 230);
+    border: none;
+    padding: 10px 35px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.item-quantity{
+    color: wheat;
+}
+
+.divider{
+    margin-top: 20px;
+    border: 0.5px solid blue;
+
+}
+
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cart-total p{
+    color: wheat;
+    font-weight: 700;
+}
+
+.cart-total span{
+    color: wheat;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+/* ocultar/mostrar carrito */
+
+#cart-toggle{
+    display: none;
+}
+
+    /* el + es el selector de hermanos
+    directos, FUNCIONA SOLO CON HERMANOS 
+    DIRECTOS ADYACENTES O SEA PEGADOS: 
+    es decir, por ejemplo:
+    <header class="header">
+        <img ...
+        <nav ...
+        img es hermano adyacente de nav
+        porque ambos son hijos de header
+        "comparten padre"
+    */
+    /* cuando esta checkbox este checkeada
+    a tu hermano directo, o sea .cart
+    hace lo siguiente: */
+
+#cart-toggle:checked + .cart{
+    display: flex;
 }

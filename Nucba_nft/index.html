@@ -11,23 +11,7 @@
 <body>
     <header class="header">
         <img src="./assets/Logo_nucba.png" class="logonav" alt="logo">
-        <!-- Cart -->
-        
-        <div class="cart">
-            <h2>tus nfts</h2>
-            <div class="cart-items">
-                <div class="item">
-                    <img src="" alt="item img">
-                    <div class="item-info">
-                        <h3 class="item-title"></h3>
-                        <p class="item-bid"></p>
-                        <span class="item-price"></span>
-                    </div>
-                    <div class="item-quantity"></div>
-                </div>
-            </div>
-        </div>
-
+        <!-- navbar -->
         <nav class="navbar">  
             <ul class="navbar-list">
                 <li><a href="#" class="navoptions">Home</a></li>
@@ -37,10 +21,93 @@
                 <li><a href="#" class="navoptions">Contactanos</a></li>
             </ul>  
         </nav>
-        <a href=""><img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" 
+        <!-- navbar end  -->
+
+        <label for="cart-toggle" class="cart-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" 
                 alt="carrito de compras"
                 class="buy-cart">
-        </a>
+        </label>
+        <input type="checkbox" id="cart-toggle">
+        <!-- Cart -->
+        
+        <div class="cart">
+            <h2>tus nfts</h2>
+            <div class="cart-items">
+                    <img src="https://img.freepik.com/free-icon/coin_318-266587.jpg" alt="item img">
+                    <div class="item-info">
+                        <h3 class="item-title">COIN</h3>
+                        <p class="item-bid">Current bid</p>
+                        <span class="item-price">4.8 ETH</span>
+                    </div>
+                    <div class="item-handler"></div>
+                        <span class="quantity-handler down"> - </span>
+                        <span class="item-quantity"> 1 </span>
+                        <span class="quantity-handler up"> + </span>
+            </div>
+        
+
+                <div class="cart-items">
+                        <img src="https://img.freepik.com/free-icon/coin_318-266587.jpg" alt="item img">
+                        <div class="item-info">
+                            <h3 class="item-title">COIN</h3>
+                            <p class="item-bid">Current bid</p>
+                            <span class="item-price">4.8 ETH</span>
+                        </div>
+                        <div class="item-handler"></div>
+                            <span class="quantity-handler down"> - </span>
+                            <span class="item-quantity"> 1 </span>
+                            <span class="quantity-handler up"> + </span>
+                </div>
+
+                <div class="cart-items">
+                        <img src="https://img.freepik.com/free-icon/coin_318-266587.jpg" alt="item img">
+                        <div class="item-info">
+                            <h3 class="item-title">COIN</h3>
+                            <p class="item-bid">Current bid</p>
+                            <span class="item-price">4.8 ETH</span>
+                        </div>
+                        <div class="item-handler"></div>
+                            <span class="quantity-handler down"> - </span>
+                            <span class="item-quantity"> 1 </span>
+                            <span class="quantity-handler up"> + </span>
+                </div>
+
+                <div class="cart-items">
+                        <img src="https://img.freepik.com/free-icon/coin_318-266587.jpg" alt="item img">
+                        <div class="item-info">
+                            <h3 class="item-title">COIN</h3>
+                            <p class="item-bid">Current bid</p>
+                            <span class="item-price">4.8 ETH</span>
+                        </div>
+                        <div class="item-handler"></div>
+                            <span class="quantity-handler down"> - </span>
+                            <span class="item-quantity"> 1 </span>
+                            <span class="quantity-handler up"> + </span>
+                </div>
+
+                <div class="cart-items">
+                    <img src="https://img.freepik.com/free-icon/coin_318-266587.jpg" alt="item img">
+                    <div class="item-info">
+                        <h3 class="item-title">COIN</h3>
+                        <p class="item-bid">Current bid</p>
+                        <span class="item-price">4.8 ETH</span>
+                    </div>
+                    <div class="item-handler"></div>
+                        <span class="quantity-handler down"> - </span>
+                        <span class="item-quantity"> 1 </span>
+                        <span class="quantity-handler up"> + </span>
+            </div>
+
+                <span class="divider"></span>
+                <div class="cart-total">
+                    <p>Total: </p>
+                    <span>18.3</span>
+                </div>
+            <button class="btn-add">Comprar</button>
+        </div>
+        <!-- cart end -->
+
     </header>
     <main> <!-- aca va el contenido ppal de la pagina, en distintos sections -->
         <section id="hero">
@@ -336,7 +403,7 @@
                 </div>
             </div>
         </section>
-        <!-- here goes a navbar -->
+       
 
 </body>
 </html>
