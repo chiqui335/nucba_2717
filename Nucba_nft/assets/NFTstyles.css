@@ -213,7 +213,8 @@ de esos p va a haber de hijo directo
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    /* IMPORTANTE flex wrap: lo que no entra se acomoda abajo */
     gap: 20px;
 }
 
@@ -289,7 +290,8 @@ de esos p va a haber de hijo directo
 .discover-cards img{
      width: 30%;  /* con esto hago que siempre se mantengan alineadas
                     las img no importa el tamaño de la pantalla */
-    border-radius: 15px; 
+    border-radius: 15px;
+    max-width: 500px; 
 }
 
 /* Products filter */
@@ -338,7 +340,7 @@ button.products-filter-button:active{
     justify-content: center;
     gap: 15px;
     padding: 40px 0;
-    max-width: 1200px;
+    max-width: 600px;
 }
 
 
