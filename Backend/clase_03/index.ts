@@ -1,15 +1,29 @@
+// instalar typescript: npm install -g typescript
+// verificar version: tsc --version
+// iniciar un proyecto en Nodejs: npm init -y 
+// para instalar typescript de manera local: npm i typescript
+
 console.log("Hola mundo con TS!");
 console.log("Hola otro mundo con TS!");
 console.log("Hola tercer mundo con TS!");
 console.log("Hola cuarto mundo con TS!");
 console.log("Hola quinto mundo con TS!");
 
+// Typescript tiene complilacion (tiempo de compilacion), 
+// lo que permite detectar errores antes de que llege al navegador, evita errores en tiempo de ejecucion,
+// hace que el codigo sea mas legible, mantenible, robusto y menos propenso a que explote en el futuro
+// a diferencia de javascript que le manda todo al navegador y este trata de interpretar el codigo, esté
+// bien o mal (tiempo de ejecucion)
+// la compilacion sucede porque se tiene que convertir de TS a JS (transpilar), en esa conversion es cuando saltan los errores
 
 let precio: number;
 let cantidad: number;
+// armo la variable y cuando le pongo dos puntos le estoy poniendo un TIPO
 
 precio = 25;
 cantidad = 3;
+// si a esta variable en vez de un 'number' (3) le pongo un 'string' (tres), da error y el CODIGO directamente
+// NO VA A LLEGAR AL NAVEGADOR
 
 let precioTotal: number = precio + cantidad;
 
