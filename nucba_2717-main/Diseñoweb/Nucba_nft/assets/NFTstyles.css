@@ -1,0 +1,590 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+
+
+.header{
+    background-color: grey;
+}
+
+.navbar-list{
+    display: flex;
+    list-style: none;
+    gap: 40px; 
+    color: gray;
+}
+
+.navbar-list a{
+    color: black;
+    font-size: 15px;
+}
+
+.navbar-list li:first-child > a{
+    color: red;
+    font-weight: 600;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+.logonav{
+    height: 50px;
+    background-color: black;
+    border-radius: 1rem;
+}
+
+.buy-cart{
+    height: 30px;
+    width: auto;
+    font-weight: auto;
+    background-color: darkorchid;
+    border-radius: 0.5rem;
+    border-color: aqua;
+    cursor: pointer;
+}
+
+/* main */
+main{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* hero */
+
+#hero{
+    margin-top: 65px;
+    padding: 70px 0;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.hero-info h1{
+    font-size: 48px;
+    width: 80%;
+    font-weight: 800;
+    color: aquamarine;
+}
+
+.hero-info p{
+    font-size: 14px;
+    width: 70%;
+    color: lightblue;
+}
+
+/* como se lee: hay una classe llamada
+HERO-INFO, dentro de esa clase hay un P, y dentro
+de esos p va a haber de hijo directo
+(es decir dentro de ese p) un SPAN */
+
+.hero-info p > span{ 
+    font-weight: 800;
+}
+
+.hero-info a{
+    color: white;
+    background-color: rgba(0, 89, 255, 0.979);
+    width: 120px;
+    padding: 8px 0px;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    text-align: center;
+}
+
+.hero-card{
+    width: 300px;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px
+}
+
+.hero-card-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}   
+
+.hero-card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.hero-card-top h3{
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-card-top span{
+    background-color: chocolate;
+    text-align: center;
+    width: 50px;
+    padding: 3px 0px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.hero-card-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hero-card-creator{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hero-card-creator img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.creator-info p:first-child, 
+.hero-card-price p{
+    color: gray;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.hero-card-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-card-price span,
+.creator-info p:last-child{
+    font-size: 14px;
+}
+
+.hero-card-price span{
+    font-weight: 700;
+}
+
+/* Info "cards" */
+
+.title-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px; /* les pongo espacio entre arriba y abajo */
+    max-width: 1200px;
+    gap: 80px;
+    font-size: 20px;
+}
+
+.nft-pros{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    /* IMPORTANTE flex wrap: lo que no entra se acomoda abajo */
+    gap: 20px;
+}
+
+.nft-pros-card{
+    width: 300px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    background-color: rgb(43, 43, 43);
+    border-radius: 12px;
+    padding: 40px 30px;
+}
+
+.nft-pros-card img{
+    height: 50px;
+}
+
+.nft-pros-card h3{
+    font-weight: 600px;
+    font-size: 18px;
+}
+
+.nft-pros-card p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Discover */
+
+.discover-info{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 20px;
+    padding: 80px 30px;
+    max-width: 1200px;
+}
+
+.discover-info h2{
+    font-weight: 900;
+    font-size: 32px;
+    max-width: 40%;
+}
+
+.discover-info-text{
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    gap: 20px;
+    max-width: 50%;
+}
+
+.discover-info-text a{
+    text-decoration: underline;
+    color: white;
+    font-weight: 600;
+}
+
+.discover-cards{
+    display: flex;
+    gap: 20px;
+    border-radius: 30px;
+    padding: 40px 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.discover-cards img{
+     width: 30%;  /* con esto hago que siempre se mantengan alineadas
+                    las img no importa el tamaño de la pantalla */
+    border-radius: 15px;
+    max-width: 500px; 
+}
+
+/* Products filter */
+
+
+#products h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.products-filter{
+    padding: 50px;
+    gap: 15px;
+}
+
+.products-filter-button{
+    background-color: rgb(0, 0, 133);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.products-filter-button:active{
+    background-color: rgb(0, 146, 146);
+    color: black;
+}
+
+.products-filter-button img{
+    height: 20px;
+}
+
+/* products */
+
+.product-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 0;
+    max-width: 600px;
+}
+
+
+.card-bid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(44, 83, 141);
+    border-radius: 15px;
+}
+
+.card-bid img{
+    width: 90%;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.product-top,
+.product-mid,
+.product-bot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-top img,
+.product-mid img,
+.product-bot img{
+    height: 100px;
+    width: auto;
+}
+
+.product-top h3{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.product-top p,
+.product-user p{
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+}
+
+.product-user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-mid span{
+    font-weight: 800px;
+}
+
+.product-bid{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bid-time{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.bid-button{
+    background-color: rgb(18, 145, 230);
+    border: none;
+    padding: 10px 35px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* buy cart */
+
+.cart{
+    position: absolute; 
+    top: 65px;  /* Porque el header ocupaba  65px de alto */
+    right: 0;
+    padding: 50px 30px;
+    background: rgb(82, 106, 236);
+    border-left: 1px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: calc(100vh - 65px);
+    /*  como se lee:
+    calculo el 100% del viewport
+    height MENOS 65px porque el 
+    header mide 65 px */
+    z-index: 2;
+    overflow-y: scroll; /* ESTO SE USA PARA QUE EN LA PESTAÑA
+    DEL CART SE PUEDA SCROLLEAR PARA VER
+    TODAS LAS COMPRAS */
+    display: none;
+}
+
+/* estilar la barra de scroll: */
+
+.cart::-webkit-scrollbar{
+    display: none;
+}
+
+.cart h2{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cart-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid rgb(0, 255, 64);
+    border-radius: 10px; 
+    padding: 20px;
+}
+
+.cart-items img{
+    height: 65px;
+    width: 65px;
+}
+
+.item-title{
+    color: wheat;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.item-bid{
+    color: gray;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.item-price{
+    background: linear-gradient(to right,
+    cyan, pink);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.item-handler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.quantity-handler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: wheat;
+    font-weight: 400;
+}
+
+.up{
+    border: 1px solid blue;
+}
+
+.down{
+    border: 1px solid blue;
+    background-color: #4949a5;
+}
+
+.btn-add{
+    background-color: rgb(18, 145, 230);
+    border: none;
+    padding: 10px 35px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.item-quantity{
+    color: wheat;
+}
+
+.divider{
+    margin-top: 20px;
+    border: 0.5px solid blue;
+
+}
+
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cart-total p{
+    color: wheat;
+    font-weight: 700;
+}
+
+.cart-total span{
+    color: wheat;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+/* ocultar/mostrar carrito */
+
+#cart-toggle{
+    display: none;
+}
+
+    /* el + es el selector de hermanos
+    directos, FUNCIONA SOLO CON HERMANOS 
+    DIRECTOS ADYACENTES O SEA PEGADOS: 
+    es decir, por ejemplo:
+    <header class="header">
+        <img ...
+        <nav ...
+        img es hermano adyacente de nav
+        porque ambos son hijos de header
+        "comparten padre"
+    */
+    /* cuando esta checkbox este checkeada
+    a tu hermano directo, o sea .cart
+    hace lo siguiente: */
+
+#cart-toggle:checked + .cart{
+    display: flex;
+}

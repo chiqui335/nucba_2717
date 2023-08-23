@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, rgba(153, 24, 165, 0.699), rgb(0, 0, 0));
+}
+
+/* logo */
+.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 1.5rem;
+}
+
+.option{
+    color: rgba(0, 211, 63, 0.699);
+    font-family: 'Rubik Dirt', cursive;
+    display: flex;
+    text-decoration: none;
+}
+
+.nav-options{
+    display: flex;
+    list-style: none;
+    gap: 100px;
+}

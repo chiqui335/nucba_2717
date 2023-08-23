@@ -1,0 +1,116 @@
+h1{
+    color: red;
+}   
+
+p{
+    color: blue;
+}
+
+/* selector universal: es el *, normalmente se usa para hacer "reset de estilos"
+selector de id: solo para ese id NO ABUSAR PORQUE SE USA MUCHO EN JS
+selector de clase: aplica estilos a todos los elementos con esa clase (EL MAS USADO) */
+
+/* combinador de descendientes: selecciona los elementos DESCENDIENTES del primer elemento.
+se aplica poniendo un espacio entre selectores
+combinador de hijo selecciona los elementos HIJOS DIRECTOS del primer elemento. se aplica usando ">"*/
+
+/* combinador de hermanos adyacentes: selecciona al elemento ADYACENTE del primer elemento que comparte
+el mismo elemento padre (son elementos hermanos). se aplica usando "+" 
+combinador general de hermanos: selecciona a un elemento HERMANO que este colocado LUEGO del primer
+elemento (no adyacente) que comparte el mismo padre. se aplica usando "~"*/
+
+#selectorId{
+    color: aqua;
+}
+.selectorclase{
+    color: red;
+}
+
+h4{
+    background-color: blueviolet;
+}
+
+/* unidades absolutas */
+
+.caja{
+    width: 100px;
+    height: 100px;                  /* LOS PIXELES SON UNIDADES ABSOLUTAS */
+    background-color: blueviolet;
+    text-align: center;
+    border-radius: 1rem;  /* redondear bordes */
+}
+
+.caja-mediana{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    text-align: center;
+    font-size: 10px;
+    color: black;
+    border-radius: 1rem;
+}
+
+/* unidades relativas */
+
+.em{
+    font-size: 2em; /* al ponerme 2 [ em ] esta midiendo EL DOBLE a lo que estaba seteado el elemento, es decir estaba en 10px, al ser el doble es 20px */
+    
+}
+
+.rem{
+    font-size: 2rem; /* rem toma como referencia el font size POR DEFECTO (el de la raiz), no el seteado por mi*/
+    
+}
+
+.porcentaje{
+    background-color: cadetblue;        /* toma en cuenta el contenedor, es decir 50% de su contenedor (del padre) */
+    width: 50%;
+    height: 50%;
+    border-radius: 1rem;
+}
+
+.vh{
+    height: 10vh;       /* la unidad vh toma en cuenta el tamano de la pantalla del navegador */
+    background-color: aqua;
+    border-radius: 1rem;
+}
+
+
+.vw{
+    width: 10vw;
+    background-color: aqua;
+    border-radius: 1rem;
+}
+
+.bg-img{
+    background-image: url('./assets/logo.png');    /* se pone [ ./ ] para buscar en la misma carpeta */
+
+
+}
+.bg-repeat{
+    background-image: url('./assets/logo.png'); /* repite la imagen lo mejor que puede (probar con otra img) */
+    background-repeat: repeat;
+}
+.bg-attach{
+    background-image: url('./assets/logo.png'); /* fixed: la imagen queda fija, no se mueve cuando muevo yo la pagina */
+    background-attachment: fixed; /* scroll */
+}
+
+.bg-position{
+    background-image: url('./assets/logo.png');
+    background-position: center;
+    background-size: contain; /* con contain la contiene nomas */
+}
+
+.bg-size{
+    background-image: url('./assets/logo.png');
+    background-position: center;
+    background-size: cover;             /* con cover cubre todo el div (lo mejor que puede claro) */
+}
+
+.color p{
+    color: crimson;
+}
+
+/* para usar una font voy a "google fonts" elijo, clickeo "selecto font" a la derecha y despues a @import  */
+
