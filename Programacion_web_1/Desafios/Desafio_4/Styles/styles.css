@@ -1,0 +1,19 @@
+body{
+    width: 400px;
+    margin: 20px;
+    background-color: lightgray;
+}
+
+h1, h2{
+    font-family: sans-serif;
+}
+
+p{
+    font-family: monospace;
+}
+
+ul{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(61, 90, 153);
+    padding-bottom: 30px
+}
