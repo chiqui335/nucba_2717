@@ -49,6 +49,14 @@
 }
 */
 
+.redes{
+    display: flex;
+}
+
+#linkredes {
+    height: 50px;
+}
+
 #prodnatacion img,
 #prodbasquet img,
 #prodrugby img{
