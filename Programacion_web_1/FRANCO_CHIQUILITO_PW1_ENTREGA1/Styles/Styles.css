@@ -1,4 +1,81 @@
+
+
 .logonav{
     height: 100px;
 }
 
+.header{
+    display: flex;
+}
+
+#log_in img, #Register img, #Cart img{
+    height: 50px;
+}
+
+#footerelements{
+    display: flex;
+}
+
+.Examples img{
+    height: 350px;
+}
+
+#IconoSearch{
+    height: 20px;
+}
+
+.Destacados img{
+    height: 300px;
+}
+
+.Registro{
+    display: flex;
+    flex-direction: column;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+.Natacion, .Basquet, .Rugby{
+    display: flex;
+}
+*/
+
+#prodnatacion img,
+#prodbasquet img,
+#prodrugby img{
+    height: 300px;
+}
+
+
+
+#Sucursal-1,
+#Sucursal-2,
+#Sucursal-3 {
+    display: flex;
+}
+
+#Sucursal-1 img,
+#Sucursal-2 img,
+#Sucursal-3 img {
+    height: 40px;
+}
+
+/*
+.promos{
+    display: flex;
+}
+*/
+
+.promo1 img,
+.promo2 img {
+    height: 400px;
+}

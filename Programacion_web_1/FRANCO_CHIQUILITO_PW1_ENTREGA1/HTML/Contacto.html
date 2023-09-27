@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="../Styles/Styles.css">
+    <link rel="shortcut icon" href="../IMAGENES/sport.png" />
 </head>
 <body>
     <header class="header">
-        <img src="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/IMAGENES/sport.png" alt="logo" class="logonav">
+        <img src="../IMAGENES/sport.png" alt="logo" class="logonav">
         <nav class="navbar">
             <ul class="navbar-list">
-                <li><a href="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/HTML/Index.html" class="navoptions">Home</a></li>
-                <li><a href="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/HTML/Productos.html" class="navoptions">Productos</a></li>
-                <li><a href="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/HTML/Contacto.html" class="navoptions">Contacto</a></li>
+                <li><a href="../HTML/Index.html" class="navoptions">Home</a></li>
+                <li><a href="../HTML/Productos.html" class="navoptions">Productos</a></li>
+                <li><a href="../HTML/Contacto.html" class="navoptions">Contacto</a></li>
             </ul>
         </nav>
-        <img src="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/IMAGENES/search_logo.png" alt="Icono Search">
-        <input type="text" placeholder="Search...">
-        <a href="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/HTML/Login.html" id="log_in"><img src="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/IMAGENES/login.png" alt="Log in logo"></a>
-        <a href="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/HTML/Registro.html" id="Register"><img src="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/IMAGENES/Register.png" alt="Register logo"></a>
-        <a href="#" id="Cart"><img src="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/IMAGENES/cart.png" alt="Cart logo"></a>
+        <img src="../IMAGENES/search_logo.png" alt="Icono_Search" id="IconoSearch">
+        <input type="text" placeholder="Search..." id="SearchBar">
+        <a href="../HTML/Login.html" id="log_in"><img src="../IMAGENES/login.png" alt="Log in logo"></a>
+        <a href="../HTML/Registro.html" id="Register"><img src="../IMAGENES/Register.png" alt="Register logo"></a>
+        <a href="#" id="Cart"><img src="../IMAGENES/cart.png" alt="Cart logo"></a>
     </header>
-
+    
     <hr>
 
     <h1>Contacto</h1>
@@ -30,8 +32,8 @@
             <input type="text" id="Nombre" placeholder="Nombre" required autocomplete="off">
             <input type="text"  id="Apellido" placeholder="Apellido" required autocomplete="off">
             <input type="email"  id="Email" placeholder="Email" required autocomplete="off">
-            <input type="number"  id="Prefijo" placeholder="Prefijo" required autocomplete="off">
-            <input type="number"  id="Telefono" placeholder="Telefono" required autocomplete="off">
+            <input type="number"  id="Prefijo" placeholder="Prefijo" required autocomplete="off"  id="number">
+            <input type="number"  id="Telefono" placeholder="Telefono" required autocomplete="off" id="number">
             <textarea  id="Comentarios" cols="30" rows="10" placeholder="Inserte su comentario"></textarea>
             <Button id="Enviar">Enviar</Button>
         </div>
@@ -41,14 +43,14 @@
 
     <Footer class="Footer">
         <div>
-            <img src="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/IMAGENES/sport.png" alt="logo" class="logonav">
+            <img src="../IMAGENES/sport.png" alt="logo" class="logonav">
         </div>
-        <div>
+        <div class="footerelements">
             <p>Copyright 2023 Compay Name.</p>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
             <a href="#">Cookie Policy</a>
-            <a href="/Programacion_web_1/FRANCO_CHIQUILITO_PW1_ENTREGA1/HTML/Contacto.html">Contact</a>
+            <a href="../HTML/Contacto.html">Contact</a>
         </div>
     </Footer>
 </body>
