@@ -53,7 +53,7 @@ public class Ejercicio1 {
                 notaEscrita = "Nota fuera de rango";
                 break;
         }
-        
+        sc.close();
         // Imprimo la nota escrita
         System.out.println("Nota en palabras: " + notaEscrita);
     }
