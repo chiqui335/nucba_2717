@@ -1,11 +1,11 @@
 
-
 .logonav{
     height: 100px;
 }
 
 .header{
     display: flex;
+    background-color: aquamarine;
 }
 
 #log_in img, #Register img, #Cart img{
@@ -31,6 +31,22 @@
 .Registro{
     display: flex;
     flex-direction: column;
+}
+
+#SearchBar{
+    margin: 15px;
+}
+
+#log_in{
+    padding: 30px;
+}
+
+#Register{
+    padding: 30px;
+}
+
+#Cart{
+    padding: 30px;
 }
 
 .login{

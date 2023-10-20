@@ -1,0 +1,13 @@
+/* hasta esta medida de ancho, mostrame las cosas que ponga dentro de esta media, de esta manera. */
+
+@media(max-width:767px) {
+    .container, h1 {
+        background-color: beige;
+    }
+    .rounded-circle {
+        width: 300px;
+        height: auto;
+    }
+
+}
+
