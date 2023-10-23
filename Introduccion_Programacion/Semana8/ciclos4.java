@@ -16,5 +16,6 @@ public class ciclos4 {
         for(int i=0; i<N; i++){
         System.out.println("Gracias");
     }
+    sc.close();
   }
 }

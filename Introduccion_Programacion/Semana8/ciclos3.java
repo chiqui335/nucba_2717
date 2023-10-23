@@ -18,5 +18,6 @@ public class ciclos3 {
             ult=nom.charAt(tam-1);
         }while(pri<'A' || pri >'Z' || ult!='.'); 
         System.out.println("Gracias "+nom);
+        sc.close();
     }
 }

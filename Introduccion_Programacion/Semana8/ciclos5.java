@@ -9,5 +9,6 @@ public class ciclos5 {
         Scanner sc = new Scanner(System.in);
         int Num;
         while ()
+        
     }
 }

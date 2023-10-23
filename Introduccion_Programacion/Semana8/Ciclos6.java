@@ -17,6 +17,7 @@ public class Ciclos6 {
         }
     }
     System.out.println("La cantidad de vocales es: " + vocales);
+    sc.close();
 }
 }
 
