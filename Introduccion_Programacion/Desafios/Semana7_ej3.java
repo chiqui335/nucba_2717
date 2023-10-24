@@ -3,34 +3,22 @@ package Introduccion_Programacion.Desafios;
 import java.util.Scanner;
 
 public class Semana7_ej3 {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Ingrese la cantidad de números a calcular el rango: ");
-        int n = sc.nextInt();
+        System.out.println("Ingrese un numero entero y positivo: ");
+        double n = sc.nextDouble();
+        double redondo = Math.round(n);
+        
 
-        System.out.println("Ingrese primer numero: ");
-        int numero;
-        int primerNumero = sc.nextInt();
-        int min = primerNumero;
-        int max = primerNumero;
-
-        for (int i = 2; i <= n; i++) {
-            System.out.print("Ingrese el número " + i + ": ");
-            numero = sc.nextInt();
-
-            if (numero < min) {
-                min = numero;
-            }
-
-            if (numero > max) {
-                max = numero;
-            }
-        }
-
-        int rango = max - min;
-        System.out.println("El rango de los números ingresados es: " + rango);
-
-        sc.close();
+        if((n < 0) || (n != redondo)){
+            System.out.println("El numero debe ser positivo y entero");
+    }else{
+      for (int i = 1; i <= n; i++){
+        int Par = 2 * i;
+        System.out.println(Par);
+      }
     }
+    sc.close();
+  }
 }
