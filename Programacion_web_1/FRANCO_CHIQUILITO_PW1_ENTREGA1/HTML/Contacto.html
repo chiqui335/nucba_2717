@@ -30,23 +30,39 @@
     
     <hr>
 
-    <h1>Contacto</h1>
-    <form>
-        <div class="formulario">
-            <input type="text" id="Nombre" placeholder="Nombre" required autocomplete="do-not-autofill" >
-            <input type="text"  id="Apellido" placeholder="Apellido" required autocomplete="do-not-autofill" >
-            <input type="email"  id="Email" placeholder="Email" required autocomplete="do-not-autofill" >
-            <input type="number"  id="Prefijo" placeholder="Prefijo" required autocomplete="do-not-autofill"  id="number" >
-            <input type="number"  id="Telefono" placeholder="Telefono" required autocomplete="do-not-autofill" id="number" >
-            <textarea  id="Comentarios" cols="30" rows="10" placeholder="Inserte su comentario"></textarea>
-            <input type="submit" value="Enviar">
-        </div>
-    </form>
+    <div class="container mt-4">
+        <h1 class="display-4">Contacto</h1>
+        <form>
+            <div class="formulario mt-4">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="Nombre" placeholder="Nombre" required autocomplete="do-not-autofill">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="Apellido" placeholder="Apellido" required autocomplete="do-not-autofill">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="Email" placeholder="Email" required autocomplete="do-not-autofill">
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">+1</span>
+                        <input type="tel" class="form-control" id="Telefono" placeholder="Teléfono" required autocomplete="do-not-autofill">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="Comentarios" rows="4" placeholder="Inserte su comentario"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                </div>
+            </div>
+        </form>
 
-    <div class="redes">
-        <a href="#"><img src="../IMAGENES/Facebook_logo.png" alt="Facebook" id="linkredes"></a>
-        <a href="#"><img src="../IMAGENES/ig_logo.png" alt="Instagram" id="linkredes"></a>
-        <a href="#"><img src="../IMAGENES/whatsapp_logo.png" alt="Whatsapp" id="linkredes"></a>
+        <div class="redes mt-4">
+            <a href="#"><img src="../IMAGENES/Facebook_logo.png" alt="Facebook" id="linkredes" class="me-3"></a>
+            <a href="#"><img src="../IMAGENES/ig_logo.png" alt="Instagram" id="linkredes" class="me-3"></a>
+            <a href="#"><img src="../IMAGENES/whatsapp_logo.png" alt="Whatsapp" id="linkredes"></a>
+        </div>
     </div>
 
     <hr>
