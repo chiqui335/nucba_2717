@@ -7,6 +7,7 @@ public class Ejercicio1 {
         int n = prices.length;
 
         for (int i = 0; i < n - 1; i++) {
+            Boolean Swap = false; //flag para indicar si hubo swap de los valores del array o no
             for (int j = 0; j < n - i - 1; j++) {
                 double act = prices[j];
                 double next = prices[j + 1];
@@ -14,6 +15,10 @@ public class Ejercicio1 {
                     double tempSw = prices[j + 1];
                     prices[j + 1] = prices[j];
                     prices[j] = tempSw;
+                    Swap = true; // Se realiza el intercambio, cambiamos el flag a true
+                }
+                if(!Swap) {
+                    break; // Si no se ha realizado ningún intercambio, el arreglo ya está ordenado
                 }
             }
         }
