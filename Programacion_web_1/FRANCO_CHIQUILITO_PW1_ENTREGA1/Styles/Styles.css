@@ -1,40 +1,16 @@
 
+/* navbarstyles */
 .logonav{
     height: 100px;
 }
 
 .header{
     display: flex;
-    background-color: aquamarine;
+    background: linear-gradient(to bottom, aquamarine, white);
 }
 
 #log_in img, #Register img, #Cart img{
-    height: 50px;
-}
-
-#footerelements{
-    display: flex;
-}
-
-.Examples img{
-    height: 350px;
-}
-
-#IconoSearch{
-    height: 20px;
-}
-
-.Destacados img{
-    height: 300px;
-}
-
-.Registro{
-    display: flex;
-    flex-direction: column;
-}
-
-#SearchBar{
-    margin: 15px;
+    height: 40px;
 }
 
 #log_in{
@@ -49,28 +25,46 @@
     padding: 30px;
 }
 
-.login{
+#IconoSearch{
+    height: 20px;
+}
+/* ----------------- */
+
+/* Index */
+.Examples img{
+    height: 350px;
+}
+
+#carouselExampleControls {
+    width: 50%; /* Define el ancho del carousel */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item img {
+    max-height: 300px; /* Tamaño máximo ajustable */
+}
+
+.Destacados p {
+    text-align: center;
+}
+
+.Destacados img {
+    background-color: lightgray; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Agrega relleno para espaciar la imagen del borde */
+  }
+  
+
+/* ----------------- */
+
+.Registro{
     display: flex;
     flex-direction: column;
-}
-
-.formulario{
-    display: flex;
-    flex-direction: column;
-}
-
-/*
-.Natacion, .Basquet, .Rugby{
-    display: flex;
-}
-*/
-
-.redes{
-    display: flex;
 }
 
 #linkredes {
-    height: 50px;
+    height: 50px;   /*  tamaño imagenes redes en contacto */
 }
 
 #prodnatacion img,
@@ -80,24 +74,11 @@
 }
 
 
-
-#Sucursal-1,
-#Sucursal-2,
-#Sucursal-3 {
-    display: flex;
-}
-
 #Sucursal-1 img,
 #Sucursal-2 img,
 #Sucursal-3 img {
     height: 40px;
 }
-
-/*
-.promos{
-    display: flex;
-}
-*/
 
 .promo1 img,
 .promo2 img {
