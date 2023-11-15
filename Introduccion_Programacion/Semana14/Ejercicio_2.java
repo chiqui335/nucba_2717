@@ -22,7 +22,7 @@ public class Ejercicio_2 {
         //precios[i] = prec;
     }
     mostrarLista(prod, prec);
-    double total = calcularTotal(prec);
+    double total = calcularTotal(precz);
     System.out.println ("monto total: " +total);
     }
 
