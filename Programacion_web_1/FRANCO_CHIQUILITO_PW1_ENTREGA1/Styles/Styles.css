@@ -1,26 +1,14 @@
-@media (max-width: 320px) {
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: #333;
-        margin-bottom: 4px;
-    }
-
-    .mobile-nav {
-        display: none;
-    }
-
-    .mobile-nav.active {
-        display: block;
-    }
+*{
+    font-family: 'Audiowide', sans-serif;
+    color: beige;
 }
 
+body {
+    background-image: url('../IMAGENES/fondo\ pagina.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
 
 /* navbarstyles */
 .logonav{
@@ -29,14 +17,14 @@
 
 .header{
     display: flex;
-    background: linear-gradient(to bottom, aquamarine, transparent);
+    background: linear-gradient(to bottom, rgb(11, 18, 110), transparent);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-#log_in img, #Register img, #Cart img{
+#log_in img, #Register img, #Cart img, .LOGO img{
     height: 40px;
 }
 
@@ -55,6 +43,11 @@
 #IconoSearch{
     height: 20px;
 }
+
+.navoptions{
+    color: rgb(212, 212, 90);
+}
+
 /* ----------------- */
 
 /* Footer */
@@ -87,24 +80,70 @@ footer a {
 }
 
 .Destacados img {
-    background: linear-gradient(to bottom right, rgb(197, 255, 236), white); /* Fondo gris claro */
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), white); /* Fondo gris claro */
     border-radius: 10px; /* Bordes redondeados */
     padding: 10px; /* Agrega relleno para espaciar la imagen del borde */
-  }
+}
+
+.Destacados:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);             
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.Destacados:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
 
 .Destacados strong {
     color: red;
 }
  
+#Promos{
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); /* Fondo gris claro */
+    color: beige;
+    border: none;
+}
+
+#Promos:hover, 
+.beneficios:hover, 
+.sucursales:hover {
+    transform: scale(1.03);             /* agrando el boton y */
+    transition: transform 0.3s ease;   /* hago que la transicion sea mas suave  */
+    color: lightseagreen;
+}
+
+#Promos:not(:hover),
+.beneficios:not(:hover),
+.sucursales:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.btn-custom-blue{
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); /* Fondo gris claro */
+    color: beige;
+    border: none;
+}
+
+.btn-custom-blue:hover{
+    color: lightseagreen;
+}
 
 /* ----------------- */
 
-/* Login and register */
+/* Login, register, contact */
 .h1login,
-.h1register {
-    color: #333;
+.h1register,
+.h1contact {
+    color: beige;
     text-align: center;
-  }
+    font-family: 'Audiowide', sans-serif;
+
+}
 
 .contenido {
     display: flex;
@@ -115,7 +154,7 @@ footer a {
   
 .form-group {
     margin-bottom: 15px;
-  }
+}
 
 .form-control {
     width: 100%;
@@ -124,24 +163,30 @@ footer a {
     border-radius: 5px;
   }
 
-  
-.login, .register{
-    background-color: rgb(185, 231, 216);
+
+.login, 
+.register, 
+.contact {
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238));
+    /* background-color: rgb(185, 231, 216); */
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    /* text-align: center; */
     max-width: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);    
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
   
 .login input {
     margin-bottom: 15px;
-  }
+}
+
+.redes {
+}
 
 /* ----------- */
 
 
-#linkredes {
+.linkredes {
     height: 50px;   /*  tamaño imagenes redes en contacto */
 }
 
@@ -152,13 +197,39 @@ footer a {
 }
 
 
-#Sucursal-1 img,
-#Sucursal-2 img,
-#Sucursal-3 img {
-    height: 40px;
-}
 
 .promo1 img,
 .promo2 img {
     height: 400px;
 }
+
+/* cart
+.cart-deploy {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+} */
+
+
+/* mostrar o no el div cart-deploy */
+ /* #cart-toggle{
+    display: none;
+}
+
+#cart-toggle:checked ~ .cart-deploy {
+    display: block;
+}  */
+
+/* Estilo inicial para ocultar el carrito */
+/* .cart-deploy {
+    display: none;
+}
+
+/* Mostrar el carrito cuando el enlace es el destino (:target) */
+/* #Cart:target ~ .cart-deploy {
+    display: block;
+} */
