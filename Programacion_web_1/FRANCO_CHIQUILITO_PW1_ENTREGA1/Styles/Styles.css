@@ -3,6 +3,18 @@
     color: beige;
 }
 
+@media (max-width: 767px) {
+    /* Ocultar elementos que no queremos en la versión móvil */
+    .desktop-only {
+        display: none;
+    }
+
+    /* Mostrar elementos específicos para la versión móvil */
+    .mobile-only {
+        display: block;
+    }
+}
+
 body {
     background-image: url('../IMAGENES/fondo\ pagina.jpg');
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
@@ -30,19 +42,24 @@ body {
 
 #log_in{
     padding: 30px;
+    filter: invert(1);
 }
 
 #Register{
     padding: 30px;
+    filter: invert(1);
 }
 
 #Cart{
     padding: 30px;
+    filter: invert(1);
 }
 
 #IconoSearch{
     height: 20px;
+    filter: invert(1);
 }
+
 
 .navoptions{
     color: rgb(212, 212, 90);
@@ -72,8 +89,13 @@ footer a {
 
 .carousel-item img {
     max-height: 300px; /* Tamaño máximo ajustable */
+    
 }
 
+
+.envios{
+    font-size: 30px;
+}
 
 
 .Destacados p {
@@ -103,30 +125,46 @@ footer a {
     color: red;
 }
  
-#Promos{
+#Promos,
+.Registerbtn{
     background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); /* Fondo gris claro */
     color: beige;
     border: none;
 }
+/* Effectos de botones hover */
 
 #Promos:hover, 
 .beneficios:hover, 
 .sucursales:hover,
-.masprod:hover {
+.masprod:hover,
+.Registerbtn:hover,
+.btnEnviar:hover,
+.contactbtn:hover {
     transform: scale(1.03);             /* agrando el boton y */
     transition: transform 0.3s ease;   /* hago que la transicion sea mas suave  */
     color: lightseagreen;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #Promos:not(:hover),
 .beneficios:not(:hover),
 .sucursales:not(:hover), 
-.masprod:not(:hover){
-    transform: scale(1);
+.masprod:not(:hover),
+.Registerbtn:not(:hover),
+.btnEnviar:not(:hover),
+.contactbtn:not(:hover) {
+    transform: scale(1);                /* achico el boton */
     transition: transform 0.3s ease;
+    border: none;
 }
 
-.btn-custom-blue{
+
+.btn-custom-blue,
+.btnEnviar,
+.Registerbtn,
+.contactbtn
+{
     background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); /* Fondo gris claro */
     color: beige;
     border: none;
@@ -135,6 +173,7 @@ footer a {
 .btn-custom-blue:hover{
     color: lightseagreen;
 }
+/* ----------------- */
 /* ----------------- */
 
 /* Login, register, contact */
@@ -182,14 +221,13 @@ footer a {
     margin-bottom: 15px;
 }
 
-
+.linkredes {
+    height: 60px;   /*  tamaño imagenes redes en contacto */
+}
 
 /* ----------- */
 
-
-.linkredes {
-    height: 50px;   /*  tamaño imagenes redes en contacto */
-}
+/* productos */
 
 #prodnatacion img,
 #prodbasquet img,
@@ -197,12 +235,37 @@ footer a {
     height: 300px;
 }
 
+.prodnatacion{
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), white); /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Agrega relleno para espaciar la imagen del borde */
+}
 
 
+
+/* ---------------- */
+
+
+
+/* promos/beneficios */
 .promo1 img,
 .promo2 img {
     height: 400px;
 }
+
+/* ------------------------ */
+
+/* Sucursales */
+
+
+.Sucursal-1 img, 
+.Sucursal-2 img, 
+.Sucursal-3 img {
+    height: 50px;
+    filter: invert(1);
+}
+
+/* ------------------ */
 
 /* cart
 .cart-deploy {
