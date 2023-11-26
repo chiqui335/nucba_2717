@@ -42,35 +42,61 @@
 
                 <!-- cart, login, register -->
                 <div class="client-items md-auto ml-4">
-                    <a href="../HTML/Login.html" id="log_in" class="btn"><img src="../IMAGENES/login.png" alt="Log in logo"></a>
+                    <!-- <a href="../HTML/Login.html" id="log_in" class="btn"><img src="../IMAGENES/login.png" alt="Log in logo"></a> -->
                     <a href="../HTML/Registro.html" id="Register"><img src="../IMAGENES/Register.png" alt="Register logo"></a>
-                    <a href="#" id="Cart"><img src="../IMAGENES/cart.png" alt="Cart logo"></a>
+                    <label for="log-toggle" id="log_in">
+                        <img src="../IMAGENES/login.png" alt="Cart logo">
+                    </label>
+                    <input type="checkbox" id="log-toggle">
+                
+                    <label for="cart-toggle" id="Cart">
+                        <img src="../IMAGENES/cart.png" alt="Cart logo">
+                    </label>
+                    <input type="checkbox" id="cart-toggle">
                 </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- carrito desplegable
-        <div class="cart-deploy">
-            <p>tu carrito</p>
-            <div class="cart-item">
-                <div class="item-info">
-                    <img src="" alt="">
-                    <p>descripcion de producto</p>
+                
+            
+                <!-- cart deploy -->
+                <div class="cart-deploy text-center" id="cart-deploy">
+                    <h3 class="mb-3">Tu carrito</h3>
+                    <div class="cart-items text-center">
+                        <div class="item-info">
+                            <img src="../IMAGENES/casco_rugby.jpeg" alt="" class="cart-img mb-4">
+                            <p>Casco De Rugby Dribbling Max Force Protección</p>
+                        </div>
+                        <div class="item-handler mb-4 mt-4">
+                            <span class="quantity-handler down"> - </span>
+                            <span class="item-quantity"> 1 </span>
+                            <span class="quantity-handler up"> + </span>
+                        </div>
+                    </div>
+                    <div class="total text-center mb-4 mt-5">
+                        <p class="mb-4">total: $10000</p> 
+                        <input type="button" name="Pagar" value="Pagar" class="btn btn-primary btnPay mb-3">
+                    </div>
                 </div>
-                <div class="item-handler">
-                    <span class="quantity-handler-down"> - </span>
-                    <span class="item-quantity"> 1 </span>
-                    <span class="quantity-handler-up"> + </span>
+
+                <!-- log deploy -->
+                <div class="logIn-deploy">
+                        <h3 class="mt-4 h1login">Ingreso</h3>
+                    <div class="loginContent contenido m-4 text-center">
+                        <form class="login">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Nombre de Usuario" required autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Contraseña" required autocomplete="off">
+                            </div>
+                            <input type="submit" class="btn btn-primary btnEnviar " value="Enviar">
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="total">
-                <p>total: </p> 
-            </div>
+
+            </div>    
         </div>
-        -------------- -->
-        
-    </header>
+    </div>
+</header>
  
 
     <div class="container">
@@ -100,17 +126,17 @@
           </div>
 
         <!-- envios en el dia/ envios gratis/ beneficios/ sucursales -->
-        <a href="../HTML/Beneficios.html" id="Promos" class=" container-fluid btn btn-primary mt-4">Promociones!</a>
+        <a href="../HTML/Beneficios.html"  class="Promosbtn container-fluid btn btn-primary mt-4">Promociones!</a>
 
         <div class="row mt-4">
             <div class="col">
-                <div class="text-center envios">
-                    <p><strong>Envíos en el día</strong></p>
+                <div>
+                    <p class="envios text-center"><strong class="envios">Envíos en el día</strong></p>
                 </div>
             </div>
             <div class="col">
-                <div  class="envios text-center">
-                    <p><strong>Envíos gratis desde $5000</strong></p>
+                <div>
+                    <p><strong class="envios">Envíos gratis desde $5000</strong></p>
                 </div>
             </div>
         </div>
@@ -151,10 +177,10 @@
             </a>
         </div>
         <!-------------------------->
-        <div class="masprod text-center ">
-            <a href="../HTML/Productos.html"  class="btn  mt-4 text-center btn-custom-blue">Mas productos</a>
+        <div class="text-center">
+            <a href="../HTML/Productos.html"  class="masprod btn mt-4 text-center btn-custom-blue">Mas productos</a>
         </div>
-        <div id="about" class="mt-4">
+        <div class="about mt-4">
             <h3 class="mt-4 mb-4">Quiénes somos?</h3>
             <p>
                 Somos la tienda online preferida de los deportistas, con más de 30 años en el mercado
@@ -180,7 +206,30 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkbox = document.getElementById('cart-toggle');
+            const cartDeploy = document.getElementById('cart-deploy');
+
+            checkbox.addEventListener('change', function () {
+                cartDeploy.style.display = this.checked ? 'block' : 'none';
+            });
+        });
+    </script>
+
+<script>
+    // Captura el elemento checkbox y el div logIn-deploy
+    const logToggle = document.getElementById('log-toggle');
+    const logInDeploy = document.querySelector('.logIn-deploy');
+
+    // Añade un event listener al cambio del estado del checkbox
+    logToggle.addEventListener('change', function () {
+        // Si el checkbox está marcado, muestra el div, de lo contrario, ocúltalo
+        logInDeploy.style.display = this.checked ? 'block' : 'none';
+    });
+</script>
 </body>
 </html>

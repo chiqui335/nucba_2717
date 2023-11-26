@@ -6,17 +6,17 @@
 
 body {
     background-image: url('../IMAGENES/fondo\ pagina.jpg');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-size: 120%; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 /* navbarstyles */
-.logonav {
+.logonav{
     height: 100px;
 }
 
-.header {
+.header{
     display: flex;
     background: linear-gradient(to bottom, rgb(11, 18, 110), transparent);
     position: -webkit-sticky;
@@ -29,137 +29,30 @@ body {
     height: 40px;
 }
 
-#log_in {
+#log_in{
     padding: 30px;
     filter: invert(1);
 }
 
-#Register {
+#Register{
     padding: 30px;
     filter: invert(1);
 }
 
-#Cart {
+#Cart{
     padding: 30px;
     filter: invert(1);
 }
 
-#IconoSearch {
+#IconoSearch{
     height: 20px;
     filter: invert(1);
 }
 
 
-.navoptions {
+.navoptions{
     color: rgb(212, 212, 90);
 }
-
-#cart-toggle{
-    display: none;
-}
-
-.logIn-deploy{
-    position: absolute; 
-    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238));
-    top: 65px;  
-    right: 10px;
-    padding: 50px 30px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    border-radius: 20px;
-}
-
-.loginContent{
-    width: 500px;
-}
-
-/* buy cart */
-
-.cart-deploy{
-    position: absolute; 
-    top: 65px;  
-    right: 10px;
-    padding: 50px 30px;
-    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238));
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    height: calc(80vh - 65px);
-    border-radius: 20px;
-    /*  como se lee:
-    calculo el 100% del viewport
-    height MENOS 65px porque el 
-    header mide 65 px */
-    z-index: 2;
-    overflow-y: scroll; /* ESTO SE USA PARA QUE EN LA PESTAÑA
-    DEL CART SE PUEDA SCROLLEAR PARA VER
-    TODAS LAS COMPRAS */
-}
-
-.cart-deploy::-webkit-scrollbar,
-.logIn-deploy::-webkit-scrollbar{
-    display: none;
-}
-
-.cart-img{
-    height: 200px;
-    width: 200px;
-    border-radius: 20px;
-}
-
-.cart-deploy {
-    display: none;
-    margin-top: 20px;
-}
-
-.item-handler{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-/* .item-handler{
-    background-color: rgb(96, 129, 238);
-} */
-
-.up{
-    border: 1px solid blue;
-    background-color: #4949a5;
-}
-
-.down{
-    border: 1px solid blue;
-    background-color: #4949a5;
-}
-
-.total{
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.quantity-handler{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px 8px;
-    border-radius: 5px;
-    color: wheat;
-    font-weight: 400;
-}
-
-/* login */
-
-/* #log-toggle{
-    display: none;
-} */
 
 /* ----------------- */
 
@@ -196,6 +89,8 @@ strong {
     font-size: 30px;
     color: rgb(214, 67, 67)
 }
+
+
 
 
 .Destacados p {
@@ -406,35 +301,33 @@ input.telefono::-webkit-outer-spin-button {
     margin: 0;
 }
 
-.propaganda {
-    position: relative;
-    text-align: center;
-} 
-
-.propImg:hover {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transform: scale(1.03);                /* achico el boton */
-    transition: transform 0.3s ease;
-    border: none;
-}
-
-.propImg:not(:hover) {
-    transform: scale(1);                /* achico el boton */
-    transition: transform 0.3s ease;
-    border: none;
-}
-
-.propaganda img{
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-}
-  
-
-.text-overlay {
+/* cart
+.cart-deploy {
+    display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(74, 74, 250);
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+} */
+
+
+/* mostrar o no el div cart-deploy */
+ /* #cart-toggle{
+    display: none;
 }
+
+#cart-toggle:checked ~ .cart-deploy {
+    display: block;
+}  */
+
+/* Estilo inicial para ocultar el carrito */
+/* .cart-deploy {
+    display: none;
+}
+
+/* Mostrar el carrito cuando el enlace es el destino (:target) */
+/* #Cart:target ~ .cart-deploy {
+    display: block;
+} */
