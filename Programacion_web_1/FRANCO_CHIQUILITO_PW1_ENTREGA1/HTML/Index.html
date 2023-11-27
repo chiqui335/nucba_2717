@@ -20,7 +20,7 @@
         <div class="container">
             <div class="container row align-items-center">
                 <!-- logo -->
-                <a href="../HTML/Index.html" class="col-md-2 mt-2 mt-md-0 ">
+                <a href="../HTML/Index.html" class="col-md-2 mt-2 mt-md-0 logonavA">
                     <img src="../IMAGENES/sport.png" alt="logo" class="logonav">
                 </a>
                 <div class="row align-items-center">
@@ -43,18 +43,20 @@
                 <!-- cart, login, register -->
                 <div class="client-items md-auto ml-4">
                     <!-- <a href="../HTML/Login.html" id="log_in" class="btn"><img src="../IMAGENES/login.png" alt="Log in logo"></a> -->
-                    <a href="../HTML/Registro.html" id="Register"><img src="../IMAGENES/Register.png" alt="Register logo"></a>
                     <label for="log-toggle" id="log_in">
                         <img src="../IMAGENES/login.png" alt="Cart logo">
                     </label>
                     <input type="checkbox" id="log-toggle">
                 
+                    <a href="../HTML/Registro.html" id="Register"><img src="../IMAGENES/Register.png" alt="Register logo"></a>
+
                     <label for="cart-toggle" id="Cart">
                         <img src="../IMAGENES/cart.png" alt="Cart logo">
                     </label>
                     <input type="checkbox" id="cart-toggle">
                 </div>
-
+                
+                
                 
             
                 <!-- cart deploy -->
@@ -66,22 +68,22 @@
                             <p>Casco De Rugby Dribbling Max Force Protección</p>
                         </div>
                         <div class="item-handler mb-4 mt-4">
-                            <span class="quantity-handler down"> - </span>
+                            <input type="button" value="-" class="quantity-handler down">
                             <span class="item-quantity"> 1 </span>
-                            <span class="quantity-handler up"> + </span>
+                            <input type="button" value="+" class="quantity-handler up">
                         </div>
                     </div>
                     <div class="total text-center mb-4 mt-5">
-                        <p class="mb-4">total: $10000</p> 
+                        <p class="mb-4 price">total: $10000</p> 
                         <input type="button" name="Pagar" value="Pagar" class="btn btn-primary btnPay mb-3">
                     </div>
                 </div>
 
                 <!-- log deploy -->
                 <div class="logIn-deploy">
-                        <h3 class="mt-4 h1login">Ingreso</h3>
-                    <div class="loginContent contenido m-4 text-center">
+                    <div class="loginContent contenido m-4 text-center d-flex flex-column">
                         <form class="login">
+                            <h3 class="mt-4 h1login">Ingreso</h3>
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Nombre de Usuario" required autocomplete="off">
                             </div>
@@ -90,6 +92,47 @@
                             </div>
                             <input type="submit" class="btn btn-primary btnEnviar " value="Enviar">
                         </form>
+                    </div>
+                </div>
+
+                <!-- hamburger-deploy -->
+
+                <label for="hamburger-toggle" id="hamburger-content">
+                    <img src="../IMAGENES/hamburger.png" alt="menu" class="hamburger">
+                </label>
+                <input type="checkbox" id="hamburger-toggle">
+
+                <!-- nav hambur -->
+                <div class="hamburger-deploy">
+                    <nav class="navbar navbar-expand-md navbar">   
+                        <ul class="navbar-list-hambur navbar-nav row col-sm-12 col-md-6 col-lg-4">
+                            <li class="nav-item nav-link"><a href="../HTML/Index.html" class="navoptions-hambur">Home</a></li>
+                            <li class="nav-item nav-link"><a href="../HTML/Productos.html" class="navoptions-hambur">Productos</a></li>
+                            <li class="nav-item nav-link"><a href="../HTML/Contacto.html" class="navoptions-hambur">Contacto</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- searchbar hambur-->
+                    <div class="search-items-hambur d-flex align-items-center">
+                        <img src="../IMAGENES/search_logo.png" alt="Icono_Search" id="IconoSearch-hambur" class="img-fluid m-2">
+                        <input type="text" placeholder="Buscar..." id="SearchBar-hambur">
+                    </div>
+                    
+    
+                    <!-- cart, login, register hambur-->
+                    <div class="client-items-hambur md-auto ml-4">
+                        <!-- <a href="../HTML/Login.html" id="log_in" class="btn"><img src="../IMAGENES/login.png" alt="Log in logo"></a> -->
+                        <label for="log-toggle" id="log_in-hambur">
+                            <img src="../IMAGENES/login.png" alt="Cart logo">
+                        </label>
+                        <input type="checkbox" id="log-toggle">
+                    
+                        <a href="../HTML/Registro.html" id="Register-hambur"><img src="../IMAGENES/Register.png" alt="Register logo"></a>
+    
+                        <label for="cart-toggle" id="Cart-hambur">
+                            <img src="../IMAGENES/cart.png" alt="Cart logo">
+                        </label>
+                        <input type="checkbox" id="cart-toggle">
                     </div>
                 </div>
 
@@ -153,7 +196,7 @@
         <!-- Destacados -->
         <h2 class="mt-4 mb-4 text-center">Destacados</h2> 
 
-        <div class="row mt-4">
+        <div class="row mt-4 prodDest">
             <a href="../HTML/Productos.html" class="col">
                 <div class="Destacados">
                     <img src="../IMAGENES/Destacado1.jpg" alt="Destacado natación" class="img-fluid">
@@ -231,5 +274,15 @@
         logInDeploy.style.display = this.checked ? 'block' : 'none';
     });
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerToggle = document.getElementById('hamburger-toggle');
+        const hamburgerDeploy = document.querySelector('.hamburger-deploy');
+
+        hamburgerToggle.addEventListener('change', function () {
+            hamburgerDeploy.style.display = this.checked ? 'block' : 'none';
+        });
+    });
+</script>
 </body>
-</html>
+</html> 

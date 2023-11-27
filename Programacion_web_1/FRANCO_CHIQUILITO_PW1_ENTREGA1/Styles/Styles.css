@@ -16,6 +16,8 @@ body {
     height: 100px;
 }
 
+
+
 .header {
     display: flex;
     background: linear-gradient(to bottom, rgb(11, 18, 110), transparent);
@@ -25,7 +27,7 @@ body {
     z-index: 1000;
 }
 
-#log_in img, #Register img, #Cart img, .LOGO img{
+#log_in img, #Register img, #Cart img, .LOGO img {
     height: 40px;
 }
 
@@ -49,8 +51,14 @@ body {
     filter: invert(1);
 }
 
+#SearchBar,
+#SearchBar-hambur{
+    color: black;
+}
 
-.navoptions {
+
+.navoptions,
+.navoptions-hambur {
     color: rgb(212, 212, 90);
 }
 
@@ -58,23 +66,7 @@ body {
     display: none;
 }
 
-.logIn-deploy{
-    position: absolute; 
-    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238));
-    top: 65px;  
-    right: 10px;
-    padding: 50px 30px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    border-radius: 20px;
-}
 
-.loginContent{
-    width: 500px;
-}
 
 /* buy cart */
 
@@ -87,9 +79,9 @@ body {
     border: none;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     height: calc(80vh - 65px);
     border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     /*  como se lee:
     calculo el 100% del viewport
     height MENOS 65px porque el 
@@ -105,7 +97,7 @@ body {
     display: none;
 }
 
-.cart-img{
+.cart-img {
     height: 200px;
     width: 200px;
     border-radius: 20px;
@@ -137,6 +129,16 @@ body {
     background-color: #4949a5;
 }
 
+.down:hover,
+.up:hover{
+    background: linear-gradient(to bottom right, blue, #4949a5);
+}
+
+.down:active,
+.up:active{
+    background: linear-gradient(to bottom right, rgb(80, 80, 235), #121261);
+}
+
 .total{
     color: transparent;
     background-clip: text;
@@ -155,11 +157,38 @@ body {
     font-weight: 400;
 }
 
+.price{
+    background-color: #4949a5;
+    border-radius: 10px;
+}
+
+
 /* login */
 
-/* #log-toggle{
+#log-toggle{
     display: none;
-} */
+}
+
+.logIn-deploy{
+    display: none;
+    position: absolute; 
+    top: 65px;  
+    right: 20%;
+    padding: 50px 30px;
+    border: none;
+    flex-direction: column;
+    gap: 30px;
+    border: none;
+}
+
+.loginContent{
+    width: 500px; 
+}
+
+.login input {
+    margin-bottom: 15px;
+}
+
 
 /* ----------------- */
 
@@ -316,9 +345,7 @@ strong {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
   
-.login input {
-    margin-bottom: 15px;
-}
+
 
 .linkredes {
     height: 60px;   /*  tamaño imagenes redes en contacto */
@@ -438,3 +465,84 @@ input.telefono::-webkit-outer-spin-button {
     transform: translate(-50%, -50%);
     color: rgb(74, 74, 250);
 }
+
+
+
+
+
+/* pantalla chica */
+@media only screen and (max-width: 1200px) {
+    .navoptions,
+    .client-items,
+    #SearchBar,
+    #IconoSearch,
+    #hamburger-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        width: 80px;
+        position: absolute;
+        right: 15%;
+        top: 15px;
+    }
+  
+    .hamburger-deploy {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        padding: 20px;
+        border: none;
+        background: linear-gradient(to bottom right, rgb(11, 18, 110), white); /* Fondo gris claro */
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #log_in-hambur img, #Register-hambur img, #Cart-hambur img {
+        height: 40px;
+        justify-content: space-between;
+        margin: 15px 15px; 
+    }
+
+    .cart-deploy{
+        position: absolute; 
+        top: 350px;
+        height: 350px;
+        right: 0px;
+    }
+
+    .logIn-deploy{
+        display: none;
+        position: absolute; 
+        top: 350px;  
+        border: none;
+        left: -140px;
+        flex-direction: column;
+        gap: 30px;
+        border: none;
+    }
+
+    #IconoSearch-hambur {
+        height: 20px;
+    }
+
+
+}
+
+
+/* pantalla grande */
+@media only screen and (min-width: 1201px) {
+    #IconoSearch-hambur,
+    #SearchBar-hambur,
+    #hamburger-toggle,
+    .hamburger,
+    .hamburger-deploy,
+    .navbar-list-hambur,
+    .client-items-hambur,
+    .navoptions-hambur {
+        display: none;
+    }
+}
+
