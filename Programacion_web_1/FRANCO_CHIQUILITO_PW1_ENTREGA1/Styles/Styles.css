@@ -8,7 +8,7 @@ body {
     background-image: url('../IMAGENES/fondo\ pagina.jpg');
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: repeat; /* Evita que la imagen se repita */
 }
 
 /* navbarstyles */
@@ -255,7 +255,7 @@ strong {
 .Promosbtn,
 .Registerbtn,
 .addToCartbtn{
-    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); /* Fondo gris claro */
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); 
     color: beige;
     border: none;
 }
@@ -345,10 +345,17 @@ strong {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
   
-
+/* para que se pueda ver todo el form */
+.register{
+    margin-bottom: 200px; 
+}
 
 .linkredes {
     height: 60px;   /*  tamaño imagenes redes en contacto */
+}
+
+.redes{
+    padding-bottom: 200px;
 }
 
 /* ----------- */
@@ -382,7 +389,7 @@ strong {
 /* promos/beneficios */
 .promo1 img,
 .promo2 img {
-    height: 400px;
+    height: 280px;
     background: linear-gradient(to bottom right, rgb(11, 18, 110), white); /* Fondo gris claro */
     border-radius: 10px; /* Bordes redondeados */
     padding: 10px; /* Agrega relleno para espaciar la imagen del borde */
@@ -452,7 +459,7 @@ input.telefono::-webkit-outer-spin-button {
 }
 
 .propaganda img{
-    width: 50%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
@@ -550,3 +557,12 @@ input.telefono::-webkit-outer-spin-button {
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .register,
+    .formulario,
+    .propImg,
+    .propaganda{
+        /* Ajusta el ancho del formulario según sea necesario */
+        max-width: 100%;
+    }
+}
