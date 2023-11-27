@@ -528,6 +528,10 @@ input.telefono::-webkit-outer-spin-button {
         height: 20px;
     }
 
+    #log-toggle-hambur,
+    #cart-toggle-hambur{
+        display: none;
+    }
 
 }
 
