@@ -68,13 +68,14 @@
                         </div>
                         <div class="item-handler mb-4 mt-4">
                             <input type="button" value="-" class="quantity-handler down">
-                            <span class="item-quantity"> 1 </span>
+                            <span id="item-quantity">1</span>
                             <input type="button" value="+" class="quantity-handler up">
                         </div>
                     </div>
                     <div class="total text-center mb-4 mt-5">
-                        <p class="mb-4 price">total: $10000</p> 
-                        <input type="button" name="Pagar" value="Pagar" class="btn btn-primary btnPay mb-3">
+                        <p>Total:</p>
+                        <p class="mb-4 price">$10000</p> 
+                        <input type="button" name="Pagar" value="Pagar" class="btn btn-primary btnPay mb-3 btn-custom-blue">
                     </div>
                 </div>
 
@@ -104,8 +105,8 @@
                 <!-- nav hambur -->
                 <div class="hamburger-deploy">
                     <nav class="navbar navbar-expand-md navbar">   
-                        <ul class="navbar-list-hambur navbar-nav row col-sm-12 col-md-6 col-lg-4">
-                            <li class="nav-item nav-link"><a href="../HTML/Index.html" class="navoptions-hambur">Home</a></li>
+                        <ul class="navbar-list-hambur navbar-nav row col-sm-12 col-md-6 col-lg-4 ">
+                            <li class="nav-item nav-link "><a href="../HTML/Index.html" class="navoptions-hambur">Home</a></li>
                             <li class="nav-item nav-link"><a href="../HTML/Productos.html" class="navoptions-hambur">Productos</a></li>
                             <li class="nav-item nav-link"><a href="../HTML/Contacto.html" class="navoptions-hambur">Contacto</a></li>
                         </ul>
@@ -140,7 +141,7 @@
     </div>
 </header>
 
-    <div class="container mt-4">
+    <div class="container mt-4 mb-4">
         <h1 class="mb-5 text-center">Nuestros Productos</h1>
         <div class=" mb-5 mt-5">
             <a href="../HTML/Beneficios.html" class="Promosbtn container-fluid btn btn-primary mt-4">Promociones!</a>
@@ -149,24 +150,24 @@
         <div class="Natacion mt-5">
             <h2 class="mb-4 text-center">Natación</h2>
             <div class="row">
-                <div class="col-md-4 text-center prodnatacion">
+                <div class="col-md-4 text-center prodnatacion ">
                     <img src="../IMAGENES/malla_mujer_speedo.jpg" alt="Malla de competicion Speedo mujer" class="prodnatacion img-fluid">
                     <p class="mt-3">Malla de competicion Speedo mujer</p>
-                    <p><del>$7500</del> <strong>$3500</strong></p>
+                    <p><del>$10000</del> <strong>$7500</strong></p>
                     <input type="button" name="addToCart" value="Agregar al carrito" class="btn btn-primary addToCartbtn mb-3">
                 </div>
-
-                <div class="col-md-4 text-center prodnatacion">
-                    <img src="../IMAGENES/Antiparras.jpeg" alt="Antiparras Speedo" class="prodnatacion img-fluid">
+        
+                <div class="col-md-4 text-center prodnatacion ">
+                    <img src="../IMAGENES/Antiparras.jpg" alt="Antiparras Speedo" class="prodnatacion img-fluid">
                     <p class="mt-3">Antiparras Speedo</p>
-                    <p>$8000</p>
+                    <p>$9000</p>
                     <input type="button" name="addToCart" value="Agregar al carrito" class="btn btn-primary addToCartbtn mb-3">
                 </div>
-                
-                <div class="col-md-4 text-center prodnatacion">
+        
+                <div class="col-md-4 text-center prodnatacion ">
                     <img src="../IMAGENES/Destacado1.jpg" alt="Malla de competicion Arena Powerskin" class="prodnatacion img-fluid ">
                     <p class="mt-3">Malla de competicion Arena Powerskin</p>
-                    <p>$15000</p>
+                    <p>$25000</p>
                     <input type="button" name="addToCart" value="Agregar al carrito" class="btn btn-primary addToCartbtn mb-3">
                 </div>
             </div>
@@ -178,21 +179,21 @@
                 <div class="col-md-4 text-center prodbasquet">
                     <img src="../IMAGENES/Camiseta_basquet.jpg" alt="Camiseta de Basquet azul oscuro" class="prodbasquet img-fluid">
                     <p class="mt-3">Camiseta de Basquet azul oscuro Kelme  </p>
-                    <p><del>$8000</del><strong>$4000</strong></p>
+                    <p><del>$12000</del><strong>$8000</strong></p>
                     <input type="button" name="addToCart" value="Agregar al carrito" class="btn btn-primary addToCartbtn mb-3">
                 </div>
 
                 <div class="col-md-4 text-center prodbasquet">
                     <img src="../IMAGENES/Destacado3.jpg" alt="Zapatillas De Basquet Nike Negro, blanco y rojo" class="prodbasquet img-fluid">
                     <p class="mt-3">Zapatillas De Basquet Nike Negro, blanco y rojo </p>
-                    <p>$18000</p>
+                    <p>$24000</p>
                     <input type="button" name="addToCart" value="Agregar al carrito" class="btn btn-primary addToCartbtn mb-3">
                 </div>
 
                 <div class="col-md-4 text-center prodbasquet">
                     <img src="../IMAGENES/prodbasquet1.jpg" alt="Zapatillas De Basquet 361° Training Blanca" class="prodbasquet img-fluid">
                     <p class="mt-3">Zapatillas De Basquet 361° Training Blanca</p>
-                    <p>$13000</p>
+                    <p>$21000</p>
                     <input type="button" name="addToCart" value="Agregar al carrito" class="btn btn-primary addToCartbtn mb-3">
                 </div>
             </div>
@@ -243,6 +244,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
@@ -276,6 +278,34 @@
             hamburgerDeploy.style.display = this.checked ? 'block' : 'none';
         });
     });
+</script>
+<script>
+    let cantidadElemento = document.getElementById('item-quantity');
+    let cantidad = 1; // Valor inicial
+
+    function incrementar() {
+        cantidad++;             //aumento la cantidad
+        actualizarCantidad();
+    }
+
+    function decrementar() {
+        if (cantidad > 1) {
+            cantidad--;         //disminuyo la cantidad
+            actualizarCantidad();
+        }
+    }
+
+    function actualizarCantidad() {
+        cantidadElemento.textContent = cantidad; // cambiar la cantidad
+        
+
+        const precioTotal = 10000; // se reemplaza esto con el precio real
+        const total = cantidad * precioTotal;
+        document.querySelector('.price').textContent = `$${total}`;
+    }
+
+    document.querySelector('.up').addEventListener('click', incrementar);
+    document.querySelector('.down').addEventListener('click', decrementar);
 </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

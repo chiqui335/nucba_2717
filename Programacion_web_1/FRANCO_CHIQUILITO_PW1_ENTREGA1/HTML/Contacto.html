@@ -70,13 +70,14 @@
                         </div>
                         <div class="item-handler mb-4 mt-4">
                             <input type="button" value="-" class="quantity-handler down">
-                            <span class="item-quantity"> 1 </span>
+                            <span id="item-quantity">1</span>
                             <input type="button" value="+" class="quantity-handler up">
                         </div>
                     </div>
                     <div class="total text-center mb-4 mt-5">
-                        <p class="mb-4 price">total: $10000</p> 
-                        <input type="button" name="Pagar" value="Pagar" class="btn btn-primary btnPay mb-3">
+                        <p>Total:</p>
+                        <p class="mb-4 price">$10000</p> 
+                        <input type="button" name="Pagar" value="Pagar" class="btn btn-primary btnPay mb-3 btn-custom-blue">
                     </div>
                 </div>
 
@@ -106,8 +107,8 @@
                 <!-- nav hambur -->
                 <div class="hamburger-deploy">
                     <nav class="navbar navbar-expand-md navbar">   
-                        <ul class="navbar-list-hambur navbar-nav row col-sm-12 col-md-6 col-lg-4">
-                            <li class="nav-item nav-link"><a href="../HTML/Index.html" class="navoptions-hambur">Home</a></li>
+                        <ul class="navbar-list-hambur navbar-nav row col-sm-12 col-md-6 col-lg-4 ">
+                            <li class="nav-item nav-link "><a href="../HTML/Index.html" class="navoptions-hambur">Home</a></li>
                             <li class="nav-item nav-link"><a href="../HTML/Productos.html" class="navoptions-hambur">Productos</a></li>
                             <li class="nav-item nav-link"><a href="../HTML/Contacto.html" class="navoptions-hambur">Contacto</a></li>
                         </ul>
@@ -229,6 +230,34 @@
             hamburgerDeploy.style.display = this.checked ? 'block' : 'none';
         });
     });
+</script>
+<script>
+    let cantidadElemento = document.getElementById('item-quantity');
+    let cantidad = 1; // Valor inicial
+
+    function incrementar() {
+        cantidad++;             //aumento la cantidad
+        actualizarCantidad();
+    }
+
+    function decrementar() {
+        if (cantidad > 1) {
+            cantidad--;         //disminuyo la cantidad
+            actualizarCantidad();
+        }
+    }
+
+    function actualizarCantidad() {
+        cantidadElemento.textContent = cantidad; // cambiar la cantidad
+        
+
+        const precioTotal = 10000; // se reemplaza esto con el precio real
+        const total = cantidad * precioTotal;
+        document.querySelector('.price').textContent = `$${total}`;
+    }
+
+    document.querySelector('.up').addEventListener('click', incrementar);
+    document.querySelector('.down').addEventListener('click', decrementar);
 </script>
 </body>
 </html>
