@@ -473,9 +473,27 @@ input.telefono::-webkit-outer-spin-button {
     color: rgb(74, 74, 250);
 }
 
+.Sucursales{
+    padding-bottom: 250px;
+}
 
+.Sucursales a {
+    white-space: normal; /* permite que el texto envuelva */
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); 
+    border: none;
+  }
 
+.Sucursales a:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);             /* agrando el boton y */
+    transition: transform 0.3s ease;   /* hago que la transicion sea mas suave  */
+    
+}
 
+.Sucursales a:not(:hover){
+    transform: scale(1);                
+    transition: transform 0.3s ease;
+}
 
 /* pantalla chica */
 @media only screen and (max-width: 1200px) {
@@ -502,7 +520,7 @@ input.telefono::-webkit-outer-spin-button {
         right: 0;
         padding: 20px;
         border: none;
-        background: linear-gradient(to bottom right, rgb(11, 18, 110), white); /* Fondo gris claro */
+        background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); 
         border-radius: 10px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
