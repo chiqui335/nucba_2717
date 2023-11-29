@@ -29,6 +29,7 @@ body {
 
 #log_in img, #Register img, #Cart img, .LOGO img {
     height: 40px;
+    cursor: pointer;
 }
 
 #log_in {
@@ -38,7 +39,7 @@ body {
 
 #Register {
     padding: 30px;
-    filter: invert(1);
+    filter: brightness(0) invert(1) grayscale(1);
 }
 
 #Cart {
