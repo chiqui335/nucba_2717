@@ -487,7 +487,7 @@ input.telefono::-webkit-outer-spin-button {
 }
 
 .Sucursales{
-    padding-bottom: 250px;
+    padding-bottom: 400px;
 }
 
 .Sucursales a {
@@ -570,7 +570,9 @@ input.telefono::-webkit-outer-spin-button {
     #cart-toggle-hambur{
         display: none;
     }
-
+    #Register-hambur img{
+        filter: brightness(0)  grayscale(1);
+    }
 }
 
 
@@ -586,6 +588,9 @@ input.telefono::-webkit-outer-spin-button {
     .navoptions-hambur {
         display: none;
     }
+    #Register-hambur img{
+        filter: brightness(0)  grayscale(1);
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -595,6 +600,9 @@ input.telefono::-webkit-outer-spin-button {
     .propaganda{
         /* Ajusta el ancho del formulario según sea necesario */
         max-width: 100%;
+    }
+    #Register-hambur img{
+        filter: brightness(0)  grayscale(1);
     }
 }
 
@@ -606,6 +614,8 @@ input.telefono::-webkit-outer-spin-button {
         /* Por ejemplo, puedes establecer 'flex-direction: column;' para ponerlos en vertical */
         display: flex;
         flex-direction: column;
-        
+    }
+    #Register-hambur img{
+        filter: brightness(0)  grayscale(1);
     }
 }

@@ -234,26 +234,26 @@
     let cantidadElemento = document.getElementById('item-quantity');
     let cantidad = 1; // Valor inicial
 
-    function incrementar() {
-        cantidad++;             //aumento la cantidad
+function incrementar() {
+    cantidad++;             //aumento la cantidad
+    actualizarCantidad();
+}
+
+function decrementar() {
+    if (cantidad > 1) {
+        cantidad--;         //disminuyo la cantidad
         actualizarCantidad();
     }
+}
 
-    function decrementar() {
-        if (cantidad > 1) {
-            cantidad--;         //disminuyo la cantidad
-            actualizarCantidad();
-        }
-    }
+function actualizarCantidad() {
+    cantidadElemento.textContent = cantidad; // cambiar la cantidad
+    
 
-    function actualizarCantidad() {
-        cantidadElemento.textContent = cantidad; // cambiar la cantidad
-        
-
-        const precioTotal = 10000; // se reemplaza esto con el precio real
-        const total = cantidad * precioTotal;
-        document.querySelector('.price').textContent = `$${total}`;
-    }
+    const precioTotal = 10000; // se reemplaza esto con el precio real
+    const total = cantidad * precioTotal;
+    document.querySelector('.price').textContent = `$${total}`;
+}
 
     document.querySelector('.up').addEventListener('click', incrementar);
     document.querySelector('.down').addEventListener('click', decrementar);
