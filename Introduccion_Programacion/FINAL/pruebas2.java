@@ -1,5 +1,6 @@
 package Introduccion_Programacion.FINAL;
 
+import javax.swing.*;
 public class pruebas2 {
     public static void main(String[] args){
         int deck [][] = new int [8][5];
@@ -62,7 +63,51 @@ public class pruebas2 {
         //         }
         //     }
         // }        
-        
+
+
+        String [][] deckImg = new String[8][5];
+
+        deckImg [0][0] = " /Cartas/esp1.png";   //ancho espada
+        deckImg [0][1] = "/Cartas/basto1.png";   //ancho basto
+        deckImg [0][2] = "/Cartas/esp7.png";   //7 espada
+        deckImg [0][3] = "/Cartas/oro7.png";   //7 oro
+        deckImg [0][4] = "/Cartas/esp3.png";    //los 3 de los 4 palos
+        deckImg [1][0] = "/Cartas/oro3.png";
+        deckImg [1][1] = "/Cartas/basto3.png";
+        deckImg [1][2] = "/Cartas/copa3.png";
+        deckImg [1][3] = "/Cartas/esp2.png";    //los 2 de los 4 palos
+        deckImg [1][4] = "/Cartas/oro2.png";
+        deckImg [2][0] = "/Cartas/basto2.png";
+        deckImg [2][1] = "/Cartas/copa2.png";
+        deckImg [2][2] = "/Cartas/oro1.png";    //los ancho falso
+        deckImg [2][3] = "/Cartas/copa1.png";
+        deckImg [2][4] = "/Cartas/esp12.png";    //los 12
+        deckImg [3][0] = "/Cartas/oro12.png";
+        deckImg [3][1] = "/Cartas/basto12.png";
+        deckImg [3][2] = "/Cartas/copa12.png";
+        deckImg [3][3] = "/Cartas/esp11.png";    //los 11
+        deckImg [3][4] = "/Cartas/oro11.png";
+        deckImg [4][0] = "/Cartas/basto11.png";
+        deckImg [4][1] = "/Cartas/copa11.png";
+        deckImg [4][2] = "/Cartas/esp10.png";    //los 10
+        deckImg [4][3] = "/Cartas/oro10.png";
+        deckImg [4][4] = "/Cartas/basto10.png";
+        deckImg [5][0] = "/Cartas/copa10.png";
+        deckImg [5][1] = "/Cartas/basto7.png";    //7 de basto y copa
+        deckImg [5][2] = "/Cartas/copa7.png";
+        deckImg [5][3] = "/Cartas/esp6.png";    //los 6
+        deckImg [5][4] = "/Cartas/oro6.png";
+        deckImg [6][0] = "/Cartas/basto6.png";
+        deckImg [6][1] = "/Cartas/copa6.png";
+        deckImg [6][2] = "/Cartas/esp5.png";    //los 5
+        deckImg [6][3] = "/Cartas/oro5.png";
+        deckImg [6][4] = "/Cartas/basto5.png";
+        deckImg [7][0] = "/Cartas/copa5.png";
+        deckImg [7][1] = "/Cartas/esp4.png";    //los 4
+        deckImg [7][2] = "/Cartas/oro4.png";
+        deckImg [7][3] = "/Cartas/basto4.png";
+        deckImg [7][4] = "/Cartas/copa4.png";
+    
         
  
          // Imprimir la matriz con los valores asignados
