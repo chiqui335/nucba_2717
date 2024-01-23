@@ -3,6 +3,8 @@ package Introduccion_Programacion.FINAL;
 import javax.swing.*;
 public class pruebas2 {
     public static void main(String[] args){
+
+        //ARMO EL MAZO
         int deck [][] = new int [8][5];
 
          // Asignar valores a cada elemento de la matriz
@@ -117,5 +119,22 @@ public class pruebas2 {
              }
              System.out.println();
          }
+
+         //----------------------------------------------------------------
+
+        //Seccion para repartir las cartas
+
+        //reparto 3 cartas al usuario
+
+        int [][] cartasUser = repartirRand(deck, deckImg, 3);
+
+        mostrarCartas(cartasUser, deckImg, "Cartas del usuario");
+
+        //reparto 3 cartas a la CPU
+
+        int [][] cartasCPU = repartirRand(deck, deckImg, 3);
+
+        mostrarCartas(cartasUser, deckImg, "Cartas de la CPU");
+         
     }
 }
