@@ -123,18 +123,58 @@ public class pruebas2 {
          //----------------------------------------------------------------
 
         //Seccion para repartir las cartas
-
         //reparto 3 cartas al usuario
 
-        int [][] cartasUser = repartirRand(deck, deckImg, 3);
+        // int [][] cartasUser = repartirRand(deck, deckImg, 3);
 
-        mostrarCartas(cartasUser, deckImg, "Cartas del usuario");
+        // mostrarCartas(cartasUser, deckImg, "Cartas del usuario");
 
-        //reparto 3 cartas a la CPU
+        // //reparto 3 cartas a la CPU
 
-        int [][] cartasCPU = repartirRand(deck, deckImg, 3);
+        // int [][] cartasCPU = repartirRand(deck, deckImg, 3);
 
-        mostrarCartas(cartasUser, deckImg, "Cartas de la CPU");
-         
+        // mostrarCartas(cartasUser, deckImg, "Cartas de la CPU");
+
+
+        int filaDeck = deck.length;
+        int colDeck = deck[0].length;
+
+        //genero un random para la carta 1:
+
+        int filaDeckRand1 =  (int) (Math.random() * filaDeck);
+        int colDeckRand1 =   (int) (Math.random() * colDeck);
+
+        //carta 2
+        int filaDeckRand2 =  (int) (Math.random() * filaDeck);
+        int colDeckRand2 =   (int) (Math.random() * colDeck);
+
+        //carta 3
+        int filaDeckRand3 =  (int) (Math.random() * filaDeck);
+        int colDeckRand3 =   (int) (Math.random() * colDeck);
+
+        int carta_1 = deck[filaDeckRand1][colDeckRand1];
+        int carta_2 = deck[filaDeckRand2][colDeckRand2];
+        int carta_3 = deck[filaDeckRand3][colDeckRand3];
+
+
+        System.out.println("Elemento seleccionado: " + carta_1);
+        System.out.println("Elemento seleccionado: " + carta_2);
+        System.out.println("Elemento seleccionado: " + carta_3);
+
+
+        int filas = deck.length;
+        int columnas = deck[0].length;
+
+        // Genera índices aleatorios
+        int filaAleatoria = (int) (Math.random() * filas);
+        int columnaAleatoria = (int) (Math.random() * columnas);
+
+        // Accede al elemento del array utilizando los índices aleatorios
+        int elementoSeleccionado = deck[filaAleatoria][columnaAleatoria];
+
+        // Imprime el elemento seleccionado
+        System.out.println("Elemento: " + elementoSeleccionado);
+
+
     }
 }
