@@ -69,7 +69,7 @@ public class pruebas2 {
 
         String [][] deckImg = new String[8][5];
 
-        deckImg [0][0] = " /Cartas/esp1.png";   //ancho espada
+        deckImg [0][0] = "/Cartas/esp1.png";   //ancho espada
         deckImg [0][1] = "/Cartas/basto1.png";   //ancho basto
         deckImg [0][2] = "/Cartas/esp7.png";   //7 espada
         deckImg [0][3] = "/Cartas/oro7.png";   //7 oro
@@ -157,24 +157,12 @@ public class pruebas2 {
         int carta_3 = deck[filaDeckRand3][colDeckRand3];
 
 
-        System.out.println("Elemento seleccionado: " + carta_1);
-        System.out.println("Elemento seleccionado: " + carta_2);
-        System.out.println("Elemento seleccionado: " + carta_3);
+        System.out.println("carta 1: " + carta_1);
+        System.out.println("carta 2: " + carta_2);
+        System.out.println("carta 3: " + carta_3);
 
-
-        int filas = deck.length;
-        int columnas = deck[0].length;
-
-        // Genera índices aleatorios
-        int filaAleatoria = (int) (Math.random() * filas);
-        int columnaAleatoria = (int) (Math.random() * columnas);
-
-        // Accede al elemento del array utilizando los índices aleatorios
-        int elementoSeleccionado = deck[filaAleatoria][columnaAleatoria];
-
-        // Imprime el elemento seleccionado
-        System.out.println("Elemento: " + elementoSeleccionado);
-
+        
+        
 
     }
 }
