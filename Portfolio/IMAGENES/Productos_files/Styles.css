@@ -1,0 +1,333 @@
+*{
+    font-family: 'Audiowide', sans-serif;
+    color: beige;
+}
+
+
+body {
+    background-image: url('../IMAGENES/fondo\ pagina.jpg');
+    background-size: 120%; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* navbarstyles */
+.logonav{
+    height: 100px;
+}
+
+.header{
+    display: flex;
+    background: linear-gradient(to bottom, rgb(11, 18, 110), transparent);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#log_in img, #Register img, #Cart img, .LOGO img{
+    height: 40px;
+}
+
+#log_in{
+    padding: 30px;
+    filter: invert(1);
+}
+
+#Register{
+    padding: 30px;
+    filter: invert(1);
+}
+
+#Cart{
+    padding: 30px;
+    filter: invert(1);
+}
+
+#IconoSearch{
+    height: 20px;
+    filter: invert(1);
+}
+
+
+.navoptions{
+    color: rgb(212, 212, 90);
+}
+
+/* ----------------- */
+
+/* Footer */
+
+footer a {
+    margin-right: 10px; 
+}
+
+/* ------------------ */
+
+/* Index */
+
+.Examples img{
+    height: 350px;
+}
+
+#carouselExampleControls {
+    width: 50%; /* Define el ancho del carousel */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item img {
+    max-height: 300px; /* Tamaño máximo ajustable */
+    
+}
+
+strong {
+    color: red;
+}
+
+.envios{
+    font-size: 30px;
+    color: rgb(214, 67, 67)
+}
+
+
+
+
+.Destacados p {
+    text-align: center;
+}
+
+.Destacados img {
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), white); /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Agrega relleno para espaciar la imagen del borde */
+}
+
+.Destacados:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);             
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.Destacados:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+
+ 
+.Promosbtn,
+.Registerbtn,
+.addToCartbtn{
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); /* Fondo gris claro */
+    color: beige;
+    border: none;
+}
+/* Effectos de botones hover */
+
+.Promosbtn:hover, 
+.beneficios:hover, 
+.sucursales:hover,
+.masprod:hover,
+.Registerbtn:hover,
+.btnEnviar:hover,
+.contactbtn:hover,
+.addToCartbtn:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);             /* agrando el boton y */
+    transition: transform 0.3s ease;   /* hago que la transicion sea mas suave  */
+    color: lightseagreen;
+    border: none;
+}
+
+.Promosbtn:not(:hover),
+.beneficios:not(:hover),
+.sucursales:not(:hover), 
+.masprod:not(:hover),
+.Registerbtn:not(:hover),
+.btnEnviar:not(:hover),
+.contactbtn:not(:hover),
+.addToCartbtn:not(:hover) {
+    transform: scale(1);                /* achico el boton */
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+
+.btn-custom-blue,
+.btnEnviar,
+.Registerbtn,
+.contactbtn
+{
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238)); /* Fondo gris claro */
+    color: beige;
+    border: none;
+}
+
+.btn-custom-blue:hover{
+    color: lightseagreen;
+}
+/* ----------------- */
+/* ----------------- */
+
+/* Login, register, contact */
+.h1login,
+.h1register,
+.h1contact {
+    color: beige;
+    text-align: center;
+    font-family: 'Audiowide', sans-serif;
+
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+
+.login, 
+.register, 
+.contact {
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), rgb(96, 129, 238));
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+  
+.login input {
+    margin-bottom: 15px;
+}
+
+.linkredes {
+    height: 60px;   /*  tamaño imagenes redes en contacto */
+}
+
+/* ----------- */
+
+/* productos */
+
+.prodnatacion img,
+.prodbasquet img,
+.prodrugby img{ 
+    height: 300px;
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), white); /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Agrega relleno para espaciar la imagen del borde */
+}
+
+.prodnatacion:hover,
+.prodbasquet:hover,
+.prodrugby:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);             
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+
+
+/* ---------------- */
+
+
+
+/* promos/beneficios */
+.promo1 img,
+.promo2 img {
+    height: 400px;
+    background: linear-gradient(to bottom right, rgb(11, 18, 110), white); /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Agrega relleno para espaciar la imagen del borde */
+
+}
+
+.promo1:hover,
+.promo2:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);                /* achico el boton */
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+
+}
+
+.promo1:not(:hover),
+.promo2:not(:hover) {
+    transform: scale(1);                /* achico el boton */
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.beneficio1 img,
+.beneficio2 img,
+.beneficio3 img {
+    height: 100px;
+}
+
+/* ------------------------ */
+
+/* Sucursales */
+
+
+.Sucursal-1 img, 
+.Sucursal-2 img, 
+.Sucursal-3 img {
+    height: 50px;
+    filter: invert(1);
+}
+
+/* ------------------ */
+
+/* Quitar las flechas del input de tipo número con clase "telefono" */
+input.telefono::-webkit-inner-spin-button,
+input.telefono::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* cart
+.cart-deploy {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+} */
+
+
+/* mostrar o no el div cart-deploy */
+ /* #cart-toggle{
+    display: none;
+}
+
+#cart-toggle:checked ~ .cart-deploy {
+    display: block;
+}  */
+
+/* Estilo inicial para ocultar el carrito */
+/* .cart-deploy {
+    display: none;
+}
+
+/* Mostrar el carrito cuando el enlace es el destino (:target) */
+/* #Cart:target ~ .cart-deploy {
+    display: block;
+} */
