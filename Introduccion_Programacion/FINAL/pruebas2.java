@@ -6,9 +6,10 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import javax.swing.*; 
 import java.io.File;
+import java.util.Scanner;
 public class pruebas2 {
     public static void main(String[] args){
-
+        Scanner sc = new Scanner(System.in);
         //ARMO EL MAZO
         int deck[][] = new int[4][10];
 
@@ -147,55 +148,47 @@ public class pruebas2 {
         deckImg[3][9] = new ImageIcon ("/Cartas/copa12.png");
 
          // Imprimir la matriz con los valores asignados (test)
-         for (int i = 0; i < deck.length; i++) {
-             for (int j = 0; j < deck[i].length; j++) {
-                 System.out.print(deck[i][j] + " ");
-             }
-             System.out.println();
-         }
+        //  for (int i = 0; i < deck.length; i++) {
+        //      for (int j = 0; j < deck[i].length; j++) {
+        //          System.out.print(deck[i][j] + " ");
+        //      }
+        //      System.out.println();
+        //  }
 
          //----------------------------------------------------------------
-
-        //Seccion para repartir las cartas
-        //reparto 3 cartas al usuario
-
-        // int [][] cartasUser = repartirRand(deck, deckImg, 3);
-
-        // mostrarCartas(cartasUser, deckImg, "Cartas del usuario");
-
-        // //reparto 3 cartas a la CPU
-
-        // int [][] cartasCPU = repartirRand(deck, deckImg, 3);
-
-        // mostrarCartas(cartasUser, deckImg, "Cartas de la CPU");
-
 
         int filaDeck = deck.length;
         int colDeck = deck[0].length;
 
-        //genero un random para la carta 1:
 
+        //seccion cartas del usuario
+        //genero un random para las cartas del usuario:
         int filaDeckRand1 =  (int) (Math.random() * filaDeck);
         int colDeckRand1 =   (int) (Math.random() * colDeck);
 
-        //carta 2
         int filaDeckRand2 =  (int) (Math.random() * filaDeck);
         int colDeckRand2 =   (int) (Math.random() * colDeck);
 
-        //carta 3
         int filaDeckRand3 =  (int) (Math.random() * filaDeck);
         int colDeckRand3 =   (int) (Math.random() * colDeck);
 
-        //imagenes para las cartas
-        //carta 1
+        //hago coincidir deck con deckEnvido
+        int filaDeckEnv1 = filaDeckRand1;
+        int colDeckEnv1 = colDeckRand1;
+
+        int filaDeckEnv2 = filaDeckRand2;
+        int colDeckEnv2 = colDeckRand2;
+
+        int filaDeckEnv3 = filaDeckRand3;
+        int colDeckEnv3 = colDeckRand3;
+
+        //hago coincidir deck con deckImg
         int filaDeckImgRand1 = filaDeckRand1;
         int colDeckImgRand1 = colDeckRand1;
 
-        //carta 2
         int filaDeckImgRand2 = filaDeckRand2;
         int colDeckImgRand2 = colDeckRand2;
 
-        //carta 3
         int filaDeckImgRand3 = filaDeckRand3;
         int colDeckImgRand3 = colDeckRand3;
 
@@ -203,43 +196,403 @@ public class pruebas2 {
         int carta_1 = deck[filaDeckRand1][colDeckRand1];
         int carta_2 = deck[filaDeckRand2][colDeckRand2];
         int carta_3 = deck[filaDeckRand3][colDeckRand3];
-        
+
+        //Valor de las cartas para envido
+        int cartaEnv_1 = deckEnvido[filaDeckEnv1][colDeckEnv1];
+        int cartaEnv_2 = deckEnvido[filaDeckEnv2][colDeckEnv2];
+        int cartaEnv_3 = deckEnvido[filaDeckEnv3][colDeckEnv3];
+
         //imgs de las cartas usuario
         ImageIcon carta_1_img = deckImg[filaDeckImgRand1][colDeckImgRand1];
         ImageIcon carta_2_img = deckImg[filaDeckImgRand2][colDeckImgRand2];
         ImageIcon carta_3_img = deckImg[filaDeckImgRand3][colDeckImgRand3];
 
-        //test2
+        //seccion cartas del PC
+        //genero un random para las cartas del usuario:
+        int filaDeckRandPC1 =  (int) (Math.random() * filaDeck);
+        int colDeckRandPC1 =   (int) (Math.random() * colDeck);
+
+        int filaDeckRandPC2 =  (int) (Math.random() * filaDeck);
+        int colDeckRandPC2 =   (int) (Math.random() * colDeck);
+
+        int filaDeckRandPC3 =  (int) (Math.random() * filaDeck);
+        int colDeckRandPC3 =   (int) (Math.random() * colDeck);
+
+        //hago coincidir deck con deckEnvido
+        int filaDeckEnvPC1 = filaDeckRandPC1;
+        int colDeckEnvPC1 = colDeckRandPC1;
+
+        int filaDeckEnvPC2 = filaDeckRandPC2;
+        int colDeckEnvPC2 = colDeckRandPC2;
+
+        int filaDeckEnvPC3 = filaDeckRandPC3;
+        int colDeckEnvPC3 = colDeckRandPC3;
+
+        //cartas que tocan a la PC
+        int carta_1_PC = deck[filaDeckRandPC1][colDeckRandPC1];
+        int carta_2_PC = deck[filaDeckRandPC2][colDeckRandPC2];
+        int carta_3_PC = deck[filaDeckRandPC3][colDeckRandPC3];
+
+        //Valor de las cartas para envido PC
+        int cartaEnv_1_PC = deckEnvido[filaDeckEnvPC1][colDeckEnvPC1];
+        int cartaEnv_2_PC = deckEnvido[filaDeckEnvPC2][colDeckEnvPC2];
+        int cartaEnv_3_PC = deckEnvido[filaDeckEnvPC3][colDeckEnvPC3];
+
+
+        // //////////////////////////////////////////////////////////////
+        // //test2 para ver si todo coincide
+        // System.out.println("carta 1: " + carta_1 + " Palo: " + filaDeckRand1);
+        // System.out.println("carta 2: " + carta_2 + " Palo: " + filaDeckRand2);
+        // System.out.println("carta 3: " + carta_3 + " Palo: " + filaDeckRand3);
+
+        // //test para saber si coinciden los array
+        // System.out.println("deck fila: " + filaDeckRand1 + " col fila: " + colDeckRand1 + " " + carta_1);
+        // System.out.println("img fila: " + filaDeckImgRand1 + " img col: " + colDeckImgRand1 + " " + carta_1_img);
+        // System.out.println("deck envido: " + filaDeckEnv1 + " col envido: " + colDeckEnv1 + " " + cartaEnv_1);
+        // /////////////////////////////////////////////////////////////
+       
+
+        
+        int[] cartasSeleccionadasUser = {carta_1, carta_2, carta_3};
+        ImageIcon[] cartasImgSeleccionadasUser = {carta_1_img, carta_2_img, carta_3_img};
+
+        int[] cartasSeleccionadasPC = {carta_1_PC, carta_2_PC, carta_3_PC};
+
         System.out.println("carta 1: " + carta_1 + " Palo: " + filaDeckRand1);
         System.out.println("carta 2: " + carta_2 + " Palo: " + filaDeckRand2);
         System.out.println("carta 3: " + carta_3 + " Palo: " + filaDeckRand3);
 
-        //test para saber si coinciden ambos array
-        System.out.println("deck fila: " + filaDeckRand1 + " col fila: " + colDeckRand1);
-        System.out.println("img fila: " + filaDeckImgRand1 + " col fila: " + colDeckImgRand1);
+        System.out.println("carta 1 PC: " + carta_1_PC + " Palo: " + filaDeckRandPC1);
+        System.out.println("carta 2 PC: " + carta_2_PC + " Palo: " + filaDeckRandPC2);
+        System.out.println("carta 3 PC: " + carta_3_PC + " Palo: " + filaDeckRandPC3);
         
-        int[] cartasSeleccionadas = {carta_1, carta_2, carta_3};
-        ImageIcon[] cartasImgSeleccionadas = {carta_1_img, carta_2_img, carta_3_img};
+            ////////////////////////////////////////////////////////////////////
+            //JUGADAS
 
-        //IMG DE CARTAS
-        // JFrame frame = new JFrame("tus cartas");
-        // frame.setSize(500, 200);
-        // frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        boolean carta1Seleccionada = false;
+        boolean carta2Seleccionada = false;
+        boolean carta3Seleccionada = false;
 
-        // JPanel panel = new JPanel(new GridLayout(1, 3));
+        boolean carta1SeleccionadaPC = false;
+        boolean carta2SeleccionadaPC = false;
+        boolean carta3SeleccionadaPC = false;
 
-        // for (int i = 0; i < cartasSeleccionadas.length; i++){
-        //     try {
-        //         BufferedImage image = ImageIO.read(pruebas2.class.getResource(cartasImgSeleccionadas[i]));
-        //         JLabel label = new JLabel(new ImageIcon(image));
-        //         panel.add(label);
-        //     } catch(IOException e){
-        //         e.printStackTrace();
-        //     }
-        // }
-        // frame.getContentPane().add(panel);
+        boolean EnvidoCantado = false;
+        
+        int Mano1;
 
-        // frame.setVisible(true);
-        JOptionPane.showMessageDialog(null, carta_3_img, "display Image", JOptionPane.INFORMATION_MESSAGE);
+        do {
+            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            Mano1 = sc.nextInt();
+
+            switch (Mano1) {
+                case 1:
+                    if (!carta1Seleccionada) {
+                        System.out.println("elegiste carta 1");
+                        carta1Seleccionada = true;
+                        Mano1 = 0;  // Establecer Mano1 en un valor que no sea 1, 2 o 3 para salir del bucle
+
+                    } else {
+                        System.out.println("ya elegiste la carta 1");
+                    }
+                        break;
+
+                case 2:
+                    if (!carta2Seleccionada) {
+                        System.out.println("elegiste carta 2");
+                        carta2Seleccionada = true;
+                        Mano1 = 0;
+                    } else {
+                        System.out.println("ya elegiste la carta 2");
+                    }
+                        break;
+
+                case 3:
+                    if (!carta3Seleccionada) {
+                        System.out.println("elegiste carta 3");
+                        carta3Seleccionada = true;
+                        Mano1 = 0;  // Establecer Mano1 en un valor que no sea 1, 2 o 3 para salir del bucle
+                    } else {
+                        System.out.println("ya elegiste la carta 3");
+                    }
+                        break;
+
+                case 4:
+                    System.out.println("elegiste envido");
+                    EnvidoCantado = true;
+                    break;
+
+                case 5:
+                    System.out.println("elegiste truco");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida.");
+            }
+        } while (Mano1 >= 1 && Mano1 <= 3);
+        
+        
+
+        int Mano1PC;
+
+        do {
+            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            Mano1PC = (int) (Math.random()* 3) + 1;
+
+            switch (Mano1PC) {
+                case 1:
+                    if (!carta1SeleccionadaPC) {
+                        System.out.println("elegiste carta 1");
+                        carta1SeleccionadaPC = true;
+                        Mano1PC = 0;
+
+                    } else {
+                        System.out.println("ya elegiste la carta 1");
+                    }
+                        break;
+
+                case 2:
+                    if (!carta2SeleccionadaPC) {
+                        System.out.println("elegiste carta 2");
+                        carta2SeleccionadaPC = true;
+                        Mano1PC = 0;
+                    } else {
+                        System.out.println("ya elegiste la carta 2");
+                    }
+                        break;
+
+                case 3:
+                    if (!carta3SeleccionadaPC) {
+                        System.out.println("elegiste carta 3");
+                        carta3SeleccionadaPC = true;
+                        Mano1PC = 0;  // Establecer Mano1 en un valor que no sea 1, 2 o 3 para salir del bucle
+                    } else {
+                        System.out.println("ya elegiste la carta 3");
+                    }
+                        break;
+
+                case 4:
+                    System.out.println("elegiste envido");
+                    break;
+
+                case 5:
+                    System.out.println("elegiste truco");
+                    break;
+
+                default:
+                    break;
+            }
+        } while (Mano1PC >= 1 && Mano1PC <= 3);
+        
+
+        int Mano2;
+
+        do {
+            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            Mano2 = sc.nextInt();
+
+            switch (Mano2) {
+                case 1:
+                    if (!carta1Seleccionada) {
+                        System.out.println("elegiste carta 1");
+                        carta1Seleccionada = true;
+                        Mano2 = 0;  
+
+                    } else {
+                        System.out.println("ya elegiste la carta 1");
+                    }
+                        break;
+
+                case 2:
+                    if (!carta2Seleccionada) {
+                        System.out.println("elegiste carta 2");
+                        carta2Seleccionada = true;
+                        Mano2 = 0;
+                    } else {
+                        System.out.println("ya elegiste la carta 2");
+                    }
+                        break;
+
+                case 3:
+                    if (!carta3Seleccionada) {
+                        System.out.println("elegiste carta 3");
+                        carta3Seleccionada = true;
+                        Mano2 = 0;  
+                    } else {
+                        System.out.println("ya elegiste la carta 3");
+                    }
+                        break;
+
+                case 4:
+                    System.out.println("elegiste envido");
+                    EnvidoCantado = true;
+                    break;
+
+                case 5:
+                    System.out.println("elegiste truco");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida.");
+            }
+        } while (Mano2 >= 1 && Mano2 <= 3);
+
+
+        int Mano2PC;
+
+        do {
+            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            Mano2PC = (int) (Math.random()* 3) + 1;
+
+            switch (Mano2PC) {
+                case 1:
+                    if (!carta1SeleccionadaPC) {
+                        System.out.println("elegiste carta 1");
+                        carta1SeleccionadaPC = true;
+                        Mano2PC = 0;
+
+                    } else {
+                        System.out.println("ya elegiste la carta 1");
+                    }
+                        break;
+
+                case 2:
+                    if (!carta2SeleccionadaPC) {
+                        System.out.println("elegiste carta 2");
+                        carta2SeleccionadaPC = true;
+                        Mano2PC = 0;
+                    } else {
+                        System.out.println("ya elegiste la carta 2");
+                    }
+                        break;
+
+                case 3:
+                    if (!carta3SeleccionadaPC) {
+                        System.out.println("elegiste carta 3");
+                        carta3SeleccionadaPC = true;
+                        Mano2PC = 0;  
+                    } else {
+                        System.out.println("ya elegiste la carta 3");
+                    }
+                        break;
+
+                case 4:
+                    System.out.println("elegiste envido");
+                    break;
+
+                case 5:
+                    System.out.println("elegiste truco");
+                    break;
+
+                default:
+                    break;
+            }
+        } while (Mano2PC >= 1 && Mano2PC <= 3);
+
+
+        int Mano3;
+
+        do {
+            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            Mano3 = sc.nextInt();
+
+            switch (Mano3) {
+                case 1:
+                    if (!carta1Seleccionada) {
+                        System.out.println("elegiste carta 1");
+                        carta1Seleccionada = true;
+                        Mano3 = 0;  
+
+                    } else {
+                        System.out.println("ya elegiste la carta 1");
+                    }
+                        break;
+
+                case 2:
+                    if (!carta2Seleccionada) {
+                        System.out.println("elegiste carta 2");
+                        carta2Seleccionada = true;
+                        Mano3 = 0;
+                    } else {
+                        System.out.println("ya elegiste la carta 2");
+                    }
+                        break;
+
+                case 3:
+                    if (!carta3Seleccionada) {
+                        System.out.println("elegiste carta 3");
+                        carta3Seleccionada = true;
+                        Mano3 = 0;  
+                    } else {
+                        System.out.println("ya elegiste la carta 3");
+                    }
+                        break;
+
+                case 4:
+                    System.out.println("elegiste envido");
+                    EnvidoCantado = true;
+                    break;
+
+                case 5:
+                    System.out.println("elegiste truco");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida.");
+            }
+        } while (Mano3 >= 1 && Mano3 <= 3);
+
+        int Mano3PC;
+
+        do {
+            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            Mano3PC = (int) (Math.random()* 3) + 1;
+
+            switch (Mano3PC) {
+                case 1:
+                    if (!carta1SeleccionadaPC) {
+                        System.out.println("elegiste carta 1");
+                        carta1SeleccionadaPC = true;
+                        Mano3PC = 0;
+
+                    } else {
+                        System.out.println("ya elegiste la carta 1");
+                    }
+                        break;
+
+                case 2:
+                    if (!carta2SeleccionadaPC) {
+                        System.out.println("elegiste carta 2");
+                        carta2SeleccionadaPC = true;
+                        Mano3PC = 0;
+                    } else {
+                        System.out.println("ya elegiste la carta 2");
+                    }
+                        break;
+
+                case 3:
+                    if (!carta3SeleccionadaPC) {
+                        System.out.println("elegiste carta 3");
+                        carta3SeleccionadaPC = true;
+                        Mano3PC = 0;  
+                    } else {
+                        System.out.println("ya elegiste la carta 3");
+                    }
+                        break;
+
+                case 4:
+                    System.out.println("elegiste envido");
+                    break;
+
+                case 5:
+                    System.out.println("elegiste truco");
+                    break;
+
+                default:
+                    break;
+            }
+        } while (Mano3PC >= 1 && Mano3PC <= 3);
+
+        ////////////////////////////////////////////////////////////////////
     }
 }
