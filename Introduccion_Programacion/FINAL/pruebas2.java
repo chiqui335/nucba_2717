@@ -331,7 +331,38 @@ public class pruebas2 {
             }
         } while (Mano1 >= 1 && Mano1 <= 3);
         
-        
+        //ENVIDO
+        if (EnvidoCantado) {
+            int PuntajePC = 0;
+            int PuntajeUser= 0;
+
+            if (filaDeckEnv1 == filaDeckEnv2) {
+                PuntajeUser = cartaEnv_1 + cartaEnv_2 + 20;
+            }else if (filaDeckEnv2 == filaDeckEnv3){
+                PuntajeUser = cartaEnv_2 + cartaEnv_3 + 20;
+            }else{
+                PuntajeUser = cartaEnv_1 + cartaEnv_3 + 20;
+            }
+
+            if (filaDeckRandPC1 == filaDeckRandPC2) {
+                PuntajePC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
+            }else if (filaDeckRandPC2 == filaDeckRandPC3){
+                PuntajePC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
+            }else{ 
+                PuntajePC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+            }
+
+
+            if (PuntajeUser > PuntajePC){
+                System.out.println("El usuario gana el envido");
+                System.out.println("user: " + PuntajeUser + " " + "PC: " + PuntajePC);
+            }else{
+                System.out.println("La PC gana el envido");
+                System.out.println("user: " + PuntajeUser + " " + "PC: " + PuntajePC);
+            }
+        }
+
+        ////////////////////////////////
 
         int Mano1PC;
 
@@ -593,6 +624,6 @@ public class pruebas2 {
             }
         } while (Mano3PC >= 1 && Mano3PC <= 3);
 
-        ////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////  
     }
 }
