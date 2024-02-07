@@ -290,7 +290,7 @@ public class pruebas2 {
                     if (!carta1Seleccionada) {
                         System.out.println("elegiste carta 1");
                         carta1Seleccionada = true;
-                        Mano1 = 0;  // Establecer Mano1 en un valor que no sea 1, 2 o 3 para salir del bucle
+                        Mano1 = 0;  // Establecer Mano1 en un valor que no sea 1, 2, 3, 4 o 5 para salir del bucle
 
                     } else {
                         System.out.println("ya elegiste la carta 1");
@@ -311,25 +311,26 @@ public class pruebas2 {
                     if (!carta3Seleccionada) {
                         System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
-                        Mano1 = 0;  // Establecer Mano1 en un valor que no sea 1, 2 o 3 para salir del bucle
+                        Mano1 = 0;  
                     } else {
                         System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 4:
-                    System.out.println("elegiste envido");
-                    EnvidoCantado = true;
+                    System.out.println("elegiste truco");
+                    Mano1 = 0;
                     break;
 
                 case 5:
-                    System.out.println("elegiste truco");
+                    System.out.println("elegiste envido");
+                    EnvidoCantado = true;
                     break;
 
                 default:
                     System.out.println("Opción no válida.");
             }
-        } while (Mano1 >= 1 && Mano1 <= 3);
+        } while (Mano1 >= 1 && Mano1 <= 4);
         
         //ENVIDO
         if (EnvidoCantado) {
@@ -364,10 +365,59 @@ public class pruebas2 {
 
         ////////////////////////////////
 
+        if (EnvidoCantado) {
+            EnvidoCantado = false;
+            do {
+                System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+                Mano1 = sc.nextInt();
+    
+                switch (Mano1) {
+                    case 1:
+                        if (!carta1Seleccionada) {
+                            System.out.println("elegiste carta 1");
+                            carta1Seleccionada = true;
+                            Mano1 = 0;  
+    
+                        } else {
+                            System.out.println("ya elegiste la carta 1");
+                        }
+                            break;
+    
+                    case 2:
+                        if (!carta2Seleccionada) {
+                            System.out.println("elegiste carta 2");
+                            carta2Seleccionada = true;
+                            Mano1 = 0;
+                        } else {
+                            System.out.println("ya elegiste la carta 2");
+                        }
+                            break;
+    
+                    case 3:
+                        if (!carta3Seleccionada) {
+                            System.out.println("elegiste carta 3");
+                            carta3Seleccionada = true;
+                            Mano1 = 0;  
+                        } else {
+                            System.out.println("ya elegiste la carta 3");
+                        }
+                            break;
+        
+                    case 4:
+                        System.out.println("elegiste truco");
+                        Mano1 = 0;  
+                        break;
+    
+                    default:
+                        System.out.println("Opción no válida.");
+                }
+            } while (Mano1 >= 1 && Mano1 <= 3);
+        }
+
         int Mano1PC;
 
         do {
-            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
             Mano1PC = (int) (Math.random()* 3) + 1;
 
             switch (Mano1PC) {
@@ -396,25 +446,105 @@ public class pruebas2 {
                     if (!carta3SeleccionadaPC) {
                         System.out.println("elegiste carta 3");
                         carta3SeleccionadaPC = true;
-                        Mano1PC = 0;  // Establecer Mano1 en un valor que no sea 1, 2 o 3 para salir del bucle
+                        Mano1PC = 0;  // Establecer Mano1PC en un valor que no sea 1, 2 o 3 para salir del bucle
                     } else {
                         System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
-                case 4:
-                    System.out.println("elegiste envido");
-                    break;
+                // case 4:
+                //     System.out.println("elegiste truco");
+                //     break;
 
-                case 5:
-                    System.out.println("elegiste truco");
-                    break;
+                // case 5:
+                //     System.out.println("elegiste envido");
+                //     EnvidoCantado = true;
+                //     break;
 
                 default:
                     break;
             }
         } while (Mano1PC >= 1 && Mano1PC <= 3);
         
+        // //ENVIDO PC
+        // if (EnvidoCantado) {
+        //     int PuntajePC = 0;
+        //     int PuntajeUser= 0;
+
+        //     if (filaDeckEnv1 == filaDeckEnv2) {
+        //         PuntajeUser = cartaEnv_1 + cartaEnv_2 + 20;
+        //     }else if (filaDeckEnv2 == filaDeckEnv3){
+        //         PuntajeUser = cartaEnv_2 + cartaEnv_3 + 20;
+        //     }else{
+        //         PuntajeUser = cartaEnv_1 + cartaEnv_3 + 20;
+        //     }
+
+        //     if (filaDeckRandPC1 == filaDeckRandPC2) {
+        //         PuntajePC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
+        //     }else if (filaDeckRandPC2 == filaDeckRandPC3){
+        //         PuntajePC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
+        //     }else{ 
+        //         PuntajePC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+        //     }
+
+
+        //     if (PuntajeUser > PuntajePC){
+        //         System.out.println("El usuario gana el envido");
+        //         System.out.println("user: " + PuntajeUser + " " + "PC: " + PuntajePC);
+        //     }else{
+        //         System.out.println("La PC gana el envido");
+        //         System.out.println("user: " + PuntajeUser + " " + "PC: " + PuntajePC);
+        //     }
+        // }
+        // ////////////////////////////////
+
+        // if (EnvidoCantado) {
+        //     do {
+        //         System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
+        //         Mano1PC = (int) (Math.random()* 3) + 1;
+    
+        //         switch (Mano1PC) {
+        //             case 1:
+        //                 if (!carta1SeleccionadaPC) {
+        //                     System.out.println("elegiste carta 1");
+        //                     carta1SeleccionadaPC = true;
+        //                     Mano1PC = 0;
+    
+        //                 } else {
+        //                     System.out.println("ya elegiste la carta 1");
+        //                 }
+        //                     break;
+    
+        //             case 2:
+        //                 if (!carta2SeleccionadaPC) {
+        //                     System.out.println("elegiste carta 2");
+        //                     carta2SeleccionadaPC = true;
+        //                     Mano1PC = 0;
+        //                 } else {
+        //                     System.out.println("ya elegiste la carta 2");
+        //                 }
+        //                     break;
+    
+        //             case 3:
+        //                 if (!carta3SeleccionadaPC) {
+        //                     System.out.println("elegiste carta 3");
+        //                     carta3SeleccionadaPC = true;
+        //                     Mano1PC = 0;  // Establecer Mano1PC en un valor que no sea 1, 2 o 3 para salir del bucle
+        //                 } else {
+        //                     System.out.println("ya elegiste la carta 3");
+        //                 }
+        //                     break;
+    
+        //             case 4:
+        //                 System.out.println("elegiste truco");
+        //                 break;
+
+    
+        //             default:
+        //                 break;
+        //         }
+        //     } while (Mano1PC >= 1 && Mano1PC <= 3);
+        // }
 
         int Mano2;
 
@@ -455,12 +585,8 @@ public class pruebas2 {
                         break;
 
                 case 4:
-                    System.out.println("elegiste envido");
-                    EnvidoCantado = true;
-                    break;
-
-                case 5:
                     System.out.println("elegiste truco");
+                    Mano2 = 0;
                     break;
 
                 default:
@@ -472,7 +598,7 @@ public class pruebas2 {
         int Mano2PC;
 
         do {
-            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
             Mano2PC = (int) (Math.random()* 3) + 1;
 
             switch (Mano2PC) {
@@ -576,7 +702,7 @@ public class pruebas2 {
         int Mano3PC;
 
         do {
-            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
             Mano3PC = (int) (Math.random()* 3) + 1;
 
             switch (Mano3PC) {
