@@ -147,14 +147,6 @@ public class pruebas2 {
         deckImg[3][8] = new ImageIcon ("/Cartas/copa11.png");
         deckImg[3][9] = new ImageIcon ("/Cartas/copa12.png");
 
-         // Imprimir la matriz con los valores asignados (test)
-        //  for (int i = 0; i < deck.length; i++) {
-        //      for (int j = 0; j < deck[i].length; j++) {
-        //          System.out.print(deck[i][j] + " ");
-        //      }
-        //      System.out.println();
-        //  }
-
          //----------------------------------------------------------------
 
         int filaDeck = deck.length;
@@ -330,36 +322,36 @@ public class pruebas2 {
                 default:
                     System.out.println("Opción no válida.");
             }
-        } while (Mano1 >= 1 && Mano1 <= 4);
+        } while (Mano1 >= 1 && Mano1 <= 3);
         
         //ENVIDO
         if (EnvidoCantado) {
-            int PuntajePC = 0;
-            int PuntajeUser= 0;
+            int PuntajeEnvPC = 0;
+            int PuntajeEnvUser= 0;
 
             if (filaDeckEnv1 == filaDeckEnv2) {
-                PuntajeUser = cartaEnv_1 + cartaEnv_2 + 20;
+                PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
             }else if (filaDeckEnv2 == filaDeckEnv3){
-                PuntajeUser = cartaEnv_2 + cartaEnv_3 + 20;
+                PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
             }else{
-                PuntajeUser = cartaEnv_1 + cartaEnv_3 + 20;
+                PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
             }
 
             if (filaDeckRandPC1 == filaDeckRandPC2) {
-                PuntajePC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
+                PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
             }else if (filaDeckRandPC2 == filaDeckRandPC3){
-                PuntajePC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
+                PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
             }else{ 
-                PuntajePC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+                PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
             }
 
 
-            if (PuntajeUser > PuntajePC){
+            if (PuntajeEnvUser > PuntajeEnvPC){
                 System.out.println("El usuario gana el envido");
-                System.out.println("user: " + PuntajeUser + " " + "PC: " + PuntajePC);
+                System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
             }else{
                 System.out.println("La PC gana el envido");
-                System.out.println("user: " + PuntajeUser + " " + "PC: " + PuntajePC);
+                System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
             }
         }
 
@@ -468,32 +460,32 @@ public class pruebas2 {
         
         // //ENVIDO PC
         // if (EnvidoCantado) {
-        //     int PuntajePC = 0;
-        //     int PuntajeUser= 0;
+        //     int PuntajeEnvPC = 0;
+        //     int PuntajeEnvUser= 0;
 
         //     if (filaDeckEnv1 == filaDeckEnv2) {
-        //         PuntajeUser = cartaEnv_1 + cartaEnv_2 + 20;
+        //         PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
         //     }else if (filaDeckEnv2 == filaDeckEnv3){
-        //         PuntajeUser = cartaEnv_2 + cartaEnv_3 + 20;
+        //         PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
         //     }else{
-        //         PuntajeUser = cartaEnv_1 + cartaEnv_3 + 20;
+        //         PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
         //     }
 
         //     if (filaDeckRandPC1 == filaDeckRandPC2) {
-        //         PuntajePC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
+        //         PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
         //     }else if (filaDeckRandPC2 == filaDeckRandPC3){
-        //         PuntajePC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
+        //         PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
         //     }else{ 
-        //         PuntajePC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+        //         PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
         //     }
 
 
-        //     if (PuntajeUser > PuntajePC){
+        //     if (PuntajeEnvUser > PuntajeEnvPC){
         //         System.out.println("El usuario gana el envido");
-        //         System.out.println("user: " + PuntajeUser + " " + "PC: " + PuntajePC);
+        //         System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
         //     }else{
         //         System.out.println("La PC gana el envido");
-        //         System.out.println("user: " + PuntajeUser + " " + "PC: " + PuntajePC);
+        //         System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
         //     }
         // }
         // ////////////////////////////////
@@ -752,4 +744,5 @@ public class pruebas2 {
 
         ////////////////////////////////////////////////////////////////////  
     }
+    
 }

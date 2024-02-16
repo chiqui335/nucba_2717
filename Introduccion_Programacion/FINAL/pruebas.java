@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class pruebas {
+
+    
     public static void main(String[] args) { 
         String deck [][] = {{"ancho de espada"},
                             {"ancho de basto"},         //matriz con el mazo
