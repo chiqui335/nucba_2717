@@ -274,6 +274,9 @@ public class pruebas2 {
         int cartaJugadaUser = 0;
         int cartaJugadaPC = 0;
 
+        int manosGanadasUser = 0;
+        int manosGanadasPC = 0;
+
         int Mano1;
 
         do {
@@ -553,7 +556,13 @@ public class pruebas2 {
         //     } while (Mano1PC >= 1 && Mano1PC <= 3);
         // }
 
-        
+        if (cartaJugadaUser >= cartaJugadaPC) {
+            manosGanadasUser = manosGanadasUser + 1;
+            System.out.println("El usuario gana la primer mano");
+        } else {                                      //aca se checkea cual carta jugada entre user y pc gana la mano, y se suma al contador manosganadas
+            manosGanadasPC = manosGanadasPC + 1;
+            System.out.println("La PC gana la primer mano");
+        }
 
         int Mano2;
 
