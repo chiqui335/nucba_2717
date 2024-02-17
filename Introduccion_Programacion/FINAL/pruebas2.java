@@ -271,6 +271,9 @@ public class pruebas2 {
 
         boolean EnvidoCantado = false;
         
+        int cartaJugadaUser = 0;
+        int cartaJugadaPC = 0;
+
         int Mano1;
 
         do {
@@ -284,6 +287,9 @@ public class pruebas2 {
                         carta1Seleccionada = true;
                         Mano1 = 0;  // Establecer Mano1 en un valor que no sea 1, 2, 3, 4 o 5 para salir del bucle
 
+                        cartaJugadaUser = carta_1;
+
+                        System.out.println("la carta jugada es: " + cartaJugadaUser);
                     } else {
                         System.out.println("ya elegiste la carta 1");
                     }
@@ -294,6 +300,8 @@ public class pruebas2 {
                         System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
                         Mano1 = 0;
+
+                        cartaJugadaUser = carta_2;
                     } else {
                         System.out.println("ya elegiste la carta 2");
                     }
@@ -304,6 +312,8 @@ public class pruebas2 {
                         System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
                         Mano1 = 0;  
+                    
+                        cartaJugadaUser = carta_3;
                     } else {
                         System.out.println("ya elegiste la carta 3");
                     }
@@ -419,6 +429,7 @@ public class pruebas2 {
                         carta1SeleccionadaPC = true;
                         Mano1PC = 0;
 
+                        cartaJugadaPC = carta_1_PC;
                     } else {
                         System.out.println("ya elegiste la carta 1");
                     }
@@ -429,6 +440,8 @@ public class pruebas2 {
                         System.out.println("elegiste carta 2");
                         carta2SeleccionadaPC = true;
                         Mano1PC = 0;
+
+                        cartaJugadaPC = carta_2_PC;
                     } else {
                         System.out.println("ya elegiste la carta 2");
                     }
@@ -439,6 +452,8 @@ public class pruebas2 {
                         System.out.println("elegiste carta 3");
                         carta3SeleccionadaPC = true;
                         Mano1PC = 0;  // Establecer Mano1PC en un valor que no sea 1, 2 o 3 para salir del bucle
+
+                        cartaJugadaPC = carta_3_PC;
                     } else {
                         System.out.println("ya elegiste la carta 3");
                     }
@@ -537,6 +552,8 @@ public class pruebas2 {
         //         }
         //     } while (Mano1PC >= 1 && Mano1PC <= 3);
         // }
+
+        
 
         int Mano2;
 

@@ -177,3 +177,32 @@ int deck[][] = new int[4][10];
         int carta_1 = deck[filaDeckRand1][colDeckRand1];
         int carta_2 = deck[filaDeckRand2][colDeckRand2];
         int carta_3 = deck[filaDeckRand3][colDeckRand3];
+
+
+        //////////////////////////////////77
+        int PuntajePC = 0;
+        int PuntajeUser = 0;
+
+        do {
+            
+            //codigo
+
+            //calculo puntaje
+            System.out.println("Puntaje pc: " + PuntajePC);
+            System.out.println("Puntaje user: " + PuntajeUser);
+        } while ((PuntajeUser <= 15) || (PuntajePC <= 15))
+
+
+        //Como calcular el puntaje
+        if (ManosGanadasUser >= ManosGanadasPC){
+            PuntajeUser = PuntajeUser + 1;
+            System.out.println("El usuario gana la ronda");
+        }else{
+            PuntajePC = PuntajePC + 1;
+            System.out.println("La Pc gana la ronda");
+        }
+
+        
+
+        
+
