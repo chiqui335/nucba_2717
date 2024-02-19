@@ -202,7 +202,11 @@ int deck[][] = new int[4][10];
             System.out.println("La Pc gana la ronda");
         }
 
-        
+        if (cartaJugadaUser >= cartaJugadaPC){
+            ManosGanadasUser = ManosGanadasUser + 1;
+        } else {
+            ManosGanadasPC = ManosGanadasPC + 1;
+        }
 
         
 

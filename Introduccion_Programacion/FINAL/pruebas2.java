@@ -270,6 +270,8 @@ public class pruebas2 {
         boolean carta3SeleccionadaPC = false;
 
         boolean EnvidoCantado = false;
+
+        boolean TrucoCantado = false;
         
         int cartaJugadaUser = 0;
         int cartaJugadaPC = 0;
@@ -382,6 +384,8 @@ public class pruebas2 {
                             System.out.println("elegiste carta 1");
                             carta1Seleccionada = true;
                             Mano1 = 0;  
+
+                            cartaJugadaUser = carta_1;
     
                         } else {
                             System.out.println("ya elegiste la carta 1");
@@ -393,6 +397,9 @@ public class pruebas2 {
                             System.out.println("elegiste carta 2");
                             carta2Seleccionada = true;
                             Mano1 = 0;
+
+                            cartaJugadaUser = carta_2;
+
                         } else {
                             System.out.println("ya elegiste la carta 2");
                         }
@@ -403,6 +410,9 @@ public class pruebas2 {
                             System.out.println("elegiste carta 3");
                             carta3Seleccionada = true;
                             Mano1 = 0;  
+
+                            cartaJugadaUser = carta_3;
+
                         } else {
                             System.out.println("ya elegiste la carta 3");
                         }
@@ -417,6 +427,10 @@ public class pruebas2 {
                         System.out.println("Opción no válida.");
                 }
             } while (Mano1 >= 1 && Mano1 <= 3);
+        }
+
+        if(TrucoCantado){
+            //truco
         }
 
         int Mano1PC;
@@ -555,7 +569,7 @@ public class pruebas2 {
         //         }
         //     } while (Mano1PC >= 1 && Mano1PC <= 3);
         // }
-
+ 
         if (cartaJugadaUser >= cartaJugadaPC) {
             manosGanadasUser = manosGanadasUser + 1;
             System.out.println("El usuario gana la primer mano");
@@ -577,6 +591,8 @@ public class pruebas2 {
                         carta1Seleccionada = true;
                         Mano2 = 0;  
 
+                        cartaJugadaUser = carta_1;
+
                     } else {
                         System.out.println("ya elegiste la carta 1");
                     }
@@ -587,6 +603,9 @@ public class pruebas2 {
                         System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
                         Mano2 = 0;
+
+                        cartaJugadaUser = carta_2;
+
                     } else {
                         System.out.println("ya elegiste la carta 2");
                     }
@@ -597,6 +616,8 @@ public class pruebas2 {
                         System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
                         Mano2 = 0;  
+
+                        cartaJugadaUser = carta_3;
                     } else {
                         System.out.println("ya elegiste la carta 3");
                     }
@@ -612,6 +633,9 @@ public class pruebas2 {
             }
         } while (Mano2 >= 1 && Mano2 <= 3);
 
+        if(TrucoCantado){
+            //truco
+        }
 
         int Mano2PC;
 
@@ -626,6 +650,8 @@ public class pruebas2 {
                         carta1SeleccionadaPC = true;
                         Mano2PC = 0;
 
+                        cartaJugadaPC = carta_1_PC;
+
                     } else {
                         System.out.println("ya elegiste la carta 1");
                     }
@@ -636,6 +662,9 @@ public class pruebas2 {
                         System.out.println("elegiste carta 2");
                         carta2SeleccionadaPC = true;
                         Mano2PC = 0;
+
+                        cartaJugadaPC = carta_1_PC;
+
                     } else {
                         System.out.println("ya elegiste la carta 2");
                     }
@@ -646,16 +675,15 @@ public class pruebas2 {
                         System.out.println("elegiste carta 3");
                         carta3SeleccionadaPC = true;
                         Mano2PC = 0;  
+
+                        cartaJugadaPC = carta_3_PC;
+
                     } else {
                         System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 4:
-                    System.out.println("elegiste envido");
-                    break;
-
-                case 5:
                     System.out.println("elegiste truco");
                     break;
 
@@ -678,6 +706,8 @@ public class pruebas2 {
                         carta1Seleccionada = true;
                         Mano3 = 0;  
 
+                        cartaJugadaUser = carta_1;
+
                     } else {
                         System.out.println("ya elegiste la carta 1");
                     }
@@ -688,6 +718,8 @@ public class pruebas2 {
                         System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
                         Mano3 = 0;
+
+                        cartaJugadaUser = carta_2;
                     } else {
                         System.out.println("ya elegiste la carta 2");
                     }
@@ -698,17 +730,14 @@ public class pruebas2 {
                         System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
                         Mano3 = 0;  
+
+                        cartaJugadaUser = carta_3;
                     } else {
                         System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 4:
-                    System.out.println("elegiste envido");
-                    EnvidoCantado = true;
-                    break;
-
-                case 5:
                     System.out.println("elegiste truco");
                     break;
 
@@ -716,6 +745,10 @@ public class pruebas2 {
                     System.out.println("Opción no válida.");
             }
         } while (Mano3 >= 1 && Mano3 <= 3);
+
+        if(TrucoCantado){
+            //truco
+        }
 
         int Mano3PC;
 
@@ -730,6 +763,8 @@ public class pruebas2 {
                         carta1SeleccionadaPC = true;
                         Mano3PC = 0;
 
+                        cartaJugadaPC = carta_1_PC;
+
                     } else {
                         System.out.println("ya elegiste la carta 1");
                     }
@@ -740,6 +775,9 @@ public class pruebas2 {
                         System.out.println("elegiste carta 2");
                         carta2SeleccionadaPC = true;
                         Mano3PC = 0;
+
+                        cartaJugadaPC = carta_2_PC;
+                        
                     } else {
                         System.out.println("ya elegiste la carta 2");
                     }
@@ -750,14 +788,13 @@ public class pruebas2 {
                         System.out.println("elegiste carta 3");
                         carta3SeleccionadaPC = true;
                         Mano3PC = 0;  
+
+                        cartaJugadaPC = carta_3_PC;
+
                     } else {
                         System.out.println("ya elegiste la carta 3");
                     }
                         break;
-
-                case 4:
-                    System.out.println("elegiste envido");
-                    break;
 
                 case 5:
                     System.out.println("elegiste truco");
@@ -767,8 +804,51 @@ public class pruebas2 {
                     break;
             }
         } while (Mano3PC >= 1 && Mano3PC <= 3);
-
+        
         ////////////////////////////////////////////////////////////////////  
     }
     
+    public static void Truco(int cartaJugadaUser, int cartaJugadaPC, int manosGanadasUser, int manosGanadasPC) {
+        if (cartaJugadaUser >= cartaJugadaPC) {
+            manosGanadasUser++;
+        } else {
+            manosGanadasPC++;
+        }
+    }
+
+    public static void Envido(
+        int filaDeckEnv1, int filaDeckEnv2, int filaDeckEnv3,
+        int filaDeckRandPC1, int filaDeckRandPC2, int filaDeckRandPC3,
+        int cartaEnv_1, int cartaEnv_2, int cartaEnv_3,
+        int cartaEnv_1_PC, int cartaEnv_2_PC, int cartaEnv_3_PC) {
+
+    
+        int PuntajeEnvPC = 0;
+        int PuntajeEnvUser = 0;
+
+        if (filaDeckEnv1 == filaDeckEnv2) {
+            PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
+        } else if (filaDeckEnv2 == filaDeckEnv3) {
+            PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
+        } else {
+            PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
+        }
+
+        if (filaDeckRandPC1 == filaDeckRandPC2) {
+            PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
+        } else if (filaDeckRandPC2 == filaDeckRandPC3) {
+            PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
+        } else {
+            PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+        }
+
+        if (PuntajeEnvUser > PuntajeEnvPC) {
+            System.out.println("El usuario gana el envido");
+            System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+        } else {
+            System.out.println("La PC gana el envido");
+            System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+        }
+    
+}
 }
