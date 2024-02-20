@@ -204,6 +204,13 @@ int deck[][] = new int[4][10];
             System.out.println("La Pc gana la ronda");
         }
 
+
+        //puntaje:
+
+        
+
+        //////////////////
+
         if (cartaJugadaUser >= cartaJugadaPC){
             ManosGanadasUser = ManosGanadasUser + 1;
         } else {
@@ -235,5 +242,51 @@ int deck[][] = new int[4][10];
                 break;
         }
     }
+
+    
         
 
+    if (PuntajeEnvUser > PuntajeEnvPC) {
+        System.out.println("El usuario gana el envido");
+        System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+    } else {
+        System.out.println("La PC gana el envido");
+        System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+    }
+
+
+    public static void Envido(
+        int filaDeckEnv1, int filaDeckEnv2, int filaDeckEnv3,
+        int filaDeckRandPC1, int filaDeckRandPC2, int filaDeckRandPC3,
+        int cartaEnv_1, int cartaEnv_2, int cartaEnv_3,
+        int cartaEnv_1_PC, int cartaEnv_2_PC, int cartaEnv_3_PC) {
+
+    
+        int PuntajeEnvPC = 0;
+        int PuntajeEnvUser = 0;
+
+        if (filaDeckEnv1 == filaDeckEnv2) {
+            PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
+        } else if (filaDeckEnv2 == filaDeckEnv3) {
+            PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
+        } else {
+            PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
+        }
+
+        if (filaDeckRandPC1 == filaDeckRandPC2) {
+            PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
+        } else if (filaDeckRandPC2 == filaDeckRandPC3) {
+            PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;  
+        } else {
+            PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+        }
+    }
+
+
+    public static void Truco(int cartaJugadaUser, int cartaJugadaPC, int manosGanadasUser, int manosGanadasPC) {
+        if (cartaJugadaUser >= cartaJugadaPC) {
+            manosGanadasUser++;
+        } else {
+            manosGanadasPC++;
+        }
+    }

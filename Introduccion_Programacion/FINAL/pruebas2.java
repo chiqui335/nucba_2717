@@ -152,8 +152,12 @@ public class pruebas2 {
         int filaDeck = deck.length;
         int colDeck = deck[0].length;
 
+        int puntajeUser = 0;
+        int puntajePC = 0;
 
-        //seccion cartas del usuario
+        do{
+
+            //seccion cartas del usuario
         //genero un random para las cartas del usuario:
         int filaDeckRand1 =  (int) (Math.random() * filaDeck);
         int colDeckRand1 =   (int) (Math.random() * colDeck);
@@ -701,8 +705,18 @@ public class pruebas2 {
             System.out.println("La PC gana la segunda mano");
         }
 
-        if(manosGanadasUser == 2 || manosGanadasPC == 2) {
-            continue; //COLOCAR TODO EL CODIGO DENTRO DE UN LOOP CON EL PUNTAJE
+        if(manosGanadasUser == 2) {
+            puntajeUser++;
+            System.out.println("El usuario gana la ronda");
+            System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+            continue;           //se saltea el resto del loop y comienza una nueva iteracion desde el principio
+        }else {
+            if (manosGanadasPC == 2){
+                puntajePC++;
+                System.out.println("La PC gana la ronda");
+                System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                continue;
+            }
         }
 
         int Mano3;
@@ -824,50 +838,29 @@ public class pruebas2 {
             manosGanadasPC++;
             System.out.println("La PC gana la tercer mano");
         }
+
+        if(manosGanadasUser == 2) {
+            puntajeUser++;
+            System.out.println("El usuario gana la ronda");
+            System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+            continue;           //se saltea el resto del loop y comienza una nueva iteracion desde el principio
+        }else {
+            if (manosGanadasPC == 2){
+                puntajePC++;
+                System.out.println("La PC gana la ronda");
+                System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                continue;
+            }
+        }
+
+        } while (puntajeUser <= 15 || puntajePC <= 15);
+
+        if (puntajeUser >= 15){
+            System.out.println("El ganador de la partida es el usuario");
+        }else{
+            
+        }
         
         ////////////////////////////////////////////////////////////////////  
-    }
-    
-    public static void Truco(int cartaJugadaUser, int cartaJugadaPC, int manosGanadasUser, int manosGanadasPC) {
-        if (cartaJugadaUser >= cartaJugadaPC) {
-            manosGanadasUser++;
-        } else {
-            manosGanadasPC++;
-        }
-    }
-
-    public static void Envido(
-        int filaDeckEnv1, int filaDeckEnv2, int filaDeckEnv3,
-        int filaDeckRandPC1, int filaDeckRandPC2, int filaDeckRandPC3,
-        int cartaEnv_1, int cartaEnv_2, int cartaEnv_3,
-        int cartaEnv_1_PC, int cartaEnv_2_PC, int cartaEnv_3_PC) {
-
-    
-        int PuntajeEnvPC = 0;
-        int PuntajeEnvUser = 0;
-
-        if (filaDeckEnv1 == filaDeckEnv2) {
-            PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
-        } else if (filaDeckEnv2 == filaDeckEnv3) {
-            PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
-        } else {
-            PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
-        }
-
-        if (filaDeckRandPC1 == filaDeckRandPC2) {
-            PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
-        } else if (filaDeckRandPC2 == filaDeckRandPC3) {
-            PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;  
-        } else {
-            PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
-        }
-
-        if (PuntajeEnvUser > PuntajeEnvPC) {
-            System.out.println("El usuario gana el envido");
-            System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
-        } else {
-            System.out.println("La PC gana el envido");
-            System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
-        }
     }
 }
