@@ -3,6 +3,8 @@ package Introduccion_Programacion.FINAL;
 import java.util.Scanner;
 
 public class Mini_truco {
+
+    
     public static void main(String[] args) {
 
          // Asignar valores a cada elemento de la matriz
@@ -208,5 +210,30 @@ int deck[][] = new int[4][10];
             ManosGanadasPC = ManosGanadasPC + 1;
         }
 
+
+    public static void actualizarManosGanadas(int cartaJugadaUser, int cartaJugadaPC) {
+        if (cartaJugadaUser >= cartaJugadaPC) {
+            ManosGanadasUser++;
+        } else {
+            ManosGanadasPC++;
+        }
+}
+
+
+//truco con suma de puntos etc
+    if(TrucoCantado){
+        switch (truco) {
+            case 1:
+                System.out.println("Quiero");
+                break;
+            
+            case 2:
+                System.out.println("No quiero");
+                break;
+        
+            default:
+                break;
+        }
+    }
         
 
