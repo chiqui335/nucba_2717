@@ -853,14 +853,17 @@ public class pruebas2 {
             }
         }
 
-        } while (puntajeUser <= 15 || puntajePC <= 15);
+        } while ((puntajeUser < 3) && (puntajePC < 3)); //WTF (AH YA ENTENDI QUE CUADRADO QUE SOY)
 
-        if (puntajeUser >= 15){
+        if (puntajeUser >= 3) {
             System.out.println("El ganador de la partida es el usuario");
-        }else{
-            
+        } else if (puntajePC >= 3) {
+            System.out.println("El ganador de la partida es la PC");
         }
         
         ////////////////////////////////////////////////////////////////////  
+
+        //TO DO:
+        //add truco mechanic (scoring and quiero/no quiero)
     }
 }
