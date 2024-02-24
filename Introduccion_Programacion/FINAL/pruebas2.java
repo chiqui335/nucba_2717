@@ -283,6 +283,10 @@ public class pruebas2 {
         int manosGanadasUser = 0;
         int manosGanadasPC = 0;
 
+        boolean trucoQuerido = false;
+        boolean retrucoQuerido = false;
+        boolean valeCuatroQuerido = false;
+
         int Mano1;
 
         do {
@@ -331,6 +335,7 @@ public class pruebas2 {
                 case 4:
                     System.out.println("elegiste truco");
                     Mano1 = 0;
+                    TrucoCantado = true;
                     break;
 
                 case 5:
@@ -340,37 +345,49 @@ public class pruebas2 {
 
                 default:
                     System.out.println("Opción no válida.");
+                    break;
             }
         } while (Mano1 >= 1 && Mano1 <= 3);
         
         //ENVIDO
         if (EnvidoCantado) {
-            int PuntajeEnvPC = 0;
-            int PuntajeEnvUser= 0;
+            int decisionPCenvido = (int) (Math.random()* 2) + 1;
 
-            if (filaDeckEnv1 == filaDeckEnv2) {
-                PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
-            }else if (filaDeckEnv2 == filaDeckEnv3){
-                PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
-            }else{
-                PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
-            }
+            if (decisionPCenvido == 1){
+                System.out.println("La PC dice QUIERO");
 
-            if (filaDeckRandPC1 == filaDeckRandPC2) {
-                PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
-            }else if (filaDeckRandPC2 == filaDeckRandPC3){
-                PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
-            }else{ 
-                PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
-            }
-
-
-            if (PuntajeEnvUser > PuntajeEnvPC){
-                System.out.println("El usuario gana el envido");
-                System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
-            }else{
-                System.out.println("La PC gana el envido");
-                System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+                int PuntajeEnvPC = 0;
+                int PuntajeEnvUser= 0;
+    
+                if (filaDeckEnv1 == filaDeckEnv2) {
+                    PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
+                }else if (filaDeckEnv2 == filaDeckEnv3){
+                    PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
+                }else{
+                    PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
+                }
+    
+                if (filaDeckRandPC1 == filaDeckRandPC2) {
+                    PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
+                }else if (filaDeckRandPC2 == filaDeckRandPC3){
+                    PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
+                }else{ 
+                    PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+                }
+    
+    
+                if (PuntajeEnvUser >= PuntajeEnvPC){
+                    System.out.println("El usuario gana el envido");
+                    puntajeUser = puntajeUser + 2;
+                    System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+                }else{
+                    System.out.println("La PC gana el envido");
+                    puntajePC = puntajePC + 2;
+                    System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+                }
+            } else {
+                System.out.println("La PC dice NO QUIERO");
+                puntajeUser++;
             }
         }
 
@@ -435,8 +452,119 @@ public class pruebas2 {
         }
 
         if(TrucoCantado){
-            //truco
+            System.out.println("cantaste truco");
+            int decisionPCtruco = 3;
+            int decisionUserREtruco = 0;
+
+            switch (decisionPCtruco) {
+                case 1:
+                    System.out.println("La PC dice QUIERO");
+                    trucoQuerido = true; 
+                    
+                    break;
+
+                case 2:
+                    System.out.println("La PC dice NO QUIERO");
+                    puntajeUser++;
+                    TrucoCantado = false;
+                    System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                    continue;
+                
+                case 3:
+                    System.out.println("La PC dice RETRUCO");
+                    System.out.println("1 = quiero, 2 = NO quiero, 3 = VALECUATRO");
+                    
+                    decisionUserREtruco = sc.nextInt();
+
+                    switch (decisionUserREtruco) {
+                        case 1:
+                            System.out.println("El usuario dice QUIERO");
+                            retrucoQuerido = true;
+                            break;
+                        
+                        case 2:
+                            System.out.println("El usuario dice NO QUIERO");
+                            puntajePC++;
+                            TrucoCantado = false;
+                            System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                            continue;
+
+                        case 3:
+                            System.out.println("El usuario dice VALECUATRO");
+
+                            int decisionPCvalecuatro = (int) (Math.random()* 2) + 1;
+                            if (decisionPCvalecuatro == 1){
+                                System.out.println("La PC dice QUIERO");
+                                valeCuatroQuerido = true;
+                            } else {
+                                System.out.println("La PC dice NO QUIERO");
+                                puntajeUser = puntajeUser + 3;
+                                TrucoCantado = false;
+                                System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                                continue;
+                            }
+
+                        default:
+                            break;
+                    }
+                default:
+                    break;
+            }
         }
+
+
+        if (TrucoCantado) {
+            TrucoCantado = false;
+            do {
+                System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+                Mano1 = sc.nextInt();
+    
+                switch (Mano1) {
+                    case 1:
+                        if (!carta1Seleccionada) {
+                            System.out.println("elegiste carta 1");
+                            carta1Seleccionada = true;
+                            Mano1 = 0;  
+
+                            cartaJugadaUser = carta_1;
+    
+                        } else {
+                            System.out.println("ya elegiste la carta 1");
+                        }
+                            break;
+    
+                    case 2:
+                        if (!carta2Seleccionada) {
+                            System.out.println("elegiste carta 2");
+                            carta2Seleccionada = true;
+                            Mano1 = 0;
+
+                            cartaJugadaUser = carta_2;
+
+                        } else {
+                            System.out.println("ya elegiste la carta 2");
+                        }
+                            break;
+    
+                    case 3:
+                        if (!carta3Seleccionada) {
+                            System.out.println("elegiste carta 3");
+                            carta3Seleccionada = true;
+                            Mano1 = 0;  
+
+                            cartaJugadaUser = carta_3;
+
+                        } else {
+                            System.out.println("ya elegiste la carta 3");
+                        }
+                            break;
+
+                    default:
+                        System.out.println("Opción no válida.");
+                }
+            } while (Mano1 >= 1 && Mano1 <= 3);
+        }
+
 
         int Mano1PC;
 
@@ -481,9 +609,14 @@ public class pruebas2 {
                     }
                         break;
 
-                // case 4:
-                //     System.out.println("elegiste truco");
-                //     break;
+                case 4:
+                    if(TrucoCantado == false){
+                        System.out.println("La PC canta TRUCO");
+                        TrucoCantado = true;
+                    } else {
+                        System.out.println("Ya se cantó TRUCO, elige otra opción.");
+                    }
+                    break;
 
                 // case 5:
                 //     System.out.println("elegiste envido");
@@ -638,9 +771,8 @@ public class pruebas2 {
             }
         } while (Mano2 >= 1 && Mano2 <= 3);
 
-        if(TrucoCantado){
-            //truco
-        }
+
+
 
         int Mano2PC;
 
@@ -708,12 +840,26 @@ public class pruebas2 {
         if(manosGanadasUser == 2) {
             puntajeUser++;
             System.out.println("El usuario gana la ronda");
+            if(trucoQuerido){
+                puntajeUser = puntajeUser + 2;      //se suma el puntaje si es que truco fue cantado 
+            } else if (retrucoQuerido){
+                puntajeUser = puntajeUser + 3;
+            } else if (valeCuatroQuerido){
+                puntajeUser = puntajeUser + 4;
+            }
             System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
             continue;           //se saltea el resto del loop y comienza una nueva iteracion desde el principio
         }else {
             if (manosGanadasPC == 2){
                 puntajePC++;
                 System.out.println("La PC gana la ronda");
+                if(trucoQuerido){
+                    puntajePC = puntajePC + 2;      //se suma el puntaje si es que truco fue cantado 
+                } else if (retrucoQuerido){
+                    puntajePC = puntajePC + 3;
+                } else if (valeCuatroQuerido){
+                    puntajePC = puntajePC + 4;
+                }
                 System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
                 continue;
             }
@@ -842,22 +988,36 @@ public class pruebas2 {
         if(manosGanadasUser == 2) {
             puntajeUser++;
             System.out.println("El usuario gana la ronda");
+            if(trucoQuerido){
+                puntajeUser = puntajeUser + 2;      //se suma el puntaje si es que truco fue cantado 
+            } else if (retrucoQuerido){
+                puntajeUser = puntajeUser + 3;
+            } else if (valeCuatroQuerido){
+                puntajeUser = puntajeUser + 4;
+            }
             System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
             continue;           //se saltea el resto del loop y comienza una nueva iteracion desde el principio
         }else {
             if (manosGanadasPC == 2){
                 puntajePC++;
                 System.out.println("La PC gana la ronda");
+                if(trucoQuerido){
+                    puntajePC = puntajePC + 2;      //se suma el puntaje si es que truco fue cantado 
+                } else if (retrucoQuerido){
+                    puntajePC = puntajePC + 3;
+                } else if (valeCuatroQuerido){
+                    puntajePC = puntajePC + 4;
+                }
                 System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
                 continue;
             }
         }
 
-        } while ((puntajeUser < 3) && (puntajePC < 3)); //WTF (AH YA ENTENDI QUE CUADRADO QUE SOY)
+        } while ((puntajeUser < 5) && (puntajePC < 5)); //WTF (AH YA ENTENDI QUE CUADRADO QUE SOY)
 
-        if (puntajeUser >= 3) {
+        if (puntajeUser >= 5) {
             System.out.println("El ganador de la partida es el usuario");
-        } else if (puntajePC >= 3) {
+        } else if (puntajePC >= 5) {
             System.out.println("El ganador de la partida es la PC");
         }
         
@@ -866,4 +1026,6 @@ public class pruebas2 {
         //TO DO:
         //add truco mechanic (scoring and quiero/no quiero)
     }
+
+    
 }

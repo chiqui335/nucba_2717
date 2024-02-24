@@ -3,8 +3,6 @@ package Introduccion_Programacion.FINAL;
 import java.util.Scanner;
 
 public class Mini_truco {
-
-    
     public static void main(String[] args) {
 
          // Asignar valores a cada elemento de la matriz
@@ -284,9 +282,79 @@ int deck[][] = new int[4][10];
 
 
     public static void Truco(int cartaJugadaUser, int cartaJugadaPC, int manosGanadasUser, int manosGanadasPC) {
+        
+        
         if (cartaJugadaUser >= cartaJugadaPC) {
-            manosGanadasUser++;
+            puntajeUser = puntajeUser + 2;
         } else {
-            manosGanadasPC++;
+            puntajePC = puntajePC + 2;
         }
+
+        if(trucoCantado){
+            System.out.println("cantaste truco");
+            int decisionPCtruco = (int) (Math.random()* 3) + 1;
+            int decisionUserREtruco = 0;
+            boolean trucoQuerido = false;
+            boolean retrucoQuerido = false;
+            boolean valeCuatroQuerido = false;
+
+            switch (decisionPCtruco) {
+                case 1:
+                    System.out.println("La PC dice QUIERO");
+                    trucoQuerido = true; 
+                    break;
+
+                case 2:
+                    System.out.println("La PC dice NO QUIERO");
+                    puntajeUser++;
+                    break;
+                
+                case 3:
+                    System.out.println("La PC dice RETRUCO");
+                    System.out.println("1 = quiero, 2 = NO quiero, 3 = VALECUATRO");
+
+
+                    switch (decisionUserREtruco) {
+                        case 1:
+                            System.out.println("El usuario dice QUIERO");
+                            retrucoQuerido = true;
+                            break;
+                        
+                        case 2:
+                            System.out.println("El usuario dice NO QUIERO");
+                            puntajePC++;
+                            continue;
+
+                        case 3:
+                            System.out.println("El usuario dice VALECUATRO");
+
+                            int decisionPCvalecuatro = (int) (Math.random()* 2) + 1;
+                            if (decisionPCvalecuatro == 1){
+                                System.out.println("La PC dice QUIERO");
+                                valeCuatroQuerido = true;
+                            } else {
+                                System.out.println("La PC dice NO QUIERO");
+                                puntajeUser = puntajeUser + 3;
+                                continue;
+                            }
+
+                        default:
+                            break;
+                    }
+            
+                default:
+                    break;
+            }
+
+
+
+
+
+        }
+
+
     }
+
+
+
+    
