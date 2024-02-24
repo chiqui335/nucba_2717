@@ -772,6 +772,121 @@ public class pruebas2 {
         } while (Mano2 >= 1 && Mano2 <= 3);
 
 
+        if(TrucoCantado){
+            System.out.println("cantaste truco");
+            int decisionPCtruco = 3;
+            int decisionUserREtruco = 0;
+
+            switch (decisionPCtruco) {
+                case 1:
+                    System.out.println("La PC dice QUIERO");
+                    trucoQuerido = true; 
+                    
+                    break;
+
+                case 2:
+                    System.out.println("La PC dice NO QUIERO");
+                    puntajeUser++;
+                    TrucoCantado = false;
+                    System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                    continue;
+                
+                case 3:
+                    System.out.println("La PC dice RETRUCO");
+                    System.out.println("1 = quiero, 2 = NO quiero, 3 = VALECUATRO");
+                    
+                    decisionUserREtruco = sc.nextInt();
+
+                    switch (decisionUserREtruco) {
+                        case 1:
+                            System.out.println("El usuario dice QUIERO");
+                            retrucoQuerido = true;
+                            break;
+                        
+                        case 2:
+                            System.out.println("El usuario dice NO QUIERO");
+                            puntajePC++;
+                            TrucoCantado = false;
+                            System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                            continue;
+
+                        case 3:
+                            System.out.println("El usuario dice VALECUATRO");
+
+                            int decisionPCvalecuatro = (int) (Math.random()* 2) + 1;
+                            if (decisionPCvalecuatro == 1){
+                                System.out.println("La PC dice QUIERO");
+                                valeCuatroQuerido = true;
+                            } else {
+                                System.out.println("La PC dice NO QUIERO");
+                                puntajeUser = puntajeUser + 3;
+                                TrucoCantado = false;
+                                System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                                continue;
+                            }
+
+                        default:
+                            break;
+                    }
+                default:
+                    break;
+            }
+        }
+
+
+        if (TrucoCantado) {
+            TrucoCantado = false;
+            do {
+                System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+                Mano1 = sc.nextInt();
+    
+                switch (Mano1) {
+                    case 1:
+                        if (!carta1Seleccionada) {
+                            System.out.println("elegiste carta 1");
+                            carta1Seleccionada = true;
+                            Mano1 = 0;  
+
+                            cartaJugadaUser = carta_1;
+    
+                        } else {
+                            System.out.println("ya elegiste la carta 1");
+                        }
+                            break;
+    
+                    case 2:
+                        if (!carta2Seleccionada) {
+                            System.out.println("elegiste carta 2");
+                            carta2Seleccionada = true;
+                            Mano1 = 0;
+
+                            cartaJugadaUser = carta_2;
+
+                        } else {
+                            System.out.println("ya elegiste la carta 2");
+                        }
+                            break;
+    
+                    case 3:
+                        if (!carta3Seleccionada) {
+                            System.out.println("elegiste carta 3");
+                            carta3Seleccionada = true;
+                            Mano1 = 0;  
+
+                            cartaJugadaUser = carta_3;
+
+                        } else {
+                            System.out.println("ya elegiste la carta 3");
+                        }
+                            break;
+
+                    default:
+                        System.out.println("Opción no válida.");
+                }
+            } while (Mano1 >= 1 && Mano1 <= 3);
+        }
+
+
 
 
         int Mano2PC;
