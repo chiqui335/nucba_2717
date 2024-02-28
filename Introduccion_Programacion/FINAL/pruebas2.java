@@ -370,16 +370,21 @@ public class pruebas2 {
                     PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
                 }else if (filaDeckEnv2 == filaDeckEnv3){
                     PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
-                }else{
+                }else if (filaDeckEnv1 == filaDeckEnv3){
                     PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
+                } else {
+                    PuntajeEnvUser = Math.max(cartaEnv_1, Math.max(cartaEnv_2, cartaEnv_3));
+
                 }
     
                 if (filaDeckRandPC1 == filaDeckRandPC2) {
                     PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
                 }else if (filaDeckRandPC2 == filaDeckRandPC3){
                     PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
-                }else{ 
+                }else if (filaDeckRandPC1 == filaDeckRandPC3){ 
                     PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+                } else {
+                    PuntajeEnvPC = Math.max(cartaEnv_1_PC, Math.max(cartaEnv_2_PC, cartaEnv_3_PC)); 
                 }
     
     
@@ -578,7 +583,7 @@ public class pruebas2 {
 
         do {
             System.out.print("Ingresa el número de la carta PC (1, 2, 3 o 4): ");
-            Mano1PC = (int) (Math.random()* 5) + 1;
+            Mano1PC = 5;
 
             switch (Mano1PC) {
                 case 1:
@@ -628,10 +633,11 @@ public class pruebas2 {
                     break;
 
                 case 5:
-                    if ((EnvidoCantado == false) && (filaDeckRandPC1 == filaDeckRandPC2 || filaDeckRandPC2 == filaDeckRandPC3 || filaDeckRandPC1 == filaDeckRandPC3)){
+                    if ((EnvidoCantado == false)){
                         System.out.println("La PC canta ENVIDO");
                         Mano1PC = 0;
                         EnvidoCantado = true;
+                        break;
                     } else if (EnvidoCantado == true){
                         System.out.println("Ya se cantó ENVIDO, elige otra opción.");
                     }
@@ -657,24 +663,30 @@ public class pruebas2 {
                     PuntajeEnvUser = cartaEnv_1 + cartaEnv_2 + 20;
                 }else if (filaDeckEnv2 == filaDeckEnv3){
                     PuntajeEnvUser = cartaEnv_2 + cartaEnv_3 + 20;
-                }else{
+                }else if (filaDeckEnv1 == filaDeckEnv3){
                     PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
+                } else {
+                    PuntajeEnvUser = Math.max(cartaEnv_1, Math.max(cartaEnv_2, cartaEnv_3));
                 }
     
                 if (filaDeckRandPC1 == filaDeckRandPC2) {
                     PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_2_PC + 20;
                 }else if (filaDeckRandPC2 == filaDeckRandPC3){
                     PuntajeEnvPC = cartaEnv_2_PC + cartaEnv_3_PC + 20;
-                }else{ 
+                }else if (filaDeckRandPC1 == filaDeckRandPC3){ 
                     PuntajeEnvPC = cartaEnv_1_PC + cartaEnv_3_PC + 20;
+                } else {
+                    PuntajeEnvPC = Math.max(cartaEnv_1_PC, Math.max(cartaEnv_2_PC, cartaEnv_3_PC)); 
                 }
     
     
                 if (PuntajeEnvUser >= PuntajeEnvPC){
                     System.out.println("El usuario gana el envido");
+                    puntajeUser = puntajeUser + 2;
                     System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
                 }else{
                     System.out.println("La PC gana el envido");
+                    puntajePC = puntajePC + 2;
                     System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
                 }
             } else {
@@ -742,14 +754,7 @@ public class pruebas2 {
         }
         ////////////////////////////////
  
-        if (cartaJugadaUser >= cartaJugadaPC) {
-            manosGanadasUser++;
-            System.out.println("El usuario gana la primer mano");
-        } else {                                      //aca se checkea cual carta jugada entre user y pc gana la mano, y se suma al contador manosganadas
-            manosGanadasPC++;
-            System.out.println("La PC gana la primer mano");
-        }
-
+        
             //TRUCO PC
         if(TrucoCantado == true && TrucoEjecutado == false){
 
@@ -863,7 +868,13 @@ public class pruebas2 {
         }
 ////////////////////////////////////////////////////////////////////////////////////////////////
         
-
+        if (cartaJugadaUser >= cartaJugadaPC) {
+            manosGanadasUser++;
+            System.out.println("El usuario gana la primer mano");
+        } else {                                      //aca se checkea cual carta jugada entre user y pc gana la mano, y se suma al contador manosganadas
+            manosGanadasPC++;
+            System.out.println("La PC gana la primer mano");
+        }
 
         int Mano2;
 
@@ -913,7 +924,7 @@ public class pruebas2 {
                 case 4:
                 if(TrucoCantado == false){
                     System.out.println("En usuario canta TRUCO");
-                    Mano1PC = 0;
+                    Mano2 = 0;
                     TrucoCantado = true;
                 } else if(TrucoCantado == true){
                     System.out.println("Ya se cantó TRUCO, elige otra opción.");
