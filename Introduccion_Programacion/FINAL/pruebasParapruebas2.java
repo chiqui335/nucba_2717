@@ -7,7 +7,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*; 
 import java.io.File;
 import java.util.Scanner;
-public class pruebas2 {
+public class pruebasParapruebas2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         //ARMO EL MAZO
@@ -317,18 +317,41 @@ public class pruebas2 {
 
 
 
-        int Mano1;
+        int Mano1 = 1;
+        
+        String seleccion = ""; // le doy un valor por defecto a la variable para que el switch no se queje
 
         do {
-            System.out.print("Ingresa el número de la carta (1, 2, 3, 4 o 5): ");
-            Mano1 = sc.nextInt();
+            
 
-            switch (Mano1) {
-                case 1:
+            // Crear un panel para contener las imágenes
+            JPanel CartasMano1 = new JPanel();
+            CartasMano1.add(new JLabel(carta_1_img));
+            CartasMano1.add(new JLabel(carta_2_img));    //en vez de "panel" uso CartasImg1 para distinguir entre manos
+            CartasMano1.add(new JLabel(carta_3_img));
+            
+
+            String[] opciones = {"Jugar primera carta", "Jugar segunda carta", "Jugar tercera carta", "Cantar Envido", "Cantar truco"};
+            JComboBox<String> comboBox = new JComboBox<>(opciones);
+            CartasMano1.add(comboBox);
+
+            // Mostrar el panel en JOptionPane
+            int result = JOptionPane.showConfirmDialog(
+                    null,
+                    CartasMano1,
+                    "Tus cartas",
+                    JOptionPane.PLAIN_MESSAGE);
+
+            if (result == JOptionPane.OK_OPTION) {
+                seleccion = (String) comboBox.getSelectedItem();   
+            }
+
+            switch (seleccion) {
+                case "Jugar primera carta":
                     if (!carta1Seleccionada) {
                         System.out.println("elegiste carta 1");
                         carta1Seleccionada = true;
-                        Mano1 = 0;  // Establecer Mano1 en un valor que no sea 1, 2, 3, 4 o 5 para salir del bucle
+                        Mano1 = 0;  // Establecer Mano1 en = 0 para salir del bucle
 
                         cartaJugadaUser = carta_1;
 
@@ -338,7 +361,7 @@ public class pruebas2 {
                     }
                         break;
 
-                case 2:
+                case "Jugar segunda carta":
                     if (!carta2Seleccionada) {
                         System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
@@ -350,7 +373,7 @@ public class pruebas2 {
                     }
                         break;
 
-                case 3:
+                case "Jugar tercera carta":
                     if (!carta3Seleccionada) {
                         System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
@@ -362,13 +385,13 @@ public class pruebas2 {
                     }
                         break;
 
-                case 4:
+                case "Cantar truco":
                     System.out.println("elegiste truco");
                     Mano1 = 0;
                     TrucoCantado = true;
                     break;
 
-                case 5:
+                case "Cantar Envido":
                     System.out.println("elegiste envido");
                     Mano1 = 0;
                     EnvidoCantado = true;
@@ -378,7 +401,7 @@ public class pruebas2 {
                     System.out.println("Opción no válida.");
                     break;
             }
-        } while (Mano1 >= 1 && Mano1 <= 5);
+        } while (Mano1 != 0);
         
         //ENVIDO USER
         if (EnvidoCantado == true && EnvidoEjecutado == false) {
@@ -399,7 +422,7 @@ public class pruebas2 {
                     PuntajeEnvUser = cartaEnv_1 + cartaEnv_3 + 20;
                 } else {
                     PuntajeEnvUser = Math.max(cartaEnv_1, Math.max(cartaEnv_2, cartaEnv_3));
-
+                    //se toman SOLO las cartas mas altas, en caso que tenga 3 del mismo palo
                 }
     
                 if (filaDeckRandPC1 == filaDeckRandPC2) {
@@ -608,7 +631,7 @@ public class pruebas2 {
 
         do {
             System.out.print("Ingresa el número de la carta PC (1, 2, 3 o 4): ");
-            Mano1PC = 5;
+            Mano1PC = (int) (Math.random()* 5) + 1;
 
             switch (Mano1PC) {
                 case 1:

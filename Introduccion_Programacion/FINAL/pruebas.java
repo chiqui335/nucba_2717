@@ -31,5 +31,10 @@ public class pruebas {
                 "Tres Imágenes",
                 JOptionPane.PLAIN_MESSAGE
         );
+
+
+
     }
 }
+
+
