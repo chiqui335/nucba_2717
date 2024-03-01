@@ -298,6 +298,8 @@ public class pruebasParapruebas2 {
             ////////////////////////////////////////////////////////////////////
             //JUGADAS
 
+            
+
         boolean carta1Seleccionada = false;
         boolean carta2Seleccionada = false;
         boolean carta3Seleccionada = false;
@@ -340,6 +342,11 @@ public class pruebasParapruebas2 {
         ImageIcon ImgCartaJugadaPC = null;
 
         ImageIcon WHITE = new ImageIcon ("Introduccion_Programacion/FINAL/Cartas/WHITEIMG.png");
+
+        //Array de opciones para cuando la pc canta truco
+        String[] opcionesUSERtruco = {"Quiero", "No quiero", "Quiero RETRUCO"};
+
+
 
         
         int seleccionMano1; // le doy un valor por defecto a la variable para que el switch no se queje
@@ -853,6 +860,7 @@ public class pruebasParapruebas2 {
 
             EnvidoEjecutado = true;
 
+            //la dejo aca para que no se inicialice en vano, consumiendo recursos
             String[] opcionesUserenvido = {"Quiero", "No Quiero"};
 
             int decisionUSERenvido = JOptionPane.showOptionDialog(
@@ -994,7 +1002,7 @@ public class pruebasParapruebas2 {
             TrucoEjecutado = true;
 
             //tal vez este array de string se pueda poner al ppio del codigo para optimizar
-            String[] opcionesUSERtruco = {"Quiero", "No quiero", "Quiero RETRUCO"};
+            // String[] opcionesUSERtruco = {"Quiero", "No quiero", "Quiero RETRUCO"};
             
             int decisionPCREtruco = 0;
             int decisionUSERtruco = JOptionPane.showOptionDialog(
@@ -1552,7 +1560,7 @@ public class pruebasParapruebas2 {
 
             TrucoEjecutado = true;
 
-            String[] opcionesUSERtruco = {"Quiero", "No quiero", "Quiero RETRUCO"};
+            // String[] opcionesUSERtruco = {"Quiero", "No quiero", "Quiero RETRUCO"};
             
             int decisionPCREtruco = 0;
             int decisionUSERtruco = JOptionPane.showOptionDialog(
@@ -1569,13 +1577,13 @@ public class pruebasParapruebas2 {
 
             switch (decisionUSERtruco) {
                 case 0:
-                    System.out.println("El usuario dice QUIERO");
+                    JOptionPane.showMessageDialog(null, "El usuario dice QUIERO");
                     trucoQuerido = true; 
                     
                     break;
 
                 case 1:
-                    JOptionPane.showMessageDialog(null,"El usuario dice NO QUIERO");
+                    JOptionPane.showMessageDialog(null, "El usuario dice NO QUIERO");
                     puntajePC++;
                     // TrucoCantado = false;
 
@@ -2117,64 +2125,110 @@ public class pruebasParapruebas2 {
             }
         } while (Mano3PC >= 1 && Mano3PC <= 4);
 
+        
 //ASKLGFASHLGÑFJHGALÑSJFFFFFFFFFFFFFFFFFFFFLÑASHGÑLASHGÑLHASÑLGHÑASLJFHGLÑJASHGLÑASHGÑLASHGÑLHASÑLGHLSHGÑASGHSAGHÑSHGLÑASHLGSÑALHG
-// TRUCO PC APLICAR JOPTIONPANE ACA EN TODO TRUCOPC
+// TRUCO PC                      APLICAR JOPTIONPANE ACA EN TODO TRUCOPC
 if(TrucoCantado == true && TrucoEjecutado == false){
 
     TrucoEjecutado = true;
 
     System.out.println("1 = quiero, 2 = NO quiero, 3 = RETRUCO");
-    int decisionUSERtruco = sc.nextInt();
     int decisionPCREtruco = 0;
+    int decisionUSERtruco = JOptionPane.showOptionDialog(
+        null,
+        "La PC te cantó TRUCO",
+        "Elije tu jugada",
+        JOptionPane.YES_NO_CANCEL_OPTION,
+        JOptionPane.INFORMATION_MESSAGE,
+        null,
+        opcionesUSERtruco,
+        opcionesUSERtruco[0]
+
+    );
+
 
     switch (decisionUSERtruco) {
-        case 1:
-            System.out.println("El usuario dice QUIERO");
+        case 0:
+            JOptionPane.showMessageDialog(null, "El usuario dice QUIERO");
             trucoQuerido = true; 
             
             break;
 
-        case 2:
-            System.out.println("El usuario dice NO QUIERO");
+        case 1:
+            JOptionPane.showMessageDialog(null, "El usuario dice NO QUIERO");
             puntajePC++;
             // TrucoCantado = false;
-            System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+            
+            JOptionPane.showMessageDialog(
+                null,
+                "Puntaje Usuario: " + puntajeUser + "\n" +
+                "Puntaje PC: " + puntajePC,
+                null,
+                JOptionPane.INFORMATION_MESSAGE
+            );
+
             continue;
         
-        case 3:
+        case 2:
             System.out.println("El usuario dice RETRUCO");
 
             decisionPCREtruco = (int) (Math.random()* 3) + 1;
 
             switch (decisionPCREtruco) {
                 case 1:
-                    System.out.println("La PC dice QUIERO");
+                    JOptionPane.showMessageDialog(null, "La PC dice QUIERO");
                     retrucoQuerido = true;
                     break;
                 
                 case 2:
-                    System.out.println("La PC dice NO QUIERO");
+                    JOptionPane.showMessageDialog(null,"La PC dice NO QUIERO");
                     puntajeUser++;
                     // TrucoCantado = false;
-                    System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
+                    
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Puntaje Usuario: " + puntajeUser + "\n" +
+                        "Puntaje PC: " + puntajePC,
+                        null,
+                        JOptionPane.INFORMATION_MESSAGE
+                    );                    
+                    
                     continue;
 
                 case 3:
-                    System.out.println("La PC dice VALECUATRO");
-                    System.out.println("1: quiero 2: no quiero");
+                JOptionPane.showMessageDialog(null,"La PC dice VALECUATRO");
 
-                    int decisionUSERvalecuatro = sc.nextInt();
+                String[] opcionesUSERvalecuatro = {"Quiero", "No quiero"};
+
+
+                    int decisionUSERvalecuatro = JOptionPane.showOptionDialog(
+                                null,
+                                "La PC te cantó VALECUATRO",
+                                "Elije tu jugada",
+                                JOptionPane.YES_NO_CANCEL_OPTION,
+                                JOptionPane.INFORMATION_MESSAGE,
+                                null,
+                                opcionesUSERvalecuatro,
+                                opcionesUSERvalecuatro[0]);
 
                     if (decisionUSERvalecuatro == 1){
-                        System.out.println("El usuario dice QUIERO");
-                        valeCuatroQuerido = true;
-                    } else {
-                        System.out.println("El dice NO QUIERO");
-                        puntajePC = puntajePC + 3;
-                        // TrucoCantado = false;
-                        System.out.println("puntaje usuario: " + puntajeUser + ", puntaje PC: " + puntajePC);
-                        continue;
-                    }
+                                JOptionPane.showMessageDialog(null,"El usuario dice QUIERO");
+                                valeCuatroQuerido = true;
+                            } else {
+                                JOptionPane.showMessageDialog(null,"El Usuario dice NO QUIERO");
+                                puntajePC = puntajePC + 3;
+                                // TrucoCantado = false;
+
+                                JOptionPane.showMessageDialog(
+                                    null,
+                                    "Puntaje Usuario: " + puntajeUser + "\n" +
+                                    "Puntaje PC: " + puntajePC,
+                                    null,
+                                    JOptionPane.INFORMATION_MESSAGE
+                                );
+
+                                continue;
+                            }
 
                 default:
                     break;
