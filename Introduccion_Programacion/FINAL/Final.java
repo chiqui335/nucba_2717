@@ -474,7 +474,7 @@ public class Final {
 
             EnvidoEjecutado = true;
 
-            if (filaDeckRandPC1 == filaDeckRandPC2 || filaDeckRandPC2 == filaDeckRandPC3 || filaDeckRandPC1 == filaDeckRandPC3){
+            if (filaDeckRandPC1 == filaDeckRandPC2 || filaDeckRandPC2 == filaDeckRandPC3 || filaDeckRandPC1 == filaDeckRandPC3){ //solo dice quiero si tiene para +20
                 JOptionPane.showMessageDialog(null, "La PC dice QUIERO");
 
                 int PuntajeEnvPC = 0;
@@ -816,7 +816,7 @@ public class Final {
         int Mano1PC;
 
         do {
-            System.out.print("Ingresa el número de la carta PC (1, 2, 3 o 4): ");
+            // System.out.print("Ingresa el número de la carta PC (1, 2, 3 o 4): ");
             Mano1PC = (int) (Math.random()* 5) + 1;
 
             switch (Mano1PC) {
@@ -964,7 +964,7 @@ public class Final {
 
 
             do {
-                System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
+                // System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
                 Mano1PC = (int) (Math.random()* 4) + 1;
     
                 switch (Mano1PC) {
