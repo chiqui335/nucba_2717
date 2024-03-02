@@ -1,10 +1,20 @@
 package Introduccion_Programacion.FINAL;
 
 import javax.swing.*; 
-import java.util.Scanner;
 public class pruebasParapruebas2 {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+
+        int respuesta = JOptionPane.showConfirmDialog(
+            null,
+            "Bienvenido al juego de truco. ¿Deseas jugar una partida?",
+            "Inicio del juego",
+            JOptionPane.YES_NO_OPTION
+        );
+
+        if (respuesta == JOptionPane.NO_OPTION){
+            System.exit(0);
+        }
+
         //ARMO EL MAZO
         int deck[][] = new int[4][10];
 
@@ -103,8 +113,8 @@ public class pruebasParapruebas2 {
         ImageIcon [][] deckImg = new ImageIcon [4][10];
  
         
-        deckImg[0][0] = new ImageIcon ("Introduccion_Programacion/FINAL/Cartas/esp1.png");
-        deckImg[0][1] = new ImageIcon ("Introduccion_Programacion/FINAL/Cartas/esp2.png");
+        deckImg[0][0] = new ImageIcon ("Introduccion_Programacion/FINAL/Cartas/esp1.png"); //AGREGAR Introduccion_Programacion/FINAL y quitar el punto para ejecutarlo desde vscode
+        deckImg[0][1] = new ImageIcon ("Introduccion_Programacion/FINAL/Cartas/esp2.png");    // dejar asi para ejecutar desde terminal
         deckImg[0][2] = new ImageIcon ("Introduccion_Programacion/FINAL/Cartas/esp3.png");
         deckImg[0][3] = new ImageIcon ("Introduccion_Programacion/FINAL/Cartas/esp4.png");
         deckImg[0][4] = new ImageIcon ("Introduccion_Programacion/FINAL/Cartas/esp5.png");
@@ -296,9 +306,8 @@ public class pruebasParapruebas2 {
         System.out.println("carta 3 PC: " + carta_3_PC + " Palo: " + filaDeckRandPC3);
         
             ////////////////////////////////////////////////////////////////////
-            //JUGADAS
 
-            
+            //JUGADAS
 
         boolean carta1Seleccionada = false;
         boolean carta2Seleccionada = false;
@@ -346,9 +355,28 @@ public class pruebasParapruebas2 {
         //Array de opciones para cuando la pc canta truco
         String[] opcionesUSERtruco = {"Quiero", "No quiero", "Quiero RETRUCO"};
 
+        //test para saber si las cartas de la pc estan bien
+        // JPanel manopc = new JPanel();
+        // manopc.add(new JLabel(carta_1_imgPC));
+        // manopc.add(new JLabel(carta_2_imgPC));
+        // manopc.add(new JLabel(carta_3_imgPC));
 
+        // String[] PC = {"Ok", "cancel"};
 
+        // int MostrarmanoPC = JOptionPane.showOptionDialog(
+        //     null,
+        //     manopc,
+
+        //     "cartas PC",
+        //     JOptionPane.DEFAULT_OPTION, 
+        //     JOptionPane.INFORMATION_MESSAGE,
+        //     null,
+        //     PC,
+        //     PC[0]
+        // );
         
+
+        //MANO 1 USER
         int seleccionMano1; // le doy un valor por defecto a la variable para que el switch no se queje
 
         String[] opcionesMano1 = {"Jugar primera carta", "Jugar segunda carta", "Jugar tercera carta", "Cantar truco", "Cantar Envido"};
@@ -363,7 +391,6 @@ public class pruebasParapruebas2 {
         do {
 
             //array de objetos que representa las opciones que se mostrarán al usuario
-            // String[] opcionesMano1 = {"Jugar primera carta", "Jugar segunda carta", "Jugar tercera carta", "Cantar truco", "Cantar Envido"};
 
             // Mostrar el panel en JOptionPane
             seleccionMano1 = JOptionPane.showOptionDialog(
@@ -437,7 +464,8 @@ public class pruebasParapruebas2 {
 
                 default:
                     System.out.println("Opción no válida.");
-                    break;
+                    System.exit(0);
+                    continue;
             }
         } while (continuarLoop1 == true);
         
@@ -574,6 +602,7 @@ public class pruebasParapruebas2 {
 
                 default:
                     System.out.println("Opción no válida.");
+                    System.exit(0);
                     break;
                 }
             } while (continuarLoopENV == true);
@@ -678,6 +707,7 @@ public class pruebasParapruebas2 {
                             }
 
                         default:
+                        System.exit(0);
                             break;
                     }
                 default:
@@ -773,6 +803,7 @@ public class pruebasParapruebas2 {
 
                 default:
                     System.out.println("Opción no válida.");
+                    System.exit(0);
                     break;
             }
         } while (continuarLoopTRUCO1 == true);
@@ -780,6 +811,7 @@ public class pruebasParapruebas2 {
 
         ////////////////////////////////////////////////////////////////////////////////
 
+        //MANO 1 PC
         int Mano1PC;
 
         do {
@@ -1163,7 +1195,7 @@ public class pruebasParapruebas2 {
         
 
         JPanel Check1 = new JPanel();
-        Check1.add(new JLabel(ImgCartaJugadaUser));
+        Check1.add(new JLabel(ImgCartaJugadaUser)); //Muestro las cartas jugadas por user y pc
         Check1.add(new JLabel(ImgCartaJugadaPC));
 
 
@@ -1186,17 +1218,7 @@ public class pruebasParapruebas2 {
         }
 
         
-
-
-
-
-
-
-
-
-
-        int mano2;
-
+        //MANO 2 USER
         int seleccionMano2;
 
 
@@ -1304,6 +1326,8 @@ public class pruebasParapruebas2 {
 
                 default:
                     System.out.println("Opción no válida.");
+                    System.exit(0);
+                    break;
             }
             System.out.println("ASAFGAFGS " + continuarLoop2);
         } while (continuarLoop2 == true);
@@ -1400,6 +1424,7 @@ public class pruebasParapruebas2 {
                                 }
     
                             default:
+                            System.exit(0);
                                 break;
                         }
                     default:
@@ -1482,6 +1507,7 @@ public class pruebasParapruebas2 {
         
                         default:
                             System.out.println("Opción no válida.");
+                            System.exit(0);
                             break;
                     }
                     System.out.println(continuarLoopTRUCO2);
@@ -1490,7 +1516,7 @@ public class pruebasParapruebas2 {
         }
             ///////////////////////////////////////////////////////////////////////////////////////////
 
-
+        //MANO 2 PC
         int Mano2PC;
 
         do { 
@@ -1555,12 +1581,10 @@ public class pruebasParapruebas2 {
         } while (Mano2PC >= 1 && Mano2PC <= 4);
 
 
-        // TRUCO PC
+        // TRUCO PC 2
         if(TrucoCantado == true && TrucoEjecutado == false){
 
             TrucoEjecutado = true;
-
-            // String[] opcionesUSERtruco = {"Quiero", "No quiero", "Quiero RETRUCO"};
             
             int decisionPCREtruco = 0;
             int decisionUSERtruco = JOptionPane.showOptionDialog(
@@ -1585,7 +1609,6 @@ public class pruebasParapruebas2 {
                 case 1:
                     JOptionPane.showMessageDialog(null, "El usuario dice NO QUIERO");
                     puntajePC++;
-                    // TrucoCantado = false;
 
                     JOptionPane.showMessageDialog(
                         null,
@@ -1611,7 +1634,6 @@ public class pruebasParapruebas2 {
                         case 2:
                             JOptionPane.showMessageDialog(null,"La PC dice NO QUIERO");
                             puntajeUser++;
-                            // TrucoCantado = false;
 
                             JOptionPane.showMessageDialog(
                                 null,
@@ -1644,7 +1666,6 @@ public class pruebasParapruebas2 {
                             } else {
                                 JOptionPane.showMessageDialog(null,"El Usuario dice NO QUIERO");
                                 puntajePC = puntajePC + 3;
-                                // TrucoCantado = false;
 
                                 JOptionPane.showMessageDialog(
                                     null,
@@ -1784,7 +1805,7 @@ public class pruebasParapruebas2 {
             }
         }
 
-
+        //MANO 3 USER
         int seleccionMano3;
 
         String [] opcionesMano3 = {"Jugar primera carta", "Jugar segunda carta", "Jugar tercera carta", "Cantar truco"};
@@ -1884,6 +1905,7 @@ public class pruebasParapruebas2 {
 
                 default:
                     System.out.println("Opción no válida.");
+                    System.exit(0);
             }
         } while (continuarLoop3 == true);
 
@@ -1907,7 +1929,6 @@ public class pruebasParapruebas2 {
                     case 2:
                         JOptionPane.showMessageDialog(null, "La PC dice NO QUIERO");
                         puntajeUser++;
-                        // TrucoCantado = false;
                         JOptionPane.showMessageDialog(
                             null,
                             "Puntaje Usuario: " + puntajeUser + "\n" +
@@ -1944,7 +1965,6 @@ public class pruebasParapruebas2 {
                             case 1:
                                 JOptionPane.showMessageDialog(null, "El Usuario dice NO QUIERO");
                                 puntajePC++;
-                                // TrucoCantado = false;
                                 
                                 JOptionPane.showMessageDialog(
                                     null,
@@ -1960,13 +1980,14 @@ public class pruebasParapruebas2 {
                                 System.out.println("El usuario dice VALECUATRO");
     
                                 int decisionPCvalecuatro = (int) (Math.random()* 2) + 1;
+
                                 if (decisionPCvalecuatro == 1){
                                     JOptionPane.showMessageDialog(null, "La PC dice QUIERO");
                                     valeCuatroQuerido = true;
+
                                 } else {
                                     JOptionPane.showMessageDialog(null, "La PC dice NO QUIERO");
                                     puntajeUser = puntajeUser + 3;
-                                    // TrucoCantado = false;
     
                                     JOptionPane.showMessageDialog(
                                     null,
@@ -1979,6 +2000,7 @@ public class pruebasParapruebas2 {
                                 }
     
                             default:
+                            System.exit(0);
                                 break;
                         }
                     default:
@@ -2055,6 +2077,7 @@ public class pruebasParapruebas2 {
         
                         default:
                             System.out.println("Opción no válida.");
+                            System.exit(0);
                             break;
                     }
                 } while (continuarLoopTRUCO3 == true);
@@ -2064,7 +2087,7 @@ public class pruebasParapruebas2 {
 
 
 
-
+        //MANO 3 PC
         int Mano3PC;
 
         do {
@@ -2126,8 +2149,7 @@ public class pruebasParapruebas2 {
         } while (Mano3PC >= 1 && Mano3PC <= 4);
 
         
-//ASKLGFASHLGÑFJHGALÑSJFFFFFFFFFFFFFFFFFFFFLÑASHGÑLASHGÑLHASÑLGHÑASLJFHGLÑJASHGLÑASHGÑLASHGÑLHASÑLGHLSHGÑASGHSAGHÑSHGLÑASHLGSÑALHG
-// TRUCO PC                      APLICAR JOPTIONPANE ACA EN TODO TRUCOPC
+// TRUCO PC
 if(TrucoCantado == true && TrucoEjecutado == false){
 
     TrucoEjecutado = true;
@@ -2310,14 +2332,14 @@ if(TrucoCantado == true && TrucoEjecutado == false){
             manosGanadasUser++;
             JOptionPane.showMessageDialog(
                 null,
-                Check1,
+                Check3,
                 "El usuario gana la tercer mano",
                 JOptionPane.PLAIN_MESSAGE);        
             } else {                                      //aca se checkea por 3ra vez cual carta jugada entre user y pc gana la mano, y se suma al contador manosganadas
             manosGanadasPC++;
             JOptionPane.showMessageDialog(
                 null,
-                Check1,
+                Check3,
                 "La PC gana la tercer mano",
                 JOptionPane.PLAIN_MESSAGE);
         }
@@ -2382,16 +2404,36 @@ if(TrucoCantado == true && TrucoEjecutado == false){
 
 
         if (puntajeUser >= 15) {
-            System.out.println("El ganador de la partida es el usuario");
+            JOptionPane.showMessageDialog(
+                null,
+                "Eres el ganador de la partida!",
+                "FELICIDADES!",
+                JOptionPane.INFORMATION_MESSAGE
+            );
+
         } else if (puntajePC >= 15) {
-            System.out.println("El ganador de la partida es la PC");
+            JOptionPane.showMessageDialog(
+                null,
+                "El ganador de la partida es la PC.",
+                "Lastima!",
+                JOptionPane.INFORMATION_MESSAGE
+            );
         }
         
         ////////////////////////////////////////////////////////////////////  
 
         //TO DO:
-        //aplicar Joption Pane
     }
 
     
 }
+
+
+
+
+
+
+
+
+
+
