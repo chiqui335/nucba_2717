@@ -296,14 +296,14 @@ public class Final {
         // System.out.println("deck envido: " + filaDeckEnv1 + " col envido: " + colDeckEnv1 + " " + cartaEnv_1);
         // /////////////////////////////////////////////////////////////
        
+        //test para saber el valor de las cartas
+        // System.out.println("carta 1: " + carta_1 + " Palo: " + filaDeckRand1);
+        // System.out.println("carta 2: " + carta_2 + " Palo: " + filaDeckRand2);
+        // System.out.println("carta 3: " + carta_3 + " Palo: " + filaDeckRand3);
 
-        System.out.println("carta 1: " + carta_1 + " Palo: " + filaDeckRand1);
-        System.out.println("carta 2: " + carta_2 + " Palo: " + filaDeckRand2);
-        System.out.println("carta 3: " + carta_3 + " Palo: " + filaDeckRand3);
-
-        System.out.println("carta 1 PC: " + carta_1_PC + " Palo: " + filaDeckRandPC1);
-        System.out.println("carta 2 PC: " + carta_2_PC + " Palo: " + filaDeckRandPC2);
-        System.out.println("carta 3 PC: " + carta_3_PC + " Palo: " + filaDeckRandPC3);
+        // System.out.println("carta 1 PC: " + carta_1_PC + " Palo: " + filaDeckRandPC1);
+        // System.out.println("carta 2 PC: " + carta_2_PC + " Palo: " + filaDeckRandPC2);
+        // System.out.println("carta 3 PC: " + carta_3_PC + " Palo: " + filaDeckRandPC3);
         
             ////////////////////////////////////////////////////////////////////
 
@@ -407,22 +407,22 @@ public class Final {
             switch (seleccionMano1) {
                 case 0:
                     if (!carta1Seleccionada) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1Seleccionada = true;
                         continuarLoop1= false; 
 
                         cartaJugadaUser = carta_1;
                         ImgCartaJugadaUser = carta_1_img;
 
-                        System.out.println("la carta jugada es: " + cartaJugadaUser);
+                        // System.out.println("la carta jugada es: " + cartaJugadaUser);
                     } else {
-                        System.out.println("ya elegiste la carta 1");
+                        // System.out.println("ya elegiste la carta 1");
                     }
                         break;
 
                 case 1:
                     if (!carta2Seleccionada) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
                         continuarLoop1= false; 
 
@@ -431,13 +431,13 @@ public class Final {
 
 
                     } else {
-                        System.out.println("ya elegiste la carta 2");
+                        // System.out.println("ya elegiste la carta 2");
                     }
                         break;
 
                 case 2:
                     if (!carta3Seleccionada) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
                         continuarLoop1= false; 
                     
@@ -446,24 +446,24 @@ public class Final {
 
 
                     } else {
-                        System.out.println("ya elegiste la carta 3");
+                        // System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 3:
-                    System.out.println("elegiste truco");
+                    // System.out.println("elegiste truco");
                     continuarLoop1= false; 
                     TrucoCantado = true;
                     break;
 
                 case 4:
-                    System.out.println("elegiste envido");
+                    // System.out.println("elegiste envido");
                     continuarLoop1= false; 
                     EnvidoCantado = true;
                     break;
 
                 default:
-                    System.out.println("Opción no válida.");
+                    // System.out.println("Opción no válida.");
                     System.exit(0);
                     continue;
             }
@@ -512,9 +512,9 @@ public class Final {
                         JOptionPane.INFORMATION_MESSAGE
                     );
                     
-                    System.out.println("El usuario gana el envido");
+                    // System.out.println("El usuario gana el envido");
                     puntajeUser = puntajeUser + 2;
-                    System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+                    // System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
                 }else{
                     JOptionPane.showMessageDialog(
                         null,
@@ -526,7 +526,7 @@ public class Final {
                     );
 
                     puntajePC = puntajePC + 2;
-                    System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
+                    // System.out.println("user: " + PuntajeEnvUser + " " + "PC: " + PuntajeEnvPC);
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "La PC dice NO QUIERO");
@@ -553,22 +553,22 @@ public class Final {
             switch (seleccionMano1) {
                 case 0:
                     if (!carta1Seleccionada) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1Seleccionada = true;
                         continuarLoopENV= false; 
 
                         cartaJugadaUser = carta_1;
                         ImgCartaJugadaUser = carta_1_img;
 
-                        System.out.println("la carta jugada es: " + cartaJugadaUser);
+                        // System.out.println("la carta jugada es: " + cartaJugadaUser);
                     } else {
-                        System.out.println("ya elegiste la carta 1");
+                        // System.out.println("ya elegiste la carta 1");
                     }
                         break;
 
                 case 1:
                     if (!carta2Seleccionada) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
                         continuarLoopENV= false; 
 
@@ -576,13 +576,13 @@ public class Final {
                         ImgCartaJugadaUser = carta_2_img;
 
                     } else {
-                        System.out.println("ya elegiste la carta 2");
+                        // System.out.println("ya elegiste la carta 2");
                     }
                         break;
 
                 case 2:
                     if (!carta3Seleccionada) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
                         continuarLoopENV= false; 
                     
@@ -590,18 +590,18 @@ public class Final {
                         ImgCartaJugadaUser = carta_3_img;
 
                     } else {
-                        System.out.println("ya elegiste la carta 3");
+                        // System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 3:
-                    System.out.println("elegiste truco");
+                    // System.out.println("elegiste truco");
                     continuarLoopENV= false; 
                     TrucoCantado = true;
                     break;
 
                 default:
-                    System.out.println("Opción no válida.");
+                    // System.out.println("Opción no válida.");
                     System.exit(0);
                     break;
                 }
@@ -617,7 +617,7 @@ public class Final {
 
             TrucoEjecutado = true;
 
-            System.out.println("cantaste truco");
+            // System.out.println("cantaste truco");
             int decisionPCtruco = (int) (Math.random()* 3) + 1;
 
             switch (decisionPCtruco) {
@@ -641,8 +641,8 @@ public class Final {
                     continue;
                 
                 case 3:
-                    System.out.println("La PC dice RETRUCO");
-                    System.out.println("1 = quiero, 2 = NO quiero, 3 = VALECUATRO");
+                    // System.out.println("La PC dice RETRUCO");
+                    // System.out.println("1 = quiero, 2 = NO quiero, 3 = VALECUATRO");
                     
                     trucoQuerido = true; 
 
@@ -682,7 +682,7 @@ public class Final {
                             continue;
 
                         case 2:
-                            System.out.println("El usuario dice VALECUATRO");
+                            // System.out.println("El usuario dice VALECUATRO");
 
                             trucoQuerido = true; 
 
@@ -735,22 +735,22 @@ public class Final {
             switch (seleccionMano1) {
                 case 0:
                     if (!carta1Seleccionada) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1Seleccionada = true;
                         continuarLoopTRUCO1 = false;
 
                         cartaJugadaUser = carta_1;
                         ImgCartaJugadaUser = carta_1_img;
 
-                        System.out.println("la carta jugada es: " + cartaJugadaUser);
+                        // System.out.println("la carta jugada es: " + cartaJugadaUser);
                     } else {
-                        System.out.println("ya elegiste la carta 1");
+                        // System.out.println("ya elegiste la carta 1");
                     }
                         break;
 
                 case 1:
                     if (!carta2Seleccionada) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
                         continuarLoopTRUCO1 = false;
 
@@ -759,13 +759,13 @@ public class Final {
                         ImgCartaJugadaUser = carta_2_img;
 
                     } else {
-                        System.out.println("ya elegiste la carta 2");
+                        // System.out.println("ya elegiste la carta 2");
                     }
                         break;
 
                 case 2:
                     if (!carta3Seleccionada) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
                         continuarLoopTRUCO1 = false;
 
@@ -774,13 +774,13 @@ public class Final {
                         ImgCartaJugadaUser = carta_3_img;
 
                     } else {
-                        System.out.println("ya elegiste la carta 3");
+                        // System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 3:
                     if(TrucoCantado == false){
-                        System.out.println("En usuario canta TRUCO");
+                        // System.out.println("En usuario canta TRUCO");
                         TrucoCantado = true;
                         continuarLoopTRUCO1 = false;
 
@@ -791,7 +791,8 @@ public class Final {
                     break;
 
                 case 4:
-                    if(EnvidoCantado == false ){System.out.println("elegiste envido");
+                    if(EnvidoCantado == false ){
+                        // System.out.println("elegiste envido");
                     EnvidoCantado = true;
                     continuarLoopTRUCO1 = false;
 
@@ -802,7 +803,7 @@ public class Final {
                     break;
 
                 default:
-                    System.out.println("Opción no válida.");
+                    // System.out.println("Opción no válida.");
                     System.exit(0);
                     break;
             }
@@ -821,7 +822,7 @@ public class Final {
             switch (Mano1PC) {
                 case 1:
                     if (!carta1SeleccionadaPC) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1SeleccionadaPC = true;
                         Mano1PC = 0;
 
@@ -829,13 +830,13 @@ public class Final {
                         ImgCartaJugadaPC = carta_1_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 1");
+                        // System.out.println("ya elegiste la carta 1");
                     }
                         break;
 
                 case 2:
                     if (!carta2SeleccionadaPC) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2SeleccionadaPC = true;
                         Mano1PC = 0;
 
@@ -843,13 +844,13 @@ public class Final {
                         ImgCartaJugadaPC = carta_2_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 2");
+                        // System.out.println("ya elegiste la carta 2");
                     }
                         break;
 
                 case 3:
                     if (!carta3SeleccionadaPC) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3SeleccionadaPC = true;
                         Mano1PC = 0;  // Establecer Mano1PC en un valor que no sea 1, 2 o 3 para salir del bucle
 
@@ -857,28 +858,28 @@ public class Final {
                         ImgCartaJugadaPC = carta_3_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 3");
+                        // System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 4:
                     if(TrucoCantado == false){
-                        System.out.println("La PC canta TRUCO");
+                        // System.out.println("La PC canta TRUCO");
                         Mano1PC = 0;
                         TrucoCantado = true;
                     } else if(TrucoCantado == true){
-                        System.out.println("Ya se cantó TRUCO, elige otra opción.");
+                        // System.out.println("Ya se cantó TRUCO, elige otra opción.");
                     }
                     break;
 
                 case 5:
                     if ((EnvidoCantado == false && TrucoCantado == false)){
-                        System.out.println("La PC canta ENVIDO");
+                        // System.out.println("La PC canta ENVIDO");
                         Mano1PC = 0;
                         EnvidoCantado = true;
                         break;
                     } else if (EnvidoCantado == true){
-                        System.out.println("Ya se cantó ENVIDO, elige otra opción.");
+                        // System.out.println("Ya se cantó ENVIDO, elige otra opción.");
                     }
                     break;
 
@@ -957,7 +958,7 @@ public class Final {
 
                 }
             } else {
-                System.out.println("El usuario dice NO QUIERO");
+                // System.out.println("El usuario dice NO QUIERO");
                 puntajePC++;
             }
 
@@ -969,7 +970,7 @@ public class Final {
                 switch (Mano1PC) {
                     case 1:
                     if (!carta1SeleccionadaPC) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1SeleccionadaPC = true;
                         Mano1PC = 0;
 
@@ -977,13 +978,13 @@ public class Final {
                         ImgCartaJugadaPC = carta_1_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 1");
+                        // System.out.println("ya elegiste la carta 1");
                     }
                         break;
 
                 case 2:
                     if (!carta2SeleccionadaPC) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2SeleccionadaPC = true;
                         Mano1PC = 0;
 
@@ -991,13 +992,13 @@ public class Final {
                         ImgCartaJugadaPC = carta_2_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 2");
+                        // System.out.println("ya elegiste la carta 2");
                     }
                         break;
 
                 case 3:
                     if (!carta3SeleccionadaPC) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3SeleccionadaPC = true;
                         Mano1PC = 0;  // Establecer Mano1PC en un valor que no sea 1, 2 o 3 para salir del bucle
 
@@ -1005,17 +1006,17 @@ public class Final {
                         ImgCartaJugadaPC = carta_3_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 3");
+                        // System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 4:
                     if(TrucoCantado == false){
-                        System.out.println("La PC canta TRUCO");
+                        // System.out.println("La PC canta TRUCO");
                         Mano1PC = 0;
                         TrucoCantado = true;
                     } else if(TrucoCantado == true){
-                        System.out.println("Ya se cantó TRUCO, elige otra opción.");
+                        // System.out.println("Ya se cantó TRUCO, elige otra opción.");
                     }
                     break;
 
@@ -1051,7 +1052,7 @@ public class Final {
 
             switch (decisionUSERtruco) {
                 case 0:
-                    System.out.println("El usuario dice QUIERO");
+                    // System.out.println("El usuario dice QUIERO");
                     trucoQuerido = true; 
                     
                     break;
@@ -1072,7 +1073,7 @@ public class Final {
                     continue;
                 
                 case 2:
-                    System.out.println("El Usuario dice RETRUCO");
+                    // // System.out.println("El Usuario dice RETRUCO");
 
                     decisionPCREtruco = (int) (Math.random()* 3) + 1;
 
@@ -1144,7 +1145,7 @@ public class Final {
                 switch (Mano1PC) {
                     case 1:
                         if (!carta1SeleccionadaPC) {
-                            System.out.println("elegiste carta 1");
+                            // // System.out.println("elegiste carta 1");
                             carta1SeleccionadaPC = true;
                             Mano1PC = 0;
     
@@ -1152,13 +1153,13 @@ public class Final {
                             ImgCartaJugadaPC = carta_1_imgPC;
 
                         } else {
-                            System.out.println("ya elegiste la carta 1");
+                            // // System.out.println("ya elegiste la carta 1");
                         }
                             break;
     
                     case 2:
                         if (!carta2SeleccionadaPC) {
-                            System.out.println("elegiste carta 2");
+                            // // System.out.println("elegiste carta 2");
                             carta2SeleccionadaPC = true;
                             Mano1PC = 0;
     
@@ -1166,13 +1167,13 @@ public class Final {
                             ImgCartaJugadaPC = carta_2_imgPC;
 
                         } else {
-                            System.out.println("ya elegiste la carta 2");
+                            // System.out.println("ya elegiste la carta 2");
                         }
                             break;
     
                     case 3:
                         if (!carta3SeleccionadaPC) {
-                            System.out.println("elegiste carta 3");
+                            // System.out.println("elegiste carta 3");
                             carta3SeleccionadaPC = true;
                             Mano1PC = 0;  // Establecer Mano1PC en un valor que no sea 1, 2 o 3 para salir del bucle
     
@@ -1180,7 +1181,7 @@ public class Final {
                             ImgCartaJugadaPC = carta_3_imgPC;
 
                         } else {
-                            System.out.println("ya elegiste la carta 3");
+                            // System.out.println("ya elegiste la carta 3");
                         }
                             break;
 
@@ -1273,7 +1274,7 @@ public class Final {
             switch (seleccionMano2) {
                 case 0:
                     if (!carta1Seleccionada) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1Seleccionada = true;
                         continuarLoop2 = false;
 
@@ -1287,7 +1288,7 @@ public class Final {
 
                 case 1:
                     if (!carta2Seleccionada) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
                         continuarLoop2 = false;
 
@@ -1301,7 +1302,7 @@ public class Final {
 
                 case 2:
                     if (!carta3Seleccionada) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
                         continuarLoop2 = false; 
 
@@ -1314,7 +1315,7 @@ public class Final {
 
                 case 3:
                 if(TrucoCantado == false){
-                    System.out.println("En usuario canta TRUCO");
+                    // System.out.println("En usuario canta TRUCO");
                     TrucoCantado = true;
                     continuarLoop2 = false;
 
@@ -1325,11 +1326,11 @@ public class Final {
                     break;
 
                 default:
-                    System.out.println("Opción no válida.");
+                    // System.out.println("Opción no válida.");
                     System.exit(0);
                     break;
             }
-            System.out.println("ASAFGAFGS " + continuarLoop2);
+            // System.out.println(continuarLoop2);
         } while (continuarLoop2 == true);
 
             //TRUCO USER 2
@@ -1337,7 +1338,7 @@ public class Final {
 
                 TrucoEjecutado = true;
     
-                System.out.println("cantaste truco");
+                // System.out.println("cantaste truco");
                 int decisionPCtruco = (int) (Math.random()* 3) + 1;
                 
     
@@ -1363,7 +1364,7 @@ public class Final {
                         continue;
                     
                     case 3:
-                        System.out.println("La PC dice RETRUCO");
+                        // System.out.println("La PC dice RETRUCO");
                         System.out.println("1 = quiero, 2 = NO quiero, 3 = VALECUATRO");
                         
     
@@ -1402,7 +1403,7 @@ public class Final {
                                 continue;
     
                             case 2:
-                                System.out.println("El usuario dice VALECUATRO");
+                                // System.out.println("El usuario dice VALECUATRO");
     
                                 int decisionPCvalecuatro = (int) (Math.random()* 2) + 1;
                                 if (decisionPCvalecuatro == 1){
@@ -1452,14 +1453,14 @@ public class Final {
                     switch (seleccionMano2) {
                         case 0:
                             if (!carta1Seleccionada) {
-                                System.out.println("elegiste carta 1");
+                                // System.out.println("elegiste carta 1");
                                 carta1Seleccionada = true;
                                 continuarLoopTRUCO2 = false; // Establecer continuarLoop2 = false para salir del bucle
 
                                 cartaJugadaUser = carta_1;
                                 ImgCartaJugadaUser = carta_1_img;
         
-                                System.out.println("la carta jugada es: " + cartaJugadaUser);
+                                // System.out.println("la carta jugada es: " + cartaJugadaUser);
                             } else {
                                 JOptionPane.showMessageDialog(null, "ya elegiste esta carta");
                             }
@@ -1467,7 +1468,7 @@ public class Final {
         
                         case 1:
                             if (!carta2Seleccionada) {
-                                System.out.println("elegiste carta 2");
+                                // System.out.println("elegiste carta 2");
                                 carta2Seleccionada = true;
                                 continuarLoopTRUCO2 = false;
 
@@ -1481,7 +1482,7 @@ public class Final {
         
                         case 2:
                             if (!carta3Seleccionada) {
-                                System.out.println("elegiste carta 3");
+                                // System.out.println("elegiste carta 3");
                                 carta3Seleccionada = true;
                                 continuarLoopTRUCO2 = false;
 
@@ -1495,7 +1496,7 @@ public class Final {
         
                         case 3:
                             if(TrucoCantado == false){
-                                System.out.println("En usuario canta TRUCO");
+                                // System.out.println("En usuario canta TRUCO");
                                 continuarLoopTRUCO2 = false;
 
                                 TrucoCantado = true;
@@ -1506,11 +1507,11 @@ public class Final {
         
         
                         default:
-                            System.out.println("Opción no válida.");
+                            // System.out.println("Opción no válida.");
                             System.exit(0);
                             break;
                     }
-                    System.out.println(continuarLoopTRUCO2);
+                    // System.out.println(continuarLoopTRUCO2);
                 } while (continuarLoopTRUCO2 == true);
 
         }
@@ -1526,7 +1527,7 @@ public class Final {
             switch (Mano2PC) {
                 case 1:
                     if (!carta1SeleccionadaPC) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1SeleccionadaPC = true;
                         Mano2PC = 0;
 
@@ -1534,13 +1535,13 @@ public class Final {
                         ImgCartaJugadaPC = carta_1_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 1");
+                        // System.out.println("ya elegiste la carta 1");
                     }
                         break;
 
                 case 2:
                     if (!carta2SeleccionadaPC) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2SeleccionadaPC = true;
                         Mano2PC = 0;
 
@@ -1548,13 +1549,13 @@ public class Final {
                         ImgCartaJugadaPC = carta_2_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 2");
+                        // System.out.println("ya elegiste la carta 2");
                     }
                         break;
 
                 case 3:
                     if (!carta3SeleccionadaPC) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3SeleccionadaPC = true;
                         Mano2PC = 0;  
 
@@ -1562,17 +1563,17 @@ public class Final {
                         ImgCartaJugadaPC = carta_3_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 3");
+                        // System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 4:
                     if(TrucoCantado == false){
-                        System.out.println("La PC canta TRUCO");
+                        // System.out.println("La PC canta TRUCO");
                         Mano2PC = 0;
-                        TrucoCantado = true;
+                        // TrucoCantado = true;
                     } else if(TrucoCantado == true){
-                        System.out.println("Ya se cantó TRUCO, elige otra opción.");
+                        // System.out.println("Ya se cantó TRUCO, elige otra opción.");
                     }
 
                 default:
@@ -1621,7 +1622,7 @@ public class Final {
                     continue;
                 
                 case 2:
-                    System.out.println("El Usuario dice RETRUCO");
+                    // System.out.println("El Usuario dice RETRUCO");
 
                     decisionPCREtruco = (int) (Math.random()* 3) + 1;
 
@@ -1691,7 +1692,7 @@ public class Final {
                 switch (Mano2PC) {
                     case 1:
                         if (!carta1SeleccionadaPC) {
-                            System.out.println("elegiste carta 1");
+                            // System.out.println("elegiste carta 1");
                             carta1SeleccionadaPC = true;
                             Mano2PC = 0;
     
@@ -1699,13 +1700,13 @@ public class Final {
                             ImgCartaJugadaPC = carta_1_imgPC;
 
                         } else {
-                            System.out.println("ya elegiste la carta 1");
+                            // System.out.println("ya elegiste la carta 1");
                         }
                             break;
     
                     case 2:
                         if (!carta2SeleccionadaPC) {
-                            System.out.println("elegiste carta 2");
+                            // System.out.println("elegiste carta 2");
                             carta2SeleccionadaPC = true;
                             Mano2PC = 0;
     
@@ -1713,13 +1714,13 @@ public class Final {
                             ImgCartaJugadaPC = carta_2_imgPC;
 
                         } else {
-                            System.out.println("ya elegiste la carta 2");
+                            // System.out.println("ya elegiste la carta 2");
                         }
                             break;
     
                     case 3:
                         if (!carta3SeleccionadaPC) {
-                            System.out.println("elegiste carta 3");
+                            // System.out.println("elegiste carta 3");
                             carta3SeleccionadaPC = true;
                             Mano2PC = 0;  // Establecer Mano1PC en un valor que no sea 1, 2 o 3 para salir del bucle
     
@@ -1727,7 +1728,7 @@ public class Final {
                             ImgCartaJugadaPC = carta_3_imgPC;
 
                         } else {
-                            System.out.println("ya elegiste la carta 3");
+                            // System.out.println("ya elegiste la carta 3");
                         }
                             break;
 
@@ -1853,7 +1854,7 @@ public class Final {
             switch (seleccionMano3) {
                 case 0:
                     if (!carta1Seleccionada) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1Seleccionada = true;
                         continuarLoop3 = false;
 
@@ -1867,7 +1868,7 @@ public class Final {
 
                 case 1:
                     if (!carta2Seleccionada) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2Seleccionada = true;
                         continuarLoop3 = false;
 
@@ -1881,7 +1882,7 @@ public class Final {
 
                 case 2:
                     if (!carta3Seleccionada) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3Seleccionada = true;
                         continuarLoop3 = false; 
 
@@ -1894,7 +1895,7 @@ public class Final {
 
                 case 3:
                     if(TrucoCantado == false){
-                        System.out.println("En usuario canta TRUCO");
+                        // System.out.println("En usuario canta TRUCO");
                         continuarLoop3 = false;
 
                         TrucoCantado = true;
@@ -1904,7 +1905,7 @@ public class Final {
                         break;
 
                 default:
-                    System.out.println("Opción no válida.");
+                    // System.out.println("Opción no válida.");
                     System.exit(0);
             }
         } while (continuarLoop3 == true);
@@ -1914,7 +1915,7 @@ public class Final {
 
                 TrucoEjecutado = true;
     
-                System.out.println("cantaste truco");
+                // System.out.println("cantaste truco");
                 int decisionPCtruco = (int) (Math.random()* 3) + 1;
                 
     
@@ -1939,8 +1940,8 @@ public class Final {
                         continue;
                     
                     case 3:
-                        System.out.println("La PC dice RETRUCO");
-                        System.out.println("1 = quiero, 2 = NO quiero, 3 = VALECUATRO");
+                        // System.out.println("La PC dice RETRUCO");
+                        // System.out.println("1 = quiero, 2 = NO quiero, 3 = VALECUATRO");
                         
     
                         String[] opcionesUserREtruco = {"Quiero", "No quiero", "QUIERO VALE CUATRO"};
@@ -1977,7 +1978,7 @@ public class Final {
                                 continue;
     
                             case 2:
-                                System.out.println("El usuario dice VALECUATRO");
+                                // System.out.println("El usuario dice VALECUATRO");
     
                                 int decisionPCvalecuatro = (int) (Math.random()* 2) + 1;
 
@@ -2027,22 +2028,22 @@ public class Final {
                     switch (seleccionMano3) {
                         case 0:
                             if (!carta1Seleccionada) {
-                                System.out.println("elegiste carta 1");
+                                // System.out.println("elegiste carta 1");
                                 carta1Seleccionada = true;
                                 continuarLoopTRUCO3 = false;  
         
                                 cartaJugadaUser = carta_1;
                                 ImgCartaJugadaUser = carta_1_img;
         
-                                System.out.println("la carta jugada es: " + cartaJugadaUser);
+                                // System.out.println("la carta jugada es: " + cartaJugadaUser);
                             } else {
-                                System.out.println("ya elegiste la carta 1");
+                                // System.out.println("ya elegiste la carta 1");
                             }
                                 break;
         
                         case 1:
                             if (!carta2Seleccionada) {
-                                System.out.println("elegiste carta 2");
+                                // System.out.println("elegiste carta 2");
                                 carta2Seleccionada = true;
                                 continuarLoopTRUCO3 = false;  
         
@@ -2050,13 +2051,13 @@ public class Final {
                                 ImgCartaJugadaUser = carta_2_img;
         
                             } else {
-                                System.out.println("ya elegiste la carta 2");
+                                // System.out.println("ya elegiste la carta 2");
                             }
                                 break;
         
                         case 2:
                             if (!carta3Seleccionada) {
-                                System.out.println("elegiste carta 3");
+                                // System.out.println("elegiste carta 3");
                                 carta3Seleccionada = true;
                                 continuarLoopTRUCO3 = false;  
                             
@@ -2064,19 +2065,19 @@ public class Final {
                                 ImgCartaJugadaUser = carta_3_img;
         
                             } else {
-                                System.out.println("ya elegiste la carta 3");
+                                // System.out.println("ya elegiste la carta 3");
                             }
                                 break;
         
                         case 3:
-                            System.out.println("elegiste truco");
+                            // System.out.println("elegiste truco");
                             continuarLoop3 = false;
                             TrucoCantado = true;
                             break;
         
         
                         default:
-                            System.out.println("Opción no válida.");
+                            // System.out.println("Opción no válida.");
                             System.exit(0);
                             break;
                     }
@@ -2097,7 +2098,7 @@ public class Final {
             switch (Mano3PC) {
                 case 1:
                     if (!carta1SeleccionadaPC) {
-                        System.out.println("elegiste carta 1");
+                        // System.out.println("elegiste carta 1");
                         carta1SeleccionadaPC = true;
                         Mano3PC = 0;
 
@@ -2105,13 +2106,13 @@ public class Final {
                         ImgCartaJugadaPC = carta_1_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 1");
+                        // System.out.println("ya elegiste la carta 1");
                     }
                         break;
 
                 case 2:
                     if (!carta2SeleccionadaPC) {
-                        System.out.println("elegiste carta 2");
+                        // System.out.println("elegiste carta 2");
                         carta2SeleccionadaPC = true;
                         Mano3PC = 0;
 
@@ -2119,13 +2120,13 @@ public class Final {
                         ImgCartaJugadaPC = carta_2_imgPC;
                         
                     } else {
-                        System.out.println("ya elegiste la carta 2");
+                        // System.out.println("ya elegiste la carta 2");
                     }
                         break;
 
                 case 3:
                     if (!carta3SeleccionadaPC) {
-                        System.out.println("elegiste carta 3");
+                        // System.out.println("elegiste carta 3");
                         carta3SeleccionadaPC = true;
                         Mano3PC = 0;  
 
@@ -2133,12 +2134,12 @@ public class Final {
                         ImgCartaJugadaPC = carta_3_imgPC;
 
                     } else {
-                        System.out.println("ya elegiste la carta 3");
+                        // System.out.println("ya elegiste la carta 3");
                     }
                         break;
 
                 case 4:
-                    System.out.println("elegiste truco");
+                    // System.out.println("elegiste truco");
                     Mano3PC = 0;
                     TrucoCantado = true;
                     break;
@@ -2154,7 +2155,7 @@ if(TrucoCantado == true && TrucoEjecutado == false){
 
     TrucoEjecutado = true;
 
-    System.out.println("1 = quiero, 2 = NO quiero, 3 = RETRUCO");
+    // System.out.println("1 = quiero, 2 = NO quiero, 3 = RETRUCO");
     int decisionPCREtruco = 0;
     int decisionUSERtruco = JOptionPane.showOptionDialog(
         null,
@@ -2192,7 +2193,7 @@ if(TrucoCantado == true && TrucoEjecutado == false){
             continue;
         
         case 2:
-            System.out.println("El usuario dice RETRUCO");
+            // System.out.println("El usuario dice RETRUCO");
 
             decisionPCREtruco = (int) (Math.random()* 3) + 1;
 
@@ -2265,50 +2266,50 @@ if(TrucoCantado == true && TrucoEjecutado == false){
         switch (Mano3PC) {
             case 1:
                 if (!carta1SeleccionadaPC) {
-                    System.out.println("elegiste carta 1");
+                    // System.out.println("elegiste carta 1");
                     carta1SeleccionadaPC = true;
                     Mano3PC = 0;
 
                     cartaJugadaPC = carta_1_PC;
                     ImgCartaJugadaPC = carta_1_imgPC;
                 } else {
-                    System.out.println("ya elegiste la carta 1");
+                    // System.out.println("ya elegiste la carta 1");
                 }
                     break;
 
             case 2:
                 if (!carta2SeleccionadaPC) {
-                    System.out.println("elegiste carta 2");
+                    // System.out.println("elegiste carta 2");
                     carta2SeleccionadaPC = true;
                     Mano3PC = 0;
 
                     cartaJugadaPC = carta_2_PC;
                     ImgCartaJugadaPC = carta_2_imgPC;
                 } else {
-                    System.out.println("ya elegiste la carta 2");
+                    // System.out.println("ya elegiste la carta 2");
                 }
                     break;
 
             case 3:
                 if (!carta3SeleccionadaPC) {
-                    System.out.println("elegiste carta 3");
+                    // System.out.println("elegiste carta 3");
                     carta3SeleccionadaPC = true;
                     Mano3PC = 0;  // Establecer Mano1PC en un valor que no sea 1, 2 o 3 para salir del bucle
 
                     cartaJugadaPC = carta_3_PC;
                     ImgCartaJugadaPC = carta_3_imgPC;
                 } else {
-                    System.out.println("ya elegiste la carta 3");
+                    // System.out.println("ya elegiste la carta 3");
                 }
                     break;
 
             case 4:
                 if(TrucoCantado == false){
-                    System.out.println("La PC canta TRUCO");
+                    // System.out.println("La PC canta TRUCO");
                     Mano3PC = 0;
                     TrucoCantado = true;
                 } else if(TrucoCantado == true){
-                    System.out.println("Ya se cantó TRUCO, elige otra opción.");
+                    // System.out.println("Ya se cantó TRUCO, elige otra opción.");
                 }
                 break;
 
