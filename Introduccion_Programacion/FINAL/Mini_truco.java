@@ -156,8 +156,6 @@ public class Mini_truco {
         int filaDeck = deck.length;
         int colDeck = deck[0].length;
 
-        int puntajeUser = 0;
-        int puntajePC = 0;
 
         do{
 
@@ -186,17 +184,6 @@ public class Mini_truco {
             } while (carta_1 == carta_2 || carta_2 == carta_3 || carta_1 == carta_3);
 
         
-
-        //hago coincidir deck con deckEnvido
-        int filaDeckEnv1 = filaDeckRand1;
-        int colDeckEnv1 = colDeckRand1;
-
-        int filaDeckEnv2 = filaDeckRand2;
-        int colDeckEnv2 = colDeckRand2;
-
-        int filaDeckEnv3 = filaDeckRand3;
-        int colDeckEnv3 = colDeckRand3;
-
         //hago coincidir deck con deckImg
         int filaDeckImgRand1 = filaDeckRand1;
         int colDeckImgRand1 = colDeckRand1;
@@ -208,15 +195,12 @@ public class Mini_truco {
         int colDeckImgRand3 = colDeckRand3;
 
 
-        //Valor de las cartas para envido
-        int cartaEnv_1 = deckEnvido[filaDeckEnv1][colDeckEnv1];
-        int cartaEnv_2 = deckEnvido[filaDeckEnv2][colDeckEnv2];
-        int cartaEnv_3 = deckEnvido[filaDeckEnv3][colDeckEnv3];
-
         //imgs de las cartas usuario
         ImageIcon carta_1_img = deckImg[filaDeckImgRand1][colDeckImgRand1];
         ImageIcon carta_2_img = deckImg[filaDeckImgRand2][colDeckImgRand2];
         ImageIcon carta_3_img = deckImg[filaDeckImgRand3][colDeckImgRand3];
+
+        
 
         
 
@@ -226,59 +210,47 @@ public class Mini_truco {
         int filaDeckRandPC1, filaDeckRandPC2, filaDeckRandPC3;
         int colDeckRandPC1, colDeckRandPC2, colDeckRandPC3;
 
-        do{
-            //genero un random para las cartas del PC:
-            filaDeckRandPC1 =  (int) (Math.random() * filaDeck);
-            colDeckRandPC1 =   (int) (Math.random() * colDeck);
-
-            filaDeckRandPC2 =  (int) (Math.random() * filaDeck);
-            colDeckRandPC2 =   (int) (Math.random() * colDeck);
-
-            filaDeckRandPC3 =  (int) (Math.random() * filaDeck);
-            colDeckRandPC3 =   (int) (Math.random() * colDeck);
-
-            //cartas que tocan a la PC
+        for (;;) {
+            // Genero un random para las cartas del PC:
+            filaDeckRandPC1 = (int) (Math.random() * filaDeck);
+            colDeckRandPC1 = (int) (Math.random() * colDeck);
+        
+            filaDeckRandPC2 = (int) (Math.random() * filaDeck);
+            colDeckRandPC2 = (int) (Math.random() * colDeck);
+        
+            filaDeckRandPC3 = (int) (Math.random() * filaDeck);
+            colDeckRandPC3 = (int) (Math.random() * colDeck);
+        
+            // Cartas que tocan a la PC
             carta_1_PC = deck[filaDeckRandPC1][colDeckRandPC1];
             carta_2_PC = deck[filaDeckRandPC2][colDeckRandPC2];
             carta_3_PC = deck[filaDeckRandPC3][colDeckRandPC3];
+        
+            if (!((carta_1 == carta_1_PC || carta_1 == carta_2_PC || carta_1 == carta_3_PC) ||
+                  (carta_2 == carta_1_PC || carta_2 == carta_2_PC || carta_2 == carta_3_PC) ||
+                  (carta_3 == carta_1_PC || carta_3 == carta_2_PC || carta_3 == carta_3_PC) ||
+                  (carta_1_PC == carta_2_PC || carta_2_PC == carta_3_PC || carta_1_PC == carta_3_PC))) {
+                break; // Salir del bucle si la condición no se cumple
+            }
+        }
+        
+        //hago coincidir deck con deckImg
+        int filaDeckImgPCRand1 = filaDeckRandPC1;
+        int colDeckImgPCRand1 = colDeckRandPC1;
 
+        int filaDeckImgPCRand2 = filaDeckRandPC2;
+        int colDeckImgPCRand2 = colDeckRandPC2;
 
-        } while ((carta_1 == carta_1_PC || carta_1 == carta_2_PC || carta_1 == carta_3_PC) ||
-                (carta_2 == carta_1_PC || carta_2 == carta_2_PC || carta_2 == carta_3_PC)  ||
-                (carta_3 == carta_1_PC || carta_3 == carta_2_PC || carta_3 == carta_3_PC) ||
-                (carta_1_PC == carta_2_PC || carta_2_PC == carta_3_PC || carta_1_PC == carta_3_PC));
-
-
-        //hago coincidir deck con deckEnvido
-        int filaDeckEnvPC1 = filaDeckRandPC1;
-        int colDeckEnvPC1 = colDeckRandPC1;
-
-        int filaDeckEnvPC2 = filaDeckRandPC2;
-        int colDeckEnvPC2 = colDeckRandPC2;
-
-        int filaDeckEnvPC3 = filaDeckRandPC3;
-        int colDeckEnvPC3 = colDeckRandPC3;
+        int filaDeckImgPCRand3 = filaDeckRandPC3;
+        int colDeckImgPCRand3 = colDeckRandPC3;
 
         
-
-        //Valor de las cartas para envido PC
-        int cartaEnv_1_PC = deckEnvido[filaDeckEnvPC1][colDeckEnvPC1];
-        int cartaEnv_2_PC = deckEnvido[filaDeckEnvPC2][colDeckEnvPC2];
-        int cartaEnv_3_PC = deckEnvido[filaDeckEnvPC3][colDeckEnvPC3];
-       
-        
-        
+        //imgs de las cartas PC
+        ImageIcon carta_1_imgPC = deckImg[filaDeckImgPCRand1][colDeckImgPCRand1];
+        ImageIcon carta_2_imgPC = deckImg[filaDeckImgPCRand2][colDeckImgPCRand2];
+        ImageIcon carta_3_imgPC = deckImg[filaDeckImgPCRand3][colDeckImgPCRand3];
 
 
-        System.out.println("carta 1: " + carta_1 + " Palo: " + filaDeckRand1);
-        System.out.println("carta 2: " + carta_2 + " Palo: " + filaDeckRand2);
-        System.out.println("carta 3: " + carta_3 + " Palo: " + filaDeckRand3);
-
-        System.out.println("carta 1 PC: " + carta_1_PC + " Palo: " + filaDeckRandPC1);
-        System.out.println("carta 2 PC: " + carta_2_PC + " Palo: " + filaDeckRandPC2);
-        System.out.println("carta 3 PC: " + carta_3_PC + " Palo: " + filaDeckRandPC3);
-        
-            ////////////////////////////////////////////////////////////////////
 
     // Crear un panel para contener las imágenes
     JPanel CartasMano1 = new JPanel();
@@ -286,40 +258,44 @@ public class Mini_truco {
     CartasMano1.add(new JLabel(carta_2_img)); //en vez de "panel" uso CartasImg1 para distinguir entre manos
     CartasMano1.add(new JLabel(carta_3_img));
 
-    String[] opciones = {"Jugar primera carta", "Jugar segunda carta", "Jugar tercera carta", "Cantar Envido", "Cantar truco"};
-    JComboBox<String> comboBox = new JComboBox<>(opciones);
-    CartasMano1.add(comboBox);
+    String[] opciones = {"ok", "cancel"};
 
-    // Mostrar el panel en JOptionPane
-    int result = JOptionPane.showConfirmDialog(
-            null,
-            CartasMano1,
-            "Tus cartas",
-            JOptionPane.PLAIN_MESSAGE);
 
-            String seleccion;
-            if (result == JOptionPane.OK_OPTION) {
-                seleccion = (String) comboBox.getSelectedItem();
-                System.out.println("Opción seleccionada: " + seleccion);
+    
 
-                
-            }
-
-            CartasImg1.remove();
-
-            // Mostrar el panel en JOptionPane
-     result = JOptionPane.showConfirmDialog(
-        null,
-        CartasImg1,
-        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-        JOptionPane.PLAIN_MESSAGE);
-
-        if (result == JOptionPane.OK_OPTION) {
-            seleccion = (String) comboBox.getSelectedItem();
-            System.out.println("Opción seleccionada: " + seleccion);
-
+            int Mostrarmanouser = JOptionPane.showOptionDialog(
+                null,
+                CartasMano1,
+    
+                "cartas user",
+                JOptionPane.DEFAULT_OPTION, 
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                opciones,
+                opciones[0]
+            );
             
-        }
+
+
+            JPanel manopc = new JPanel();
+            manopc.add(new JLabel(carta_1_imgPC));
+            manopc.add(new JLabel(carta_2_imgPC));
+            manopc.add(new JLabel(carta_3_imgPC));
+    
+            String[] PC = {"Ok", "cancel"};
+    
+            int MostrarmanoPC = JOptionPane.showOptionDialog(
+                null,
+                manopc,
+    
+                "cartas PC",
+                JOptionPane.DEFAULT_OPTION, 
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                PC,
+                PC[0]
+            );
+         
 
     
 

@@ -4,6 +4,9 @@ import javax.swing.*;
 public class Final {
     public static void main(String[] args){
 
+
+        //todos los System.out.println comentados son test
+
         int respuesta = JOptionPane.showConfirmDialog(
             null,
             "Bienvenido al juego de truco. ¿Deseas jugar una partida?",
@@ -14,6 +17,7 @@ public class Final {
         if (respuesta == JOptionPane.NO_OPTION){
             System.exit(0);
         }
+        // System.out.println(Final.class.getResource("./Cartas/esp1.png"));
 
         //ARMO EL MAZO
         int deck[][] = new int[4][10];
@@ -113,47 +117,46 @@ public class Final {
         ImageIcon [][] deckImg = new ImageIcon [4][10];
  
         
-        deckImg[0][0] = new ImageIcon ("./Cartas/esp1.png"); //AGREGAR Introduccion_Programacion/FINAL y quitar el punto para ejecutarlo desde vscode
-        deckImg[0][1] = new ImageIcon ("./Cartas/esp2.png");    // dejar asi para ejecutar desde terminal
-        deckImg[0][2] = new ImageIcon ("./Cartas/esp3.png");
-        deckImg[0][3] = new ImageIcon ("./Cartas/esp4.png");
-        deckImg[0][4] = new ImageIcon ("./Cartas/esp5.png");
-        deckImg[0][5] = new ImageIcon ("./Cartas/esp6.png");
-        deckImg[0][6] = new ImageIcon ("./Cartas/esp7.png");
-        deckImg[0][7] = new ImageIcon ("./Cartas/esp10.png");
-        deckImg[0][8] = new ImageIcon ("./Cartas/esp11.png");
-        deckImg[0][9] = new ImageIcon ("./Cartas/esp12.png");
-        deckImg[1][0] = new ImageIcon ("./Cartas/basto1.png"); 
-        deckImg[1][1] = new ImageIcon ("./Cartas/basto2.png");
-        deckImg[1][2] = new ImageIcon ("./Cartas/basto3.png"); 
-        deckImg[1][3] = new ImageIcon ("./Cartas/basto4.png");
-        deckImg[1][4] = new ImageIcon ("./Cartas/basto5.png");
-        deckImg[1][5] = new ImageIcon ("./Cartas/basto6.png");
-        deckImg[1][6] = new ImageIcon ("./Cartas/basto7.png");
-        deckImg[1][7] = new ImageIcon ("./Cartas/basto10.png");
-        deckImg[1][8] = new ImageIcon ("./Cartas/basto11.png");
-        deckImg[1][9] = new ImageIcon ("./Cartas/basto12.png");
-        deckImg[2][0] = new ImageIcon ("./Cartas/oro1.png");
-        deckImg[2][1] = new ImageIcon ("./Cartas/oro2.png");
-        deckImg[2][2] = new ImageIcon ("./Cartas/oro3.png");
-        deckImg[2][3] = new ImageIcon ("./Cartas/oro4.png");
-        deckImg[2][4] = new ImageIcon ("./Cartas/oro5.png");
-        deckImg[2][5] = new ImageIcon ("./Cartas/oro6.png");
-        deckImg[2][6] = new ImageIcon ("./Cartas/oro7.png");
-        deckImg[2][7] = new ImageIcon ("./Cartas/oro10.png");
-        deckImg[2][8] = new ImageIcon ("./Cartas/oro11.png");
-        deckImg[2][9] = new ImageIcon ("./Cartas/oro12.png");
-        deckImg[3][0] = new ImageIcon ("./Cartas/copa1.png");
-        deckImg[3][1] = new ImageIcon ("./Cartas/copa2.png");
-        deckImg[3][2] = new ImageIcon ("./Cartas/copa3.png");
-        deckImg[3][3] = new ImageIcon ("./Cartas/copa4.png");
-        deckImg[3][4] = new ImageIcon ("./Cartas/copa5.png");
-        deckImg[3][5] = new ImageIcon ("./Cartas/copa6.png");
-        deckImg[3][6] = new ImageIcon ("./Cartas/copa7.png");
-        deckImg[3][7] = new ImageIcon ("./Cartas/copa10.png");
-        deckImg[3][8] = new ImageIcon ("./Cartas/copa11.png");
-        deckImg[3][9] = new ImageIcon ("./Cartas/copa12.png");
-
+        deckImg[0][0] = new ImageIcon (Final.class.getResource("./Cartas/esp1.png"));
+        deckImg[0][1] = new ImageIcon (Final.class.getResource("./Cartas/esp2.png"));
+        deckImg[0][2] = new ImageIcon (Final.class.getResource("./Cartas/esp3.png"));
+        deckImg[0][3] = new ImageIcon (Final.class.getResource("./Cartas/esp4.png"));
+        deckImg[0][4] = new ImageIcon (Final.class.getResource("./Cartas/esp5.png"));
+        deckImg[0][5] = new ImageIcon (Final.class.getResource("./Cartas/esp6.png"));
+        deckImg[0][6] = new ImageIcon (Final.class.getResource("./Cartas/esp7.png"));
+        deckImg[0][7] = new ImageIcon (Final.class.getResource("./Cartas/esp10.png"));
+        deckImg[0][8] = new ImageIcon (Final.class.getResource("./Cartas/esp11.png"));
+        deckImg[0][9] = new ImageIcon (Final.class.getResource("./Cartas/esp12.png"));
+        deckImg[1][0] = new ImageIcon (Final.class.getResource("./Cartas/basto1.png")); 
+        deckImg[1][1] = new ImageIcon (Final.class.getResource("./Cartas/basto2.png"));
+        deckImg[1][2] = new ImageIcon (Final.class.getResource("./Cartas/basto3.png")); 
+        deckImg[1][3] = new ImageIcon (Final.class.getResource("./Cartas/basto4.png"));
+        deckImg[1][4] = new ImageIcon (Final.class.getResource("./Cartas/basto5.png"));
+        deckImg[1][5] = new ImageIcon (Final.class.getResource("./Cartas/basto6.png"));
+        deckImg[1][6] = new ImageIcon (Final.class.getResource("./Cartas/basto7.png"));
+        deckImg[1][7] = new ImageIcon (Final.class.getResource("./Cartas/basto10.png"));
+        deckImg[1][8] = new ImageIcon (Final.class.getResource("./Cartas/basto11.png"));
+        deckImg[1][9] = new ImageIcon (Final.class.getResource("./Cartas/basto12.png"));
+        deckImg[2][0] = new ImageIcon (Final.class.getResource("./Cartas/oro1.png"));
+        deckImg[2][1] = new ImageIcon (Final.class.getResource("./Cartas/oro2.png"));
+        deckImg[2][2] = new ImageIcon (Final.class.getResource("./Cartas/oro3.png"));
+        deckImg[2][3] = new ImageIcon (Final.class.getResource("./Cartas/oro4.png"));
+        deckImg[2][4] = new ImageIcon (Final.class.getResource("./Cartas/oro5.png"));
+        deckImg[2][5] = new ImageIcon (Final.class.getResource("./Cartas/oro6.png"));
+        deckImg[2][6] = new ImageIcon (Final.class.getResource("./Cartas/oro7.png"));
+        deckImg[2][7] = new ImageIcon (Final.class.getResource("./Cartas/oro10.png"));
+        deckImg[2][8] = new ImageIcon (Final.class.getResource("./Cartas/oro11.png"));
+        deckImg[2][9] = new ImageIcon (Final.class.getResource("./Cartas/oro12.png"));
+        deckImg[3][0] = new ImageIcon (Final.class.getResource("./Cartas/copa1.png"));
+        deckImg[3][1] = new ImageIcon (Final.class.getResource("./Cartas/copa2.png"));
+        deckImg[3][2] = new ImageIcon (Final.class.getResource("./Cartas/copa3.png"));
+        deckImg[3][3] = new ImageIcon (Final.class.getResource("./Cartas/copa4.png"));
+        deckImg[3][4] = new ImageIcon (Final.class.getResource("./Cartas/copa5.png"));
+        deckImg[3][5] = new ImageIcon (Final.class.getResource("./Cartas/copa6.png"));
+        deckImg[3][6] = new ImageIcon (Final.class.getResource("./Cartas/copa7.png"));
+        deckImg[3][7] = new ImageIcon (Final.class.getResource("./Cartas/copa10.png"));
+        deckImg[3][8] = new ImageIcon (Final.class.getResource("./Cartas/copa11.png"));
+        deckImg[3][9] = new ImageIcon (Final.class.getResource("./Cartas/copa12.png"));
          //----------------------------------------------------------------
 
         int filaDeck = deck.length;
@@ -162,7 +165,7 @@ public class Final {
         int puntajeUser = 0;
         int puntajePC = 0;
 
-        do{
+        while ( puntajeUser < 15 && puntajePC < 15 ) {
 
             int carta_1, carta_2, carta_3;
 
@@ -229,27 +232,54 @@ public class Final {
         int filaDeckRandPC1, filaDeckRandPC2, filaDeckRandPC3;
         int colDeckRandPC1, colDeckRandPC2, colDeckRandPC3;
 
-        do{
-            //genero un random para las cartas del PC:
-            filaDeckRandPC1 =  (int) (Math.random() * filaDeck);
-            colDeckRandPC1 =   (int) (Math.random() * colDeck);
+        //do while para las cartas del pc  
+        // do{
+        //     //genero un random para las cartas del PC:
+        //     filaDeckRandPC1 =  (int) (Math.random() * filaDeck);
+        //     colDeckRandPC1 =   (int) (Math.random() * colDeck);
 
-            filaDeckRandPC2 =  (int) (Math.random() * filaDeck);
-            colDeckRandPC2 =   (int) (Math.random() * colDeck);
+        //     filaDeckRandPC2 =  (int) (Math.random() * filaDeck);
+        //     colDeckRandPC2 =   (int) (Math.random() * colDeck);
 
-            filaDeckRandPC3 =  (int) (Math.random() * filaDeck);
-            colDeckRandPC3 =   (int) (Math.random() * colDeck);
+        //     filaDeckRandPC3 =  (int) (Math.random() * filaDeck);
+        //     colDeckRandPC3 =   (int) (Math.random() * colDeck);
 
-            //cartas que tocan a la PC
+        //     //cartas que tocan a la PC
+        //     carta_1_PC = deck[filaDeckRandPC1][colDeckRandPC1];
+        //     carta_2_PC = deck[filaDeckRandPC2][colDeckRandPC2];
+        //     carta_3_PC = deck[filaDeckRandPC3][colDeckRandPC3];
+
+
+        // } while ((carta_1 == carta_1_PC || carta_1 == carta_2_PC || carta_1 == carta_3_PC) ||
+        //         (carta_2 == carta_1_PC || carta_2 == carta_2_PC || carta_2 == carta_3_PC)  ||
+        //         (carta_3 == carta_1_PC || carta_3 == carta_2_PC || carta_3 == carta_3_PC) ||
+        //         (carta_1_PC == carta_2_PC || carta_2_PC == carta_3_PC || carta_1_PC == carta_3_PC));
+
+
+        for (;;) {
+            // Genero un random para las cartas del PC:
+            filaDeckRandPC1 = (int) (Math.random() * filaDeck);
+            colDeckRandPC1 = (int) (Math.random() * colDeck);
+        
+            filaDeckRandPC2 = (int) (Math.random() * filaDeck);
+            colDeckRandPC2 = (int) (Math.random() * colDeck);
+        
+            filaDeckRandPC3 = (int) (Math.random() * filaDeck);
+            colDeckRandPC3 = (int) (Math.random() * colDeck);
+        
+            // Cartas que tocan a la PC
             carta_1_PC = deck[filaDeckRandPC1][colDeckRandPC1];
             carta_2_PC = deck[filaDeckRandPC2][colDeckRandPC2];
             carta_3_PC = deck[filaDeckRandPC3][colDeckRandPC3];
-
-
-        } while ((carta_1 == carta_1_PC || carta_1 == carta_2_PC || carta_1 == carta_3_PC) ||
-                (carta_2 == carta_1_PC || carta_2 == carta_2_PC || carta_2 == carta_3_PC)  ||
-                (carta_3 == carta_1_PC || carta_3 == carta_2_PC || carta_3 == carta_3_PC) ||
-                (carta_1_PC == carta_2_PC || carta_2_PC == carta_3_PC || carta_1_PC == carta_3_PC));
+        
+            if (!((carta_1 == carta_1_PC || carta_1 == carta_2_PC || carta_1 == carta_3_PC) ||
+                  (carta_2 == carta_1_PC || carta_2 == carta_2_PC || carta_2 == carta_3_PC) ||
+                  (carta_3 == carta_1_PC || carta_3 == carta_2_PC || carta_3 == carta_3_PC) ||
+                  (carta_1_PC == carta_2_PC || carta_2_PC == carta_3_PC || carta_1_PC == carta_3_PC))) {
+                break; // Salir del bucle si la condición no se cumple
+            }
+        }
+        
 
 
         //hago coincidir deck con deckEnvido
@@ -279,7 +309,7 @@ public class Final {
         int cartaEnv_2_PC = deckEnvido[filaDeckEnvPC2][colDeckEnvPC2];
         int cartaEnv_3_PC = deckEnvido[filaDeckEnvPC3][colDeckEnvPC3];
         
-        //imgs de las cartas usuario
+        //imgs de las cartas PC
         ImageIcon carta_1_imgPC = deckImg[filaDeckImgPCRand1][colDeckImgPCRand1];
         ImageIcon carta_2_imgPC = deckImg[filaDeckImgPCRand2][colDeckImgPCRand2];
         ImageIcon carta_3_imgPC = deckImg[filaDeckImgPCRand3][colDeckImgPCRand3];
@@ -374,7 +404,7 @@ public class Final {
         //     PC,
         //     PC[0]
         // );
-        
+
 
         //MANO 1 USER
         int seleccionMano1; // le doy un valor por defecto a la variable para que el switch no se queje
@@ -1269,7 +1299,7 @@ public class Final {
                     opcionesMano2, 
                     opcionesMano2[0]);
 
-            System.out.print("Ingresa el número de la carta (1, 2, 3 o 4): ");
+            // System.out.print("Ingresa el número de la carta (1, 2, 3 o 4): ");
 
             switch (seleccionMano2) {
                 case 0:
@@ -1521,7 +1551,7 @@ public class Final {
         int Mano2PC;
 
         do { 
-            System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
+            // System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
             Mano2PC = (int) (Math.random()* 3) + 1;
 
             switch (Mano2PC) {
@@ -1849,7 +1879,7 @@ public class Final {
                     opcionesMano3, 
                     opcionesMano3[0]);
 
-            System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
+            // System.out.print("Ingresa el número de la carta (1, 2 o 3): ");
 
             switch (seleccionMano3) {
                 case 0:
@@ -2092,7 +2122,7 @@ public class Final {
         int Mano3PC;
 
         do {
-            System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
+            // System.out.print("Ingresa el número de la carta PC (1, 2 o 3): ");
             Mano3PC = (int) (Math.random()* 3) + 1;
 
             switch (Mano3PC) {
@@ -2398,7 +2428,9 @@ if(TrucoCantado == true && TrucoEjecutado == false){
             }
         }
 
-        } while ((puntajeUser < 15) && (puntajePC < 15)); //el while del loop de la partida entera
+
+    }
+        // } while ((puntajeUser < 15) && (puntajePC < 15)); //otra forma de aplicar el loop de la partida
 
 
 
