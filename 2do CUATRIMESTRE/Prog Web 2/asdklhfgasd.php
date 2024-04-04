@@ -10,6 +10,8 @@ if($edad >= 12){
 
 $rta = $edad >= 12 ? "si" : "no"; 
 
-echo $rta
+echo $rta;
+
+echo "MAMA";
 
 ?>
