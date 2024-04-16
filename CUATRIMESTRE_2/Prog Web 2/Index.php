@@ -62,7 +62,8 @@ function sum2(...$num){
 
 
     //lo de abajo se lee: a todos los datos de $num los vas a identificar como $key, y a cada uno de los datos se suman (+) y se asigna el valor (=)
-    //por ende es +=
+    //por ende es +=}
+    //hace como una suerte de "array"
     foreach ($num as $key){
         $sum += $key;
     }
