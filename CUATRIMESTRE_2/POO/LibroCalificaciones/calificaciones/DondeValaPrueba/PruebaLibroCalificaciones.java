@@ -12,13 +12,14 @@ public class PruebaLibroCalificaciones {
         LibroCalificaciones p3 = new LibroCalificaciones();
 
         // le cargo el valor a la variable tipo string (escrito en la class)
-        p1.nombreCurso = "EL MEJOR";
+        p1.setNombreCurso("curso 1");
+
+        p2.setNombreCurso("curso 2");
+
+        p3.setNombreCurso("curso 3");
+
         p1.showNombreCurso();
-
-        p2.nombreCurso = "EL 2DO MEJOR";
         p2.showNombreCurso();
-
-        p3.nombreCurso = "EL 3ER MEJOR";
         p3.showNombreCurso();
 
         // System.out.println(p1); si pongo esto me va a salir en la consola:
