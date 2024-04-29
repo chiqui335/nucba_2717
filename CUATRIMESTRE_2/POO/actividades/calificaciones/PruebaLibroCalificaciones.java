@@ -7,10 +7,10 @@ public class PruebaLibroCalificaciones {
 
         // p1.ShownombreCurso();
 
-        p1.setNombreCurso("curso 1");
+        p1.setNombreCurso("curso 1"); // le cambio el valor a la variable nombreCurso
 
-        p1.getNombreCurso();
+        p1.getNombreCurso(); // llamo al metodo de la otra clase para que me traiga la variable (?)
 
-        System.out.println(p1.getNombreCurso());
+        System.out.println(p1.getNombreCurso()); // imprimo
     }
 }
