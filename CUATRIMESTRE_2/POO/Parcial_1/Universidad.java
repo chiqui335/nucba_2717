@@ -1,6 +1,6 @@
 package CUATRIMESTRE_2.POO.Parcial_1;
 
-public class ParcialN1 {
+public class Universidad {
     public static void main(String[] args) {
 
         // Asignaturas
