@@ -1,24 +1,18 @@
-package empresa;
+// package empresa;
 
-public class Empleado {
-	//declaración de variables(atributos) SIN ENCAPSULAR
-	public String nombreEmpleado;
-	public int id;
-	public String apellidoEmpleado;
-	public double salario;
-	public Direccion d1;//vinculación entre clases!!!!
-	
-	//declaración de métodos(operaciones)
-	public void mostrarInfo() {
-		System.out.println("Nombre:"+ nombreEmpleado + "\nID:"+id
-				+"\nApellido:"+apellidoEmpleado+ "\nSalario:"+salario);
-		
-	}
-	
-	
-	
-	
-	
-	
+// public class Empleado {
+// //declaraciï¿½n de variables(atributos) SIN ENCAPSULAR
+// public String nombreEmpleado;
+// public int id;
+// public String apellidoEmpleado;
+// public double salario;
+// public Direccion d1;//vinculaciï¿½n entre clases!!!!
 
-}
+// //declaraciï¿½n de mï¿½todos(operaciones)
+// public void mostrarInfo() {
+// System.out.println("Nombre:"+ nombreEmpleado + "\nID:"+id
+// +"\nApellido:"+apellidoEmpleado+ "\nSalario:"+salario);
+
+// }
+
+// }

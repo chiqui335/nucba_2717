@@ -19,7 +19,7 @@ public class PruebaLibroCalificaciones {
         p3.setNombreCurso("curso 3");
 
         p1.showNombreCurso();
-        p2.showNombreCurso();
+        p2.showNombreCurso(); // comente asi no esta en rojito
         p3.showNombreCurso();
 
         // System.out.println(p1); si pongo esto me va a salir en la consola:

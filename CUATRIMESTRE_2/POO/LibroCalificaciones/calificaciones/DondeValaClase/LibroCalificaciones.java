@@ -13,8 +13,8 @@ public class LibroCalificaciones {
         return nombreCurso;
     }
 
-    // // muestro la variable de nombreCurso
-    // public void showNombreCurso() {
-    // System.out.println("El nombre del curso es: " + nombreCurso);
-    // }
+    // muestro la variable de nombreCurso
+    public void showNombreCurso() {
+        System.out.println("El nombre del curso es: " + nombreCurso);
+    }
 }
