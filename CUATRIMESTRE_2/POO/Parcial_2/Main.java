@@ -21,15 +21,15 @@ public class Main {
 
         // Copias
         Copia cop1 = new Copia(1, "en la biblioteca", lib1);
-        Copia cop2 = new Copia(1, "en la biblioteca", lib1);
+        Copia cop2 = new Copia(2, "en la biblioteca", lib1);
         Copia cop4 = new Copia(3, "en la biblioteca", lib3);
         Copia cop3 = new Copia(4, "en la biblioteca", lib4);
 
         //----------------------------------------------------------------//
 
         lec1.realizarPrestamo(cop1);
-        lec1.realizarPrestamo(cop1);
-        lec1.realizarPrestamo(cop1); 
+        lec1.realizarPrestamo(cop2);
+        lec1.realizarPrestamo(cop3);
 
     }
 }

@@ -13,6 +13,12 @@ public class Main {
         // Creación de copias
         Copia copia1 = new Copia(1, libro1);
         Copia copia2 = new Copia(2, libro2);
+        Copia copia3 = new Copia(1, libro1);
+        Copia copia4 = new Copia(2, libro2);
+        Copia copia5 = new Copia(1, libro1);
+        Copia copia6 = new Copia(2, libro2);
+        Copia copia7 = new Copia(1, libro1);
+        Copia copia8 = new Copia(2, libro2);
 
         // Creación de un lector
         Lector lector1 = new Lector("Juan Pérez");
@@ -22,6 +28,13 @@ public class Main {
         boolean prestamo1 = lector1.prestarCopia(copia1);
         boolean prestamo2 = lector1.prestarCopia(copia2);
         boolean prestamo3 = lector1.prestarCopia(copia2); // Intentando prestar la misma copia dos veces
+        boolean prestamo4 = lector1.prestarCopia(copia3);
+        boolean prestamo5 = lector1.prestarCopia(copia4);
+        boolean prestamo6 = lector1.prestarCopia(copia5);
+        boolean prestamo7 = lector1.prestarCopia(copia6);
+        boolean prestamo8 = lector1.prestarCopia(copia7);
+        boolean prestamo9 = lector1.prestarCopia(copia8);
+
 
         if (prestamo1) {
             System.out.println("Copia 1 prestada a " + lector1.getNombre());

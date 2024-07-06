@@ -27,10 +27,14 @@ public class Main {
 
         //----------------------------------------------------------------//
 
-        lec1.realizarPrestamo(cop1);
-        lec1.realizarPrestamo(cop1);
-        lec1.realizarPrestamo(cop1); 
-        cop1.getCantidadCopias();
+        lec1.realizarPrestamo(lib1, cop1);
+        lec1.realizarPrestamo(lib1, cop1);
+        lec1.realizarPrestamo(lib1, cop1);
+        lec1.realizarPrestamo(lib1, cop1);
+        lec2.realizarPrestamo(lib1, cop1);
+        
+
+        System.out.println(lib1.getCantidadCopias());
 
     }
 }
