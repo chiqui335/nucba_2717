@@ -50,6 +50,10 @@ public class Copia {
         this.libro = libro;
     }
     
+    public void mostrarEstadoCopia() {
+        System.out.println(this.toString());
+    }
+
     public String toString() {
         return "Datos Copia: " + '\n' +
                 "id= " + id + '\n' +

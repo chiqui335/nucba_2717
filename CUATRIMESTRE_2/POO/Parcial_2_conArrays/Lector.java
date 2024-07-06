@@ -64,110 +64,75 @@ public class Lector {
 
 
     // Metodo para realizar un prestamo de una copia
-
-    // public void realizarPrestamo(Copia copia) {
-    //     if (getNumLibrosPrestados() >= 3) {
-    //         System.out.println("El lector ya tiene 3 libros prestados.");
-    //     } else {
-    //         // Verificar el estado actual de la copia
-    //         if (copia.getEstado().equals("prestado")) {
-    //             System.out.println("El libro " + copia.getLibro().getNombre() + " ya ha sido prestado");
-    //         } else if (!copia.getEstado().equals("en la biblioteca")) {
-    //             System.out.println("El libro " + copia.getLibro().getNombre() + " no está disponible para préstamo");
-    //         } else {
-    //             // Realizar el préstamo
-    //             setNumLibrosPrestados(getNumLibrosPrestados() + 1);
-    //             System.out.println("El libro " + copia.getLibro().getNombre() + " fue prestado con éxito");
-    //             copia.setEstado("prestado");
-    //             copiasPrestadas.add(copia);
-    //         }
-    //     }
-    // }
-
-
     public void realizarPrestamo(Copia copia) {
         if (copiasPrestadas.size() >= 3) {
             System.out.println("El lector ya tiene 3 libros prestados.");
         } else {
             // Verificar el estado actual de la copia
-            if (copia.getEstado().equals("prestado")) {
+            if (!copia.getEstado().equals("en la biblioteca")) {
                 System.out.println("El libro " + copia.getLibro().getNombre() + " ya ha sido prestado");
-            } else if (!copia.getEstado().equals("en la biblioteca")) {
-                System.out.println("El libro " + copia.getLibro().getNombre() + " no está disponible para préstamo");
             } else {
                 // Realizar el préstamo
                 copiasPrestadas.add(copia);
-                System.out.println("El libro " + copia.getLibro().getNombre() + " fue prestado con éxito");
+                System.out.println("El libro " + copia.getLibro().getNombre() + " fue prestado con ÉXITO");
                 copia.setEstado("prestado");
                 setNumLibrosPrestados(getNumLibrosPrestados() + 1);
             }
         }
     }
        
-    
-    
-
-
-
-
-
-    // public void realizarPrestamo(Copia copia) {
-    //     if (getNumLibrosPrestados() >= 3) {
-    //         System.out.println("El lector ya tiene 3 libros prestados.");
-    //     } else {
-    //         if (copia.getEstado() != "en la biblioteca"){
-    //             System.out.println("El libro " + copia.getLibro().getNombre() + " ya ha sido prestado");
  
-    //         } else {
-    //             setNumLibrosPrestados(getNumLibrosPrestados() + 1);
-    //             System.out.println("El libro " + copia.getLibro().getNombre() + " fue prestado con éxito");
-    //             copia.setEstado("prestado");
-    //             copiasPrestadas.add(copia);
-    //         }
-    //     }
-    // }
 
-    // Sobrecarga para prestar mas de una copia
+    // Sobrecarga para prestar 2 copias
+    public void realizarPrestamo(Copia copia1, Copia copia2) {
+        realizarPrestamo(copia1);
+        realizarPrestamo(copia2);
+    }
 
-
-
-    // Metodo para realizar una devolucion de una copia
-    // public void devolverLibro(Copia copia) {
-    //     if (getNumLibrosPrestados() == 0) {
-    //         System.out.println("El lector no posee libros para devolver");
-    //     } else {
-    //         if (copia.getEstado().equals("en la biblioteca")) {
-    //             System.out.println("El lector no posee o ya ha devuelto el libro " + copia.getLibro().getNombre());
-    //         } else {
-    //             setNumLibrosPrestados(getNumLibrosPrestados() - 1);
-    //             System.out.println("El libro " + copia.getLibro().getNombre() + " fue devuelto con éxito");
-    //             copia.setEstado("en la biblioteca");
-    //             copiasPrestadas.remove(copia);
-    //         }
-    //     }
-    // }
+    // Sobrecarga para prestar 3 copias
+    public void realizarPrestamo(Copia copia1, Copia copia2, Copia copia3) {
+        realizarPrestamo(copia1);
+        realizarPrestamo(copia2);
+        realizarPrestamo(copia3);
+    }
 
 
+
+    // Metodo para devolver una copia
     public void devolverLibro(Copia copia) {
         if (copiasPrestadas.isEmpty()) {
             System.out.println("El lector no posee libros para devolver");
-        } else {
-            // Verificar el estado actual de la copia
-            if (copia.getEstado().equals("en la biblioteca")) {
-                System.out.println("El lector no posee o ya ha devuelto el libro " + copia.getLibro().getNombre());
+        } else { // Verificar si la copia esta en la lista del lector
+            if (!copiasPrestadas.contains(copia)) {
+                System.out.println("El lector no posee la copia de " + copia.getLibro().getNombre());
             } else {
-                // Se realiza la devolucion
-                System.out.println("El libro " + copia.getLibro().getNombre() + " fue devuelto con éxito");
-                copia.setEstado("en la biblioteca");
-                copiasPrestadas.remove(copia);
-                setNumLibrosPrestados(getNumLibrosPrestados() - 1);
-            }
+                    // Verificar el estado actual de la copia
+                if (copia.getEstado().equals("en la biblioteca")) {
+                    System.out.println("El lector no posee o ya ha devuelto el libro " + copia.getLibro().getNombre());
+                } else {
+                    // Se realiza la devolucion
+                    System.out.println("El libro " + copia.getLibro().getNombre() + " fue devuelto con éxito");
+                    copia.setEstado("en la biblioteca");
+                    copiasPrestadas.remove(copia);
+                    setNumLibrosPrestados(getNumLibrosPrestados() - 1);
+                }
+            }     
         }
     }
     
 
-    // Sobrecarga para devolver mas de una copia
+    // Sobrecarga para devolver dos copias
+    public void devolverLibro(Copia copia1, Copia copia2) {
+        devolverLibro(copia1);
+        devolverLibro(copia2);
+    }
 
+    // Sobrecarga para devolver tres copias
+    public void devolverLibro(Copia copia1, Copia copia2, Copia copia3) {
+        devolverLibro(copia1);
+        devolverLibro(copia2);
+        devolverLibro(copia3);
+    }
 
 
     // Metodo para mostrar la informacion de los libros que tiene el lector
@@ -178,11 +143,17 @@ public class Lector {
         }
     }
 
+    public void mostrarInfoLector() {
+        System.out.println(this.toString());
+        mostrarCopiasPrestadas();
+    }
+
+
 
     public String toString() {
         return "Datos Lector: " + '\n' +
                 "id= " + id + '\n' +
                 "nombre= " + nombre + '\n' +
-                "Numero de libros prestados= " + numLibrosPrestados;
+                "Numero de libros en posesion= " + numLibrosPrestados;
     }     
 }

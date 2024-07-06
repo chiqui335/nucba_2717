@@ -93,7 +93,8 @@ public class Libro {
                     "tipo= " + tipo + '\n' +
                     "editorial= " + editorial + '\n' +
                     "año=" + año + '\n' +
-                    autor;
+                    autor + '\n' +
+                    "-------------------------";
         }
         
 }

@@ -1,7 +1,5 @@
 package CUATRIMESTRE_2.POO.Parcial_2_conArrays;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args){
@@ -30,84 +28,115 @@ public class Main {
         Copia cop4 = new Copia(4, "en la biblioteca", lib4);
         Copia cop5 = new Copia(5, "en la biblioteca", lib5);
         Copia cop6 = new Copia(6, "en la biblioteca", lib6);
-        // Copia cop7 = new Copia(7, "en la biblioteca", lib4);
-        // Copia cop8 = new Copia(8, "en la biblioteca", lib5);
-        // Copia cop9 = new Copia(9, "en la biblioteca", lib6);
 
         // Lectores
         Lector lec1 = new Lector(1,"Franco", 0);
         Lector lec2 = new Lector(2,"Matias", 0);
         Lector lec3 = new Lector(3,"Marta", 0);
+        Lector lec4 = new Lector(4,"José", 0);
 
         //----------------------------------------------------------------//
 
         // Acciones Lector 1
-        System.out.println("Prestamos del lector 1");
-        lec1.realizarPrestamo(cop1);
-        lec1.realizarPrestamo(cop2);
-        lec1.realizarPrestamo(cop3);
-        lec1.realizarPrestamo(cop3);
+        System.out.println("Prestamos del lector 1"+ '\n');
+        lec1.realizarPrestamo(cop1, cop2, cop3);
+        lec1.realizarPrestamo(cop4);    // lector 1 ya tiene 3 libros prestados
 
-        System.out.println("------------------------------------");
+        System.out.println('\n'+"------------------------------------"+ '\n');
         
         System.out.println("Devoluciones del lector 1");
-        lec1.devolverLibro(cop3);
+        lec1.devolverLibro(cop3);        // devolucion con exito
+        lec1.devolverLibro(cop4, cop1); // lector 1 no tiene cop4 pero si cop1
 
-        System.out.println("------------------------------------");
+        System.out.println('\n'+"------------------------------------"+ '\n');
 
-        System.out.println("Copias en posesion del lector 1");
+        System.out.println("Copias en posesion del lector 1"+ '\n');
         lec1.mostrarCopiasPrestadas();
 
-        System.out.println("-----------------Fin lector 1-------------------");
+        System.out.println('\n'+"-----------------Fin lector 1-------------------"+ '\n');
 
         // Acciones Lector 2
-        System.out.println("Prestamos del lector 2");
-        lec2.realizarPrestamo(cop4);
-        lec2.realizarPrestamo(cop4);
-        lec2.realizarPrestamo(cop5);
+        System.out.println("Prestamos del lector 2"+ '\n');
+        lec2.realizarPrestamo(cop4, cop5);
+        lec2.realizarPrestamo(cop2);    // cop2 ya ha sido prestado
         lec2.realizarPrestamo(cop6);
+        lec2.realizarPrestamo(cop3);    // el lector ya tiene 3 libros
 
-        System.out.println("------------------------------------");
+        System.out.println('\n'+"------------------------------------"+ '\n');
 
-        System.out.println("Devoluciones del lector 2");
-        lec2.devolverLibro(cop6);
-        lec2.devolverLibro(cop2);
-        lec2.devolverLibro(cop1);
-        lec2.devolverLibro(cop3);
+        System.out.println("Devoluciones del lector 2"+ '\n');
+        lec2.devolverLibro(cop2);  
+        lec2.devolverLibro(cop1);   // cop3 no estas en posesion del lector
+        lec2.devolverLibro(cop3);   
+
+        lec2.devolverLibro(cop6, cop1, cop3);   // cop6 se devuelve con exito. cop1, cop3 no estan en posesion del lector 3
 
 
-        System.out.println("------------------------------------");
+        System.out.println('\n'+"------------------------------------"+ '\n');
 
-        System.out.println("Copias en posesion del lector 2");
+        System.out.println("Copias en posesion del lector 2"+ '\n');
         lec2.mostrarCopiasPrestadas();
 
-        System.out.println("-----------------Fin lector 2-------------------");
+        System.out.println('\n'+"-----------------Fin lector 2-------------------"+ '\n');
 
         // Acciones Lector 3
-        System.out.println("Prestamos del lector 3");
-        lec3.realizarPrestamo(cop6);
+        System.out.println("Prestamos del lector 3"+ '\n');
+        lec3.realizarPrestamo(cop6, cop1);
         lec3.realizarPrestamo(cop2);
-        lec3.realizarPrestamo(cop1);
         lec2.realizarPrestamo(cop6);
         lec2.realizarPrestamo(cop1);
 
+        System.out.println('\n'+"------------------------------------"+ '\n');
 
-        System.out.println("------------------------------------");
-
-        System.out.println("Devoluciones del lector 3");
+        System.out.println("Devoluciones del lector 3" + '\n');
         lec3.devolverLibro(cop1);
-        lec3.devolverLibro(cop2);
+        lec3.devolverLibro(cop2);       // cop3, cop4, cop3 no estan en posesion del lector 3
         lec3.devolverLibro(cop4);
         lec3.devolverLibro(cop3);
-        lec3.devolverLibro(cop1);
+        lec3.devolverLibro(cop6, cop1); // devuelve cop6 pero cuando intenta devolver cop1 el output es "El lector no posee libros para devolver"
 
-        System.out.println("------------------------------------");
+        System.out.println('\n'+"------------------------------------"+ '\n');
 
-
-
-
-        System.out.println("Copias en posesion del lector 3");
+        System.out.println("Copias en posesion del lector 3" + '\n');
         lec3.mostrarCopiasPrestadas();
+
+        System.out.println('\n'+"-----------------Fin lector 3-------------------"+ '\n');
+
+        // Acciones Lector 4
+        System.out.println("Prestamos del lector 4" + '\n');
+        lec4.realizarPrestamo(cop1, cop3, cop6);
+        lec4.realizarPrestamo(cop4, cop2, cop5);
+
+        System.out.println("Devoluciones del lector 4" + '\n');
+        lec4.devolverLibro(cop1, cop3);
+        lec4.devolverLibro(cop2, cop6, cop5);
+
+        System.out.println("Copias en posesion del lector 4" + '\n');
+        lec4.mostrarCopiasPrestadas();
+
+        System.out.println('\n'+"-----------------Fin lector 4-------------------"+ '\n');
+
+        
+        System.out.println("Datos de los lectores: " );
+        System.out.println("Lector 1: "+ '\n');
+        lec1.mostrarInfoLector();
+        System.out.println("Lector 2: " + '\n');
+        lec2.mostrarInfoLector();
+        System.out.println("Lector 3: "+ '\n');
+        lec3.mostrarInfoLector();
+        System.out.println("Lector 4: "+ '\n');
+        lec4.mostrarInfoLector();
+
+
+        System.out.println("Estado de las copias: "+ '\n');
+        cop1.mostrarEstadoCopia();
+        cop2.mostrarEstadoCopia();
+        cop3.mostrarEstadoCopia();
+        cop4.mostrarEstadoCopia();
+        cop5.mostrarEstadoCopia();
+        cop6.mostrarEstadoCopia();
+
+
 
     }
 }
