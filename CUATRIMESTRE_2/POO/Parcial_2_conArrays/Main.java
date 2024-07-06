@@ -117,7 +117,7 @@ public class Main {
         System.out.println('\n'+"-----------------Fin lector 4-------------------"+ '\n');
 
         
-        System.out.println("Datos de los lectores: " );
+        System.out.println('\n'+"Datos de los lectores: " );
         System.out.println("Lector 1: "+ '\n');
         lec1.mostrarInfoLector();
         System.out.println("Lector 2: " + '\n');
@@ -128,14 +128,21 @@ public class Main {
         lec4.mostrarInfoLector();
 
 
-        System.out.println("Estado de las copias: "+ '\n');
+        System.out.println('\n'+"Datos de las copias: "+ '\n');
+        cop1.mostrarDatosCopia();
+        cop2.mostrarDatosCopia();
+        cop3.mostrarDatosCopia();
+        cop4.mostrarDatosCopia();
+        cop5.mostrarDatosCopia();
+        cop6.mostrarDatosCopia();
+
+        System.out.println('\n'+"Estado de las copias: "+ '\n');
         cop1.mostrarEstadoCopia();
         cop2.mostrarEstadoCopia();
         cop3.mostrarEstadoCopia();
         cop4.mostrarEstadoCopia();
         cop5.mostrarEstadoCopia();
         cop6.mostrarEstadoCopia();
-
 
 
     }
