@@ -2,7 +2,7 @@ package CUATRIMESTRE_2.POO.Semana_10.act;
 
 public class pruebaAritmetica {
 
-    public static void main(String[] args){
+    public static void main(String[] args){ 
 
         Aritmetica aritmetica = new Aritmetica();
 
