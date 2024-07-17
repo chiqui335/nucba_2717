@@ -12,10 +12,15 @@ public class GarajeTest {
         // Crear vehículos
         Vehiculo coche1 = new Coche("toyota", 20000, 4, 1, 4);
         Vehiculo moto1 = new Moto("honda", 15000, 2, 1, 150);
+        Vehiculo moto2 = new Moto("honda", 3000, 2, 2, 200);
+
 
         // Ingresar vehículos al garaje
         garaje.agregarVehiculo(coche1);
         garaje.agregarVehiculo(moto1);
+        garaje.agregarVehiculo(moto2);
+        garaje.quitarVehiculo(moto2);
+
 
         // Mostrar información del garaje
         System.out.println("Precio total para cambiar todas las ruedas: " + garaje.precioCambioTotal());
