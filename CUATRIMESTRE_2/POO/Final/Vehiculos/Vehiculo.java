@@ -14,6 +14,7 @@ public class Vehiculo {
     public Vehiculo(String marca, double Kilometraje, int nroRuedas) {
         this.marca = marca;
         this.Kilometraje = Kilometraje;
+        this.nroRuedas = nroRuedas;
     }
 
     public double getKilometraje() {

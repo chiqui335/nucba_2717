@@ -30,4 +30,10 @@ public class Coche extends Vehiculo {
     public void setNroPuertas(int nroPuertas) {
         this.nroPuertas = nroPuertas;
     }
+
+
+    @Override
+    public String toString() {
+        return "Coche - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Puertas: " + nroPuertas;
+    }
 }

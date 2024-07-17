@@ -74,4 +74,10 @@ public class Garage {
         return totalKilometros / vehiculos.size();
     }
 
+    //Mostrar vehiculos en el garage
+    public void vehiculosIngresados() {
+        for (Vehiculo vehiculo : vehiculos) {
+            System.out.println(vehiculo);
+        }
+    }
 }
