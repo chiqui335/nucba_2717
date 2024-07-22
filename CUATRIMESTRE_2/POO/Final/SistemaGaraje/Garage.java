@@ -9,7 +9,9 @@ public class Garage {
 
 
     // to do: 
-    // -acomodar metodo para calcular el precio de cambio de ruedas de todos los vehiculos del garage
+    // -(consignas como tal estan listas): capaz agregar chiche:
+    // [cambiar de 1 a 4 ruedas nomas de un vehiculo (2 apra moto), con su precio total 
+    // y que no se puedan cambiar mas ruedas de las que tiene el vehiculo]
     protected int id;
     protected int capMax;
     protected double precioCambioRueda; 
@@ -27,6 +29,11 @@ public class Garage {
         this.capMax = capMax;
         this.precioCambioRueda = precioCambioRueda;
         this.vehiculos = new ArrayList<>();
+    }
+
+    //getter precioCambioRueda
+    public double getPrecioCambioRueda() {
+        return precioCambioRueda;
     }
 
     public void agregarVehiculo(Vehiculo vehiculo) {
@@ -64,6 +71,15 @@ public class Garage {
         }
         return total;
     }
+
+    //no se si implementar
+    // public double precioCambioCadaVehiculo() {
+    //     double total = 0;
+    //     total = vehiculo.getNroRuedas() * precioCambioRueda;
+
+    // }
+
+
 
     //calcular el kilometraje medio de todos los vehiculos del garage
     public double KilometrajeMedio () {

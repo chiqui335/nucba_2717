@@ -32,4 +32,9 @@ public class Vehiculo {
     public void setNroRuedas(int nroRuedas) {
         this.nroRuedas = nroRuedas;
     }
+
+    //no se si implementar esto, medio choto
+    // public double precioCambioRuedas(double precioCambioRueda) {
+    //     return this.nroRuedas * precioCambioRueda;
+    // }
 }
