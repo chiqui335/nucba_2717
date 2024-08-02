@@ -17,6 +17,7 @@ public class Garage {
     protected double precioCambioRueda; 
     protected List<Vehiculo> vehiculos;
 
+    //constructor predeterminado
     public Garage() {
         this.id = 0;
         this.capMax = 0;
@@ -24,7 +25,8 @@ public class Garage {
         this.vehiculos = new ArrayList<>();
     }
 
-    public Garage (int id, int capMax, int precioCambioRueda){
+    //constructor con parametros
+    public Garage (int id, int capMax, double precioCambioRueda){
         this.id = id;
         this.capMax = capMax;
         this.precioCambioRueda = precioCambioRueda;
@@ -36,6 +38,7 @@ public class Garage {
         return precioCambioRueda;
     }
 
+    //Metodo para agregar un vehiculo
     public void agregarVehiculo(Vehiculo vehiculo) {
         if (vehiculos.size() >= capMax) {
             System.out.println("El garaje está lleno.");
@@ -46,6 +49,7 @@ public class Garage {
         }
     }
 
+    //Metodo para quitar un vehiculo
     public void quitarVehiculo(Vehiculo vehiculo) {
         if (vehiculos.isEmpty()) {
             System.out.println("El garaje está vacío.");

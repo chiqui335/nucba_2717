@@ -32,6 +32,12 @@ public class Moto extends Vehiculo{
         this.cilindrada = cilindrada;
     }
 
+    // Metodo/getter para retornar el numero maximo de ruedas
+    public int getMaxRuedas() {
+        return 2; // Moto tiene 2 ruedas maximo
+    }
+
+
     @Override
     public String toString() {
         return "Moto - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Cilindrada: " + cilindrada;

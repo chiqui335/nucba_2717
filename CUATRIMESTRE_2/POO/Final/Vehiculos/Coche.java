@@ -31,6 +31,10 @@ public class Coche extends Vehiculo {
         this.nroPuertas = nroPuertas;
     }
 
+    // Metodo/getter para retornar el numero maximo de ruedas
+    public int getMaxRuedas() {
+        return 4; // Coche tiene 4 ruedas maximo
+    }
 
     @Override
     public String toString() {
