@@ -100,4 +100,18 @@ public class Garage {
             System.out.println(vehiculo);
         }
     }
+
+    //Metodo para cambiar X numero de ruedas por separado
+    public void cambiarRuedas(Vehiculo vehiculo, int nroRuedasACambiar) {
+        if (nroRuedasACambiar < 1) {
+            System.out.println("El numero de ruedas a cambiar debe ser mayor a 1");
+        } else if (nroRuedasACambiar > vehiculo.getNroRuedas()) {
+            System.out.println("No se pueden cambiar más ruedas de las que tiene el vehículo.");
+        } else {
+            double costoCambio = nroRuedasACambiar * precioCambioRueda;
+            System.out.println("Costo del cambio de " + nroRuedasACambiar + " ruedas: " + costoCambio);
+        }
+
+    }
+
 }

@@ -21,6 +21,7 @@ public class GarajeTest {
         garaje.agregarVehiculo(moto2);
         garaje.quitarVehiculo(moto2);
 
+        garaje.cambiarRuedas(coche1, 3);
 
         // Mostrar información del garaje
         System.out.println("Precio total para cambiar todas las ruedas: " + garaje.precioCambioTotal());

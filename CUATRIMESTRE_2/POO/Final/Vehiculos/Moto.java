@@ -32,8 +32,8 @@ public class Moto extends Vehiculo{
         this.cilindrada = cilindrada;
     }
 
-    // Metodo/getter para retornar el numero maximo de ruedas
-    public int getMaxRuedas() {
+    // Metodo para retornar el numero maximo de ruedas
+    public int maxRuedas() {
         return 2; // Moto tiene 2 ruedas maximo
     }
 

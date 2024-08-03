@@ -32,7 +32,7 @@ public class Coche extends Vehiculo {
     }
 
     // Metodo/getter para retornar el numero maximo de ruedas
-    public int getMaxRuedas() {
+    public int maxRuedas() {
         return 4; // Coche tiene 4 ruedas maximo
     }
 
