@@ -42,6 +42,8 @@ public class Garage {
     public void agregarVehiculo(Vehiculo vehiculo) {
         if (vehiculos.size() >= capMax) {
             System.out.println("El garaje está lleno.");
+        } else if (vehiculos.contains(vehiculo)){
+            System.out.println("El vehiculo ya está en el garaje.");
         } else {
             vehiculos.add(vehiculo);
             System.out.println("Vehiculo agregado al garaje.");
@@ -53,6 +55,8 @@ public class Garage {
     public void quitarVehiculo(Vehiculo vehiculo) {
         if (vehiculos.isEmpty()) {
             System.out.println("El garaje está vacío.");
+        } else if (!vehiculos.contains(vehiculo)) {
+            System.out.println("El vehiculo no está en el garaje.");
         } else {
             vehiculos.remove(vehiculo);
             System.out.println("Vehiculo removido del garaje.");
@@ -63,33 +67,27 @@ public class Garage {
 
     //Metodo para ver el numero de vehiculos en el garage
     public int numeroVehiculos() {
+        System.out.println("Número total de vehículos en el garaje: " + vehiculos.size());
         return vehiculos.size();
     }
 
 
     //calcular el precio de cambio de ruedas de todos los vehiculos del garage
-    public double precioCambioTotal() {
+    public double precioCambio() {
         double total = 0;
         for (Vehiculo vehiculo : vehiculos) {
             total += vehiculo.getNroRuedas() * precioCambioRueda;
         }
+        System.out.println("Precio total para cambiar todas las ruedas de todos los vehículos es: " + total);
         return total;
     }
 
-    public double precioCambioTotal(Vehiculo vehiculo) { // Sobrecarga deñ metodo precioCambioTotal()
+    // Sobrecarga y sobreescritura del metodo precioCambioTotal()
+    public double precioCambio(Vehiculo vehiculo) { 
         double total = vehiculo.getNroRuedas() * precioCambioRueda;
         System.out.println("Precio total para cambiar todas las ruedas de " + vehiculo + " es: " + total);
         return total;
     }
-
-
-    //no se si implementar
-    // public double precioCambioCadaVehiculo() {
-    //     double total = 0;
-    //     total = vehiculo.getNroRuedas() * precioCambioRueda;
-
-    // }
-
 
 
     //calcular el kilometraje medio de todos los vehiculos del garage
@@ -98,18 +96,23 @@ public class Garage {
         for (Vehiculo vehiculo : vehiculos) {
             totalKilometros += vehiculo.getKilometraje();
         }
-        return totalKilometros / vehiculos.size();
+        double total = totalKilometros / vehiculos.size();
+        System.out.println("Kilometraje medio de los vehículos: " + total);
+        return total;
     }
 
     //Mostrar vehiculos en el garage
     public void vehiculosIngresados() {
         for (Vehiculo vehiculo : vehiculos) {
-            System.out.println(vehiculo);
+            // System.out.println(vehiculo);
+            System.out.println(vehiculo.toString());
         }
     }
 
+
+    //METODOS EXTRA ------------------------------------------------------------
     //Metodo para cambiar X numero de ruedas por separado
-    public void cambiarRuedas(Vehiculo vehiculo, int nroRuedasACambiar) {
+    public void precioCambio(Vehiculo vehiculo, int nroRuedasACambiar) { //sobrecarga y sobreescritura del metodo precioCambio()
         int maxRuedas = vehiculo.getNroRuedas();
         if (nroRuedasACambiar < 1) {
             System.out.println("El numero de ruedas a cambiar debe ser mayor a 1");
@@ -119,7 +122,15 @@ public class Garage {
             double costoCambio = nroRuedasACambiar * precioCambioRueda;
             System.out.println("Costo del cambio de " + nroRuedasACambiar + " ruedas: " + costoCambio);
         }
-
     }
+
+    public String toString() {
+        return "Garage: " + '\n' +
+                "id: " + id + '\n' +
+                "capMax: " + capMax + '\n' +
+                "precioCambioRueda: " + precioCambioRueda + '\n' +
+                "vehiculos: " + vehiculos;
+    }
+
 
 }
