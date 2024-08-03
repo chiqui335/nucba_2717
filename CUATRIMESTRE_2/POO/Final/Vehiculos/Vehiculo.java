@@ -2,7 +2,7 @@ package CUATRIMESTRE_2.POO.Final.Vehiculos;
 
 public class Vehiculo {
     protected String marca;
-    protected double Kilometraje;
+    protected double Kilometraje;   //realizamos encapsulamiento protected asi es accesible en el mismo paquete y en las subclases
     protected int nroRuedas;
 
     public Vehiculo() {
@@ -17,6 +17,7 @@ public class Vehiculo {
         this.nroRuedas = nroRuedas;
     }
 
+    // Setters y getters
     public double getKilometraje() {
         return Kilometraje;
     }
@@ -33,8 +34,5 @@ public class Vehiculo {
         this.nroRuedas = nroRuedas;
     }
 
-    //no se si implementar esto, medio choto
-    // public double precioCambioRuedas(double precioCambioRueda) {
-    //     return this.nroRuedas * precioCambioRueda;
-    // }
+
 }

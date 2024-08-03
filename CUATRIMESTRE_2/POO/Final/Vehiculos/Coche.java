@@ -1,9 +1,10 @@
 package CUATRIMESTRE_2.POO.Final.Vehiculos;
 
-public class Coche extends Vehiculo {
-    private int id;
+public class Coche extends Vehiculo { //realizamos herencia de Vehiculo sobre Coche
+    private int id; //realizamos encapsulamiento private debido a que no se tendra subclases
     private int nroPuertas;
 
+    //utilizamos super()
     public Coche() {
         super();
         this.id = 0;
@@ -16,6 +17,7 @@ public class Coche extends Vehiculo {
         this.nroPuertas = nroPuertas;
     }
 
+    //setters y getters 
     public int getId() {
         return id;
     }
@@ -31,12 +33,12 @@ public class Coche extends Vehiculo {
         this.nroPuertas = nroPuertas;
     }
 
-    // Metodo/getter para retornar el numero maximo de ruedas
+    // Metodo para retornar el numero maximo de ruedas
     public int maxRuedas() {
         return 4; // Coche tiene 4 ruedas maximo
     }
 
-    @Override
+    // Metodo toString
     public String toString() {
         return "Coche - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Puertas: " + nroPuertas;
     }

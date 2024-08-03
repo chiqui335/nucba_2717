@@ -21,13 +21,16 @@ public class GarajeTest {
         garaje.agregarVehiculo(moto2);
         garaje.quitarVehiculo(moto2);
 
-        garaje.cambiarRuedas(coche1, 3);
+        // Cambiar número de ruedas especifico de un vehículo
+        // garaje.cambiarRuedas(coche1, 3);
 
         // Mostrar información del garaje
         System.out.println("Precio total para cambiar todas las ruedas: " + garaje.precioCambioTotal());
-        System.out.println("Kilometraje medio de los vehículos: " + garaje.KilometrajeMedio());
+        garaje.precioCambioTotal(moto1);
+        
+        // System.out.println("Kilometraje medio de los vehículos: " + garaje.KilometrajeMedio());
 
-        System.out.println("Vehículos ingresados en el garaje:");
-        garaje.vehiculosIngresados();
+        // System.out.println("Vehículos ingresados en el garaje:");
+        // garaje.vehiculosIngresados();
     }
 }

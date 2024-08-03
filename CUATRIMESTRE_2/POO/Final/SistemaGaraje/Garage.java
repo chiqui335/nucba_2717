@@ -76,6 +76,13 @@ public class Garage {
         return total;
     }
 
+    public double precioCambioTotal(Vehiculo vehiculo) { // Sobrecarga deñ metodo precioCambioTotal()
+        double total = vehiculo.getNroRuedas() * precioCambioRueda;
+        System.out.println("Precio total para cambiar todas las ruedas de " + vehiculo + " es: " + total);
+        return total;
+    }
+
+
     //no se si implementar
     // public double precioCambioCadaVehiculo() {
     //     double total = 0;
@@ -103,9 +110,10 @@ public class Garage {
 
     //Metodo para cambiar X numero de ruedas por separado
     public void cambiarRuedas(Vehiculo vehiculo, int nroRuedasACambiar) {
+        int maxRuedas = vehiculo.getNroRuedas();
         if (nroRuedasACambiar < 1) {
             System.out.println("El numero de ruedas a cambiar debe ser mayor a 1");
-        } else if (nroRuedasACambiar > vehiculo.getNroRuedas()) {
+        } else if (nroRuedasACambiar > maxRuedas) {
             System.out.println("No se pueden cambiar más ruedas de las que tiene el vehículo.");
         } else {
             double costoCambio = nroRuedasACambiar * precioCambioRueda;

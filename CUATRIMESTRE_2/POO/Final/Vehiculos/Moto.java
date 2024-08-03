@@ -1,9 +1,10 @@
 package CUATRIMESTRE_2.POO.Final.Vehiculos;
 
-public class Moto extends Vehiculo{
-    private int id;
+public class Moto extends Vehiculo{ //realizamos herencia de Vehiculo sobre Moto
+    private int id; //realizamos encapsulamiento private debido a que no se tendra subclases
     private int cilindrada;
 
+    //utilizamos super()
     public Moto(){
         super();
         this.id = 0;
@@ -16,6 +17,7 @@ public class Moto extends Vehiculo{
         this.cilindrada = cilindrada;
     }
 
+    //setters y getters 
     public int getId() {
         return id;
     }
@@ -38,7 +40,7 @@ public class Moto extends Vehiculo{
     }
 
 
-    @Override
+    // Metodo toString
     public String toString() {
         return "Moto - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Cilindrada: " + cilindrada;
     }
