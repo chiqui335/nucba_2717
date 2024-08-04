@@ -33,6 +33,4 @@ public class Vehiculo {
     public void setNroRuedas(int nroRuedas) {
         this.nroRuedas = nroRuedas;
     }
-
-
 }

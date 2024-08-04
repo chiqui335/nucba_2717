@@ -82,36 +82,14 @@ public class Garage {
         return total;
     }
 
-    // Sobrecarga y sobreescritura del metodo precioCambioTotal()
-    public double precioCambio(Vehiculo vehiculo) { 
+    //Metodo para cambiar todas las ruedas de un vehiculo en particular
+    public double precioCambio(Vehiculo vehiculo) { // Sobrecarga y sobreescritura del metodo precioCambio()
         double total = vehiculo.getNroRuedas() * precioCambioRueda;
         System.out.println("Precio total para cambiar todas las ruedas de " + vehiculo + " es: " + total);
         return total;
     }
 
-
-    //calcular el kilometraje medio de todos los vehiculos del garage
-    public double KilometrajeMedio () {
-        double totalKilometros = 0;
-        for (Vehiculo vehiculo : vehiculos) {
-            totalKilometros += vehiculo.getKilometraje();
-        }
-        double total = totalKilometros / vehiculos.size();
-        System.out.println("Kilometraje medio de los vehículos: " + total);
-        return total;
-    }
-
-    //Mostrar vehiculos en el garage
-    public void vehiculosIngresados() {
-        for (Vehiculo vehiculo : vehiculos) {
-            // System.out.println(vehiculo);
-            System.out.println(vehiculo.toString());
-        }
-    }
-
-
-    //METODOS EXTRA ------------------------------------------------------------
-    //Metodo para cambiar X numero de ruedas por separado
+    //Metodo para cambiar X numero de ruedas de un vehiculo en particular
     public void precioCambio(Vehiculo vehiculo, int nroRuedasACambiar) { //sobrecarga y sobreescritura del metodo precioCambio()
         int maxRuedas = vehiculo.getNroRuedas();
         if (nroRuedasACambiar < 1) {
@@ -124,13 +102,33 @@ public class Garage {
         }
     }
 
-    public String toString() {
-        return "Garage: " + '\n' +
-                "id: " + id + '\n' +
-                "capMax: " + capMax + '\n' +
-                "precioCambioRueda: " + precioCambioRueda + '\n' +
-                "vehiculos: " + vehiculos;
+    //calcular el kilometraje medio de todos los vehiculos del garage
+        public double kilometrajeMedio () {
+            double totalKilometros = 0;
+            for (Vehiculo vehiculo : vehiculos) {
+                totalKilometros += vehiculo.getKilometraje();
+            }
+            double total = totalKilometros / vehiculos.size();
+            System.out.println("Kilometraje medio de los vehículos: " + total);
+            return total;
+        }
+
+    //Mostrar vehiculos en el garaje
+    public void vehiculosIngresados() {
+        for (Vehiculo vehiculo : vehiculos) {
+            // System.out.println(vehiculo);
+            System.out.println(vehiculo.toString());
+        }
     }
 
+
+
+    public String toString() {
+        return "Garaje: " + '\n' +
+                "id: " + id + "," + '\n' +
+                "capacidad Maxima: " + capMax + "," + '\n' +
+                "precio de cambio de ruedas: " + precioCambioRueda + "," + '\n' +
+                "vehiculos dentro del garaje: " + vehiculos + '\n';
+    }
 
 }

@@ -42,6 +42,6 @@ public class Moto extends Vehiculo{ //realizamos herencia de Vehiculo sobre Moto
 
     // Metodo toString
     public String toString() {
-        return "Moto - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Cilindrada: " + cilindrada;
+        return "Moto - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Cilindrada: " + cilindrada + '\n';
     }
 }

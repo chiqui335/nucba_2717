@@ -36,15 +36,24 @@ public class GarajeTest {
         garaje.precioCambio(coche1, 3);
 
         // Mostrar información del garaje
-        garaje.precioCambio();
-        garaje.KilometrajeMedio();
+        garaje.precioCambio(); // precio de cambio de todas las ruedas de todos los vehiculos en el garaje
+
+        garaje.precioCambio(moto1); // precio de cambio de todas las ruedas del vehiculo elegido
         
-        garaje.precioCambio(moto1);
+        garaje.precioCambio(coche1, 3); // precio de cambio de X cantidad de ruedas del vehiculo elegido
+
+        // Mostrar el kilometraje medio
+        garaje.kilometrajeMedio(); // Kilometraje medio de todos los vehiculos en el garaje
         
     
+        // Mostrar los vehiculos en el garaje
         System.out.println("Vehículos ingresados en el garaje:");
         garaje.vehiculosIngresados();
 
+        // Mostrar el numero de vehiculos en el garaje        
         garaje.numeroVehiculos();
+
+        // Mostrar la informacion del garaje
+        System.out.println(garaje.toString());
     }
 }

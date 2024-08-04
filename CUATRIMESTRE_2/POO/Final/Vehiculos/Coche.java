@@ -40,6 +40,6 @@ public class Coche extends Vehiculo { //realizamos herencia de Vehiculo sobre Co
 
     // Metodo toString
     public String toString() {
-        return "Coche - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Puertas: " + nroPuertas;
+        return "Coche - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Puertas: " + nroPuertas + '\n';
     }
 }
