@@ -21,7 +21,7 @@ public class GarajeTest {
         // Ingresar/quitar vehículos al garaje
         garaje.quitarVehiculo(coche1); // output: "garaje vacio"
         garaje.agregarVehiculo(coche1);
-        garaje.agregarVehiculo(coche1); //output: el vehiculo ya esta en el garage
+        garaje.agregarVehiculo(coche1); // output: el vehiculo ya esta en el garage
         garaje.agregarVehiculo(coche2);
         garaje.agregarVehiculo(coche3);
         garaje.quitarVehiculo(coche1);
