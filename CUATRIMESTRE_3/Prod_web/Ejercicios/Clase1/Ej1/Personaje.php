@@ -31,7 +31,7 @@ class Personaje {
 
     public function restarVida():void{
         $this->vidas--;
-        echo "se ha restado una vida";
+        echo "se ha restado una vida a " . $this->nombre . "<br>    ";
     }
 
     public function curar(): void{
@@ -50,10 +50,10 @@ class Personaje {
     
     private function defender(Personaje $enemigo){
         if ($this->getDefRand() >= $enemigo->getAtaqueRand()){
-            echo "El personaje {$this->nombre} ha defendido";
+            echo "El personaje {$this->nombre} ha defendido <br>";
             return true;
         } else {
-            echo "El personaje {$this->nombre} ha recibido ataque";
+            echo "El personaje {$this->nombre} ha recibido ataque <br>";
             $this->restarVida();
             return false;
         }
@@ -68,6 +68,4 @@ class Personaje {
             return $this->defender($enemigo);
         }
     }
-
-    
 }
