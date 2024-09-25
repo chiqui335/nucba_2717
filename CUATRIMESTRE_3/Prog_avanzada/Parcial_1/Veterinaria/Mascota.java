@@ -55,7 +55,7 @@ public abstract class Mascota {
         return "Datos de la Mascota" + "\n" +
                 "Nombre:" + nombre + "\n" +
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
-                "Peso: " + peso + "\n" +
+                "Peso: " + peso + " kg" +"\n" +
                 "Especie: " + especie + "\n" +
                 "Recomendaciones de " + cuidadosRecomendacion() + "\n";
     }
