@@ -46,29 +46,6 @@ public abstract class Mascota {
         return especie;
     }
 
-
-    // public void datosMascota() {
-    //     Scanner scM = new Scanner(System.in);
-
-    //     System.out.println("Ingrese los datos de la mascota");
-    //     System.out.println("Nombre de la mascota: ");
-    //     String nombreMascota = scM.nextLine(); //probar si funciona asi
-    //     this.setNombre(nombreMascota);
-
-    //     System.out.println("Peso de la mascota (en kg): ");
-    //     double pesoMascota = scM.nextInt();
-    //     this.setPeso(pesoMascota);
-    //     scM.nextLine();
-
-    //     System.out.println("Fecha de nacimiento de la mascota (formato yyyy-MM-dd): ");
-    //     LocalDate fechaNacimientoMascota = leerFechaNacimiento(scM);
-    //     this.setFechaNacimiento(fechaNacimientoMascota);
-
-    //     datosEspeficicos(scM);
-    // }
-
-    //public abstract void datosEspeficicos(Scanner scM);
-
     //recomendacion abstract
     public abstract String cuidadosRecomendacion();
 

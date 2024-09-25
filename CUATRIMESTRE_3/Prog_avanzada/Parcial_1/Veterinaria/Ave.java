@@ -25,10 +25,6 @@ public class Ave extends Mascota{
         this.peso = peso;
     }
 
-
-
-
-
     public String cuidadosRecomendacion() {
         return "Cuidados del Ave: jaula amplia, temperatura agradable, limpieza de jaula.";
     }

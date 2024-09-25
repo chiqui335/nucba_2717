@@ -21,35 +21,7 @@ public class Adoptante {
         this.direccion = direccion;
     }
 
-    // public void datosAdoptante(){
-
-    //     Scanner scAdoptante = new Scanner(System.in);
-
-    //     //se piden los datos del adoptante
-    //     System.out.println("Ingrese los datos del adoptante:");
-    //     System.out.print("Nombre: ");
-    //     String nombreAdoptante = scAdoptante.nextLine();
-
-    //     System.out.print("Edad: ");
-    //     int edadAdoptante = scAdoptante.nextInt();
-    //     scAdoptante.nextLine();
-
-    //     System.out.print("Dirección: ");
-    //     String direccionAdoptante = scAdoptante.nextLine();
-
-    //     System.out.println("ID:");
-    //     int idAdoptante = scAdoptante.nextInt();
-    //     scAdoptante.nextLine();
-
-    //     //se registra los cambios del adoptante
-    //     this.setId(idAdoptante);
-    //     this.setDireccion(direccionAdoptante);
-    //     this.setEdad(edadAdoptante);
-    //     this.setNombre(nombreAdoptante);
-
-    //     Adoptante adoptante = new Adoptante(nombreAdoptante, edadAdoptante, direccionAdoptante, idAdoptante);
-    // }
-
+   
     //setters
     public void setId(int id) {
         this.id = id;
