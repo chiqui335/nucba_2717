@@ -1,18 +1,16 @@
 package CUATRIMESTRE_3.Prog_avanzada.Parcial_1.Veterinaria;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Reptil extends Mascota {
 
-    private String tipo;
 
     public Reptil(){
         super();
     }
 
-    public Reptil(String nombre, LocalDate fechaNacimiento, double peso) {
-        super(nombre, fechaNacimiento, peso);
+    public Reptil(String nombre, LocalDate fechaNacimiento, double peso, String especie) {
+        super(nombre, fechaNacimiento, peso, especie);
     }
 
     public void setNombre(String nombre) {
@@ -27,22 +25,18 @@ public class Reptil extends Mascota {
         this.peso = peso;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    
-    public void datosEspeficicos(Scanner scM) {
-        System.out.println("Tipo: ");
-        String Tipo = scM.nextLine();
-        this.setTipo(Tipo);
-    }
     
     public void cuidadosRecomendacion() {
         System.out.println("Cuidados del Reptil: Iluminacion natural, variedad en la dieta, temperatura cálida.");
     }
 
-    public String toString(){
-        return "Nombre: " + nombre + ", Fecha de nacimiento: " + fechaNacimiento + ", Peso: " + peso + ", Raza: " + tipo;
+    public String toString() {
+        return "Datos de la Mascota" + "\n" +
+                "Nombre:" + nombre + "\n" +
+                "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
+                "Peso: " + peso + "\n" +
+                "Especie: " + especie + "\n" +
+                "Recomendaciones de Cuidado: "   + "\n";
     }
+
 }

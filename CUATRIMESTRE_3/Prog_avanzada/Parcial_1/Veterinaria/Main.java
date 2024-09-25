@@ -1,23 +1,31 @@
 package CUATRIMESTRE_3.Prog_avanzada.Parcial_1.Veterinaria;
 
+import java.util.Scanner;
+
 public class Main {
-    private static Empleado empleado = Empleado.getInstance();
     public static void main(String[] args) {
-        Adoptante adoptante = new Adoptante(); //objeto adoptante sin parametros para ser modificado en datosAdoptante()
+        Scanner sc = new Scanner(System.in);
 
         //se piden los datos del empleado
-        empleado.datosEmpleado();
+        // empleado.datosEmpleado();
+        // System.out.println(empleado.toString());
 
 
         //se piden los datos del adoptante
-        adoptante.datosAdoptante();
-        System.out.println(adoptante.toString());
+        // adoptante.datosAdoptante();
+        // System.out.println(adoptante.toString());
 
-        
+        Adopcion adopcion = new Adopcion();
+
+        adopcion.adoptarMascota();
+        // System.out.println(adopcion.toString());
+
+        adopcion.generarTicket();
+
+        sc.close();
 
 
 
 
-        
     }
 }

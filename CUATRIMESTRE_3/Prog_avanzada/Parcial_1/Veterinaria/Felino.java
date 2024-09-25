@@ -1,23 +1,19 @@
 package CUATRIMESTRE_3.Prog_avanzada.Parcial_1.Veterinaria;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Felino extends Mascota {
-
-    private String raza;
     
     public Felino(){
-        //llamar al constructor padre
+        //constructor default
         super();
     }
 
-    public Felino(String nombre, LocalDate fechaNacimiento, double peso, String raza) {
-        super(nombre, fechaNacimiento, peso);
-        this.raza = raza;
+    public Felino(String nombre, LocalDate fechaNacimiento, double peso, String especie) {
+        super(nombre, fechaNacimiento, peso, especie);
     }
 
-        //Setters
+    //Setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -30,23 +26,18 @@ public class Felino extends Mascota {
         this.peso = peso;
     }
 
-    public void setRaza(String raza) {
-        this.raza = raza;
-    }
-
-    @Override
-    public void datosEspeficicos(Scanner scM) {
-        System.out.println("Raza: ");
-        String raza = scM.nextLine();
-        this.setRaza(raza);
-    }
-
+    //recomenacion
     public void cuidadosRecomendacion() {
         System.out.println("Cuidados del felino: cepillado, limpieza de arenero, control de la hidratacion.");
     }
 
-    public String toString(){
-        return "Nombre: " + nombre + ", Fecha de nacimiento: " + fechaNacimiento + ", Peso: " + peso + ", Raza: " + raza;
+    public String toString() {
+        return "Datos de la Mascota" + "\n" +
+                "Nombre:" + nombre + "\n" +
+                "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
+                "Peso: " + peso + "\n" +
+                "Especie: " + especie + "\n" +
+                "Recomendaciones de Cuidado: "   + "\n";
     }
 
     

@@ -18,7 +18,7 @@ public class Empleado {
         }
         return instance;
     }
-
+    //Manejo de datos
     public void datosEmpleado(){
         Scanner sc = new Scanner(System.in);
 
@@ -36,8 +36,8 @@ public class Empleado {
         //se modifica el empleado con los datos ingresados
         Empleado empleado = Empleado.getInstance();
         empleado.registrarEmpleado(nombreEmpleado, cargoEmpleado, idEmpleado);
-        sc.close();
     }
+
 
     public void registrarEmpleado(String nombre, String cargo, int id) {
         this.nombre = nombre;
@@ -57,11 +57,12 @@ public class Empleado {
         return cargo;
     }
 
+    
+
+    @Override
     public String toString() {
-        return "Empleado{" +
-                "nombre='" + nombre + '\'' +
-                ", cargo='" + cargo + '\'' +
-                ", id=" + id +
-                '}';
+        return "Empleado Encargado: " + "\n" +
+                "Nombre:" + nombre + "\n" +
+                "Cargo: " + cargo + "\n";
     }
 }

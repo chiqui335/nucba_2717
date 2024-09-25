@@ -1,6 +1,5 @@
 package CUATRIMESTRE_3.Prog_avanzada.Parcial_1.Veterinaria;
 
-import java.util.Scanner;
 
 public class Adoptante {
     private int id;
@@ -22,34 +21,34 @@ public class Adoptante {
         this.direccion = direccion;
     }
 
-    public void datosAdoptante(){
+    // public void datosAdoptante(){
 
-        Scanner scAdoptante = new Scanner(System.in);
+    //     Scanner scAdoptante = new Scanner(System.in);
 
-        //se piden los datos del adoptante
-        System.out.println("Ingrese los datos del adoptante:");
-        System.out.print("Nombre: ");
-        String nombreAdoptante = scAdoptante.nextLine();
+    //     //se piden los datos del adoptante
+    //     System.out.println("Ingrese los datos del adoptante:");
+    //     System.out.print("Nombre: ");
+    //     String nombreAdoptante = scAdoptante.nextLine();
 
-        System.out.print("Edad: ");
-        int edadAdoptante = scAdoptante.nextInt();
-        scAdoptante.nextLine();
+    //     System.out.print("Edad: ");
+    //     int edadAdoptante = scAdoptante.nextInt();
+    //     scAdoptante.nextLine();
 
-        System.out.print("Dirección: ");
-        String direccionAdoptante = scAdoptante.nextLine();
+    //     System.out.print("Dirección: ");
+    //     String direccionAdoptante = scAdoptante.nextLine();
 
-        System.out.println("ID:");
-        int idAdoptante = scAdoptante.nextInt();
-        scAdoptante.nextLine();
+    //     System.out.println("ID:");
+    //     int idAdoptante = scAdoptante.nextInt();
+    //     scAdoptante.nextLine();
 
-        //se registra los cambios del adoptante
-        setId(idAdoptante);
-        setDireccion(direccionAdoptante);
-        setEdad(edadAdoptante);
-        setNombre(nombreAdoptante);
+    //     //se registra los cambios del adoptante
+    //     this.setId(idAdoptante);
+    //     this.setDireccion(direccionAdoptante);
+    //     this.setEdad(edadAdoptante);
+    //     this.setNombre(nombreAdoptante);
 
-        scAdoptante.close();
-    }
+    //     Adoptante adoptante = new Adoptante(nombreAdoptante, edadAdoptante, direccionAdoptante, idAdoptante);
+    // }
 
     //setters
     public void setId(int id) {
@@ -84,12 +83,11 @@ public class Adoptante {
         return direccion;
     }
 
+    @Override
     public String toString() {
-        return "Adoptante{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                ", direccion='" + direccion + '\'' +
-                '}';
+        return "Datos del Adoptante" + "\n" +
+                "Nombre:" + nombre + "\n" +
+                "Edad: " + edad + "\n" +
+                "Direccion:" + direccion + "\n";
     }
 }
