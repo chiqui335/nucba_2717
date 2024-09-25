@@ -1,5 +1,6 @@
 package CUATRIMESTRE_3.Prog_avanzada.Parcial_1.Veterinaria;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Empleado {
@@ -22,14 +23,33 @@ public class Empleado {
     public void datosEmpleado(){
         Scanner sc = new Scanner(System.in);
 
+        //nombre
         System.out.println("Ingrese los datos del empleado:");
+        //nombre
         System.out.print("Nombre: ");
         String nombreEmpleado = sc.nextLine();
 
-        System.out.print("ID: ");
-        int idEmpleado = sc.nextInt();
-        sc.nextLine();
+        //id
+        int idEmpleado = -1;
+        while (idEmpleado == -1) {
+            try {
+                System.out.println("ID:");
+                idEmpleado = sc.nextInt();  // Puede lanzar InputMismatchException
 
+                if (idEmpleado <= 0) {
+                    System.out.println("Por favor, introduce un ID válido (mayor a 0).");
+                    idEmpleado = -1;  // Reiniciar para que el ciclo vuelva a pedir el ID
+                } 
+                sc.nextLine();
+
+
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Por favor, introduce un número válido para el ID.");
+                sc.nextLine(); 
+            }
+        }
+
+        //cargo
         System.out.print("Cargo: ");
         String cargoEmpleado = sc.nextLine();
 

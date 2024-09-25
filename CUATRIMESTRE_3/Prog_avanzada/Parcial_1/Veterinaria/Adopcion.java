@@ -2,6 +2,7 @@ package CUATRIMESTRE_3.Prog_avanzada.Parcial_1.Veterinaria;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Adopcion {
@@ -37,46 +38,96 @@ public class Adopcion {
         empleado.datosEmpleado();
 
         //datos adoptante
-        //adoptante.datosAdoptante();
         System.out.println("Ingrese los datos del adoptante:");
+
+        //nombre
         System.out.print("Nombre: ");
         String nombreAdoptante = scAdoptar.nextLine();
 
-        System.out.print("Edad: ");
-        int edadAdoptante = scAdoptar.nextInt();
+        //edad
+        int edadAdoptante = -1; //incializo 
+        while (edadAdoptante == -1) {
+            try {
+                System.out.print("Edad: ");
+                edadAdoptante = scAdoptar.nextInt();  // Puede lanzar InputMismatchException
+
+                if (edadAdoptante <= 0) {
+                    System.out.println("Por favor, introduce una edad válida (mayor a 0).");
+                    edadAdoptante = -1;  // Reiniciar para que el ciclo vuelva a pedir la edad
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Por favor, introduce un número válido para la edad.");
+                scAdoptar.nextLine();  // Asi evito bucles infinitos
+            }
+        }
+
+        scAdoptar.nextLine();  
+
+        //id
+        int idAdoptante = -1;
+        while (idAdoptante == -1) {
+            try {
+                System.out.println("ID:");
+                idAdoptante = scAdoptar.nextInt();  // Puede lanzar InputMismatchException
+
+                if (idAdoptante <= 0) {
+                    System.out.println("Por favor, introduce un ID válido (mayor a 0).");
+                    idAdoptante = -1;  // Reiniciar para que el ciclo vuelva a pedir el ID
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Por favor, introduce un número válido para el ID.");
+                scAdoptar.nextLine(); 
+            }
+        }
+
         scAdoptar.nextLine();
 
+        //direccion
         System.out.print("Dirección: ");
         String direccionAdoptante = scAdoptar.nextLine();
 
-        System.out.println("ID:");
-        int idAdoptante = scAdoptar.nextInt();
-        scAdoptar.nextLine();
-
-        adoptante = new Adoptante(nombreAdoptante, edadAdoptante, direccionAdoptante, idAdoptante);
+        adoptante = new Adoptante(nombreAdoptante, edadAdoptante, direccionAdoptante, idAdoptante); //se crea el objeto con los parametros
         
         //datos mascota
         System.out.println("Ingrese los datos de la mascota");
+
+        //nombre
         System.out.println("Nombre de la mascota: ");
         String nombreMascota = scAdoptar.nextLine(); //probar si funciona asi
 
-        System.out.println("Peso de la mascota (en kg): ");
-        double pesoMascota = scAdoptar.nextInt();
+
+        //peso
+        double pesoMascota = -1; 
+
+        while (pesoMascota == -1) {
+            try {
+                System.out.println("Peso de la mascota (en kg): ");
+                pesoMascota = scAdoptar.nextDouble();  
+
+                if (pesoMascota <= 0) {
+                    System.out.println("Por favor, introduce un peso válido (mayor a 0).");
+                    pesoMascota = -1;  
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Por favor, introduce un número válido para el peso.");
+                scAdoptar.nextLine();  
+            }
+        }
+
         scAdoptar.nextLine();
 
+
+        //fecha de nacimiento
         System.out.println("Fecha de nacimiento de la mascota (formato yyyy-MM-dd): ");
         LocalDate fechaNacimientoMascota = leerFechaNacimiento(scAdoptar);
 
-        
+
 
         //seleccionar la especie
-        System.out.println("\nSeleccione la especie de la mascota: ");
-        System.out.println("1. Canino");
-        System.out.println("2. Felino");
-        System.out.println("3. Ave");
-        System.out.println("4. Reptil");
-        System.out.println("5. Salir");
-
+        mostrarMenu();
         
 
         int opcionMascota = scAdoptar.nextInt();
@@ -140,14 +191,32 @@ public class Adopcion {
         scAdoptar.close();
     }
 
-    public LocalDate leerFechaNacimiento(Scanner scM) throws DateTimeParseException {
-        String fechaEntrada = scM.nextLine();
-        
-        try {
-            return LocalDate.parse(fechaEntrada);
-        } catch (DateTimeParseException e) {
-            throw new DateTimeParseException("Formato de fecha inválido. El es formato yyyy-MM-dd.", fechaEntrada, e.getErrorIndex());
+    public static LocalDate leerFechaNacimiento(Scanner scAdoptar) throws DateTimeParseException {
+        boolean fechaValida = false; // Variable de control para el bucle
+        LocalDate fechaNacimiento = null; // Variable para almacenar la fecha válida
+
+        while (!fechaValida) { // Bucle que se ejecuta mientras la fecha no sea válida
+            String fechaEntrada = scAdoptar.nextLine(); // Leer la entrada
+
+            try {
+                fechaNacimiento = LocalDate.parse(fechaEntrada); // Convierto la fecha a LocalDate
+                fechaValida = true;                              // Si la conversion es exitosa, se rompe el ciclo
+            } catch (DateTimeParseException e) {
+                System.out.println("Formato de fecha inválido en el índice " + e.getErrorIndex() + ". Por favor, use el formato yyyy-MM-dd.");
+            }
         }
+        
+        return fechaNacimiento; // Retorno la fecha valida
+    }
+
+
+    public void mostrarMenu(){
+        System.out.println("\nSeleccione la especie de la mascota: ");
+        System.out.println("1. Canino");
+        System.out.println("2. Felino");
+        System.out.println("3. Ave");
+        System.out.println("4. Reptil");
+        System.out.println("5. Salir");
     }
     
     public void generarTicket() {

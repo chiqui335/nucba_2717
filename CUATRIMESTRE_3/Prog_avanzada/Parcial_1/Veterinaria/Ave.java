@@ -31,7 +31,7 @@ public class Ave extends Mascota{
     
 
     public String toString() {
-        return "Datos de la Mascota" + "\n" +
+        return "Datos del Ave" + "\n" +
                 "Nombre:" + nombre + "\n" +
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + "\n" +

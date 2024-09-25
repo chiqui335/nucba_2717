@@ -10,7 +10,7 @@ public abstract class Mascota {
     protected String especie;
 
     public Mascota(){
-        // Constructor vacío para herencia y creación de objetos de tipo Mascota.
+        // Constructor vacío
         this.nombre = "";
         this.fechaNacimiento = LocalDate.now();
         this.peso = 0.0;
