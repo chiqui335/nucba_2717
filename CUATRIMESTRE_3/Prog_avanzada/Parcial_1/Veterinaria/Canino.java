@@ -28,17 +28,17 @@ public class Canino extends Mascota  {
 
 
 
-    public void cuidadosRecomendacion() {
-        System.out.println("Cuidados del canino: paseos diarios, alimentación balanceada, control de garrapatas.");
+    public String cuidadosRecomendacion() {
+        return "Cuidados del Canino: paseos diarios, alimentacion balanceada, control de garrapatas.";
     }
     
-    @Override
+
     public String toString() {
         return "Datos de la Mascota" + "\n" +
                 "Nombre:" + nombre + "\n" +
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + "\n" +
                 "Especie: " + especie + "\n" +
-                "Recomendaciones de Cuidado: "  + "\n";
+                "Recomendaciones de " + cuidadosRecomendacion() + "\n";
     }
 }

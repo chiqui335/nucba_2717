@@ -26,9 +26,10 @@ public class Reptil extends Mascota {
     }
 
     
-    public void cuidadosRecomendacion() {
-        System.out.println("Cuidados del Reptil: Iluminacion natural, variedad en la dieta, temperatura cálida.");
+    public String cuidadosRecomendacion() {
+        return "Cuidados del Reptil: luz solar abundante, temperatura calida, preparacion de un terrario adecuado.";
     }
+    
 
     public String toString() {
         return "Datos de la Mascota" + "\n" +
@@ -36,7 +37,7 @@ public class Reptil extends Mascota {
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + "\n" +
                 "Especie: " + especie + "\n" +
-                "Recomendaciones de Cuidado: "   + "\n";
+                "Recomendaciones de " + cuidadosRecomendacion() + "\n";
     }
 
 }

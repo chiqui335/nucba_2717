@@ -26,10 +26,11 @@ public class Felino extends Mascota {
         this.peso = peso;
     }
 
-    //recomenacion
-    public void cuidadosRecomendacion() {
-        System.out.println("Cuidados del felino: cepillado, limpieza de arenero, control de la hidratacion.");
+    //recomendacion
+    public String cuidadosRecomendacion() {
+        return "Cuidados del Felino: cepillado, limpieza de arenero, control de la hidratacion.";
     }
+    
 
     public String toString() {
         return "Datos de la Mascota" + "\n" +
@@ -37,7 +38,7 @@ public class Felino extends Mascota {
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + "\n" +
                 "Especie: " + especie + "\n" +
-                "Recomendaciones de Cuidado: "   + "\n";
+                "Recomendaciones de Cuidado del: " + cuidadosRecomendacion() + "\n";
     }
 
     

@@ -29,9 +29,10 @@ public class Ave extends Mascota{
 
 
 
-    public void cuidadosRecomendacion() {
-        System.out.println("Cuidados del Ave: Jaula amplia, variedad en la dieta, iluminacion suficiente, temperatura templada.");
+    public String cuidadosRecomendacion() {
+        return "Cuidados del Ave: jaula amplia, temperatura agradable, limpieza de jaula.";
     }
+    
 
     public String toString() {
         return "Datos de la Mascota" + "\n" +
@@ -39,6 +40,6 @@ public class Ave extends Mascota{
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + "\n" +
                 "Especie: " + especie + "\n" +
-                "Recomendaciones de Cuidado: "   + "\n";
+                "Recomendaciones de " + cuidadosRecomendacion() + "\n";
     }
 }

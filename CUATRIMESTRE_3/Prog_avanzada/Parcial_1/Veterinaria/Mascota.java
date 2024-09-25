@@ -70,11 +70,16 @@ public abstract class Mascota {
     //public abstract void datosEspeficicos(Scanner scM);
 
     //recomendacion abstract
-    public abstract void cuidadosRecomendacion();
+    public abstract String cuidadosRecomendacion();
 
 
     @Override
     public String toString() {
-        return "";
+        return "Datos de la Mascota" + "\n" +
+                "Nombre:" + nombre + "\n" +
+                "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
+                "Peso: " + peso + "\n" +
+                "Especie: " + especie + "\n" +
+                "Recomendaciones de " + cuidadosRecomendacion() + "\n";
     }
 }
