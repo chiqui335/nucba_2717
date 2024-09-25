@@ -115,7 +115,7 @@ class Personaje
             INSERT INTO personajes(nombre, ataque, defensa, vidas)
             VALUES(:nombre, :ataque, :defensa, :vidas)
         '); //preparo la consulta sql
-        //inyecto para que sea pas seguro con bindvalue
+        //inyecto para que sea mas seguro con bindvalue
         $consulta->bindValue(':nombre', $nombre);
         $consulta->bindValue(':ataque', $ataque);
         $consulta->bindValue(':defensa', $defensa);

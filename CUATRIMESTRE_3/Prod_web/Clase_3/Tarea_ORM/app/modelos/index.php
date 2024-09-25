@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pj" href="modelos/Personaje.php">
+    <link rel="cnx" href="modelos/Cnx.php">
     <title>Document</title>
 </head>
 <body>
@@ -16,8 +18,19 @@
         
         <label for="defensa">Defensa:</label><br>
         <input type="number" id="defensa" name="defensa" required><br><br>
+
+        <label for="curar">Curar personaje</label>
+        <input type="checkbox" name="curar" id="curar"><br><br>
         
         <input type="submit" value="Crear Personaje">
     </form>
+
+    <div>
+        <h3>Personajes Creados:</h3>
+        <?php
+            include'modelos/Cnx.php';
+            $cnx = new Cnx();
+            $personajes = $cnx->getPersonajes();
+    </div>
 </body>
 </html>
