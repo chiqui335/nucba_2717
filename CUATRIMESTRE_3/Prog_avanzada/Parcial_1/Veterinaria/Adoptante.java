@@ -3,13 +3,16 @@ package CUATRIMESTRE_3.Prog_avanzada.Parcial_1.Veterinaria;
 import java.util.Scanner;
 
 public class Adoptante {
-    protected int id;
-    protected String nombre;
-    protected int edad;
-    protected String direccion;
+    private int id;
+    private String nombre;
+    private int edad;
+    private String direccion;
 
-    public Adoptante(){
-        
+    public Adoptante(){ 
+        this.direccion = null;
+        this.edad = 0;
+        this.nombre = null;
+        this.id = 0;
     }
 
     public Adoptante(String nombre, int edad, String direccion, int id) {
@@ -39,12 +42,32 @@ public class Adoptante {
         int idAdoptante = scAdoptante.nextInt();
         scAdoptante.nextLine();
 
-        //se registra el adoptante
-        Adoptante adoptante = new Adoptante(nombreAdoptante, edadAdoptante, direccionAdoptante, idAdoptante); 
-        
+        //se registra los cambios del adoptante
+        setId(idAdoptante);
+        setDireccion(direccionAdoptante);
+        setEdad(edadAdoptante);
+        setNombre(nombreAdoptante);
+
         scAdoptante.close();
     }
 
+    //setters
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    //getters
     public int getId() {
         return id;
     }

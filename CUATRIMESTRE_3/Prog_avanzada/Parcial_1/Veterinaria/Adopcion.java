@@ -30,29 +30,31 @@ public class Adopcion {
 
         int opcionMascota = scAdoptar.nextInt();
 
+        Mascota mascota; //variable para una instancia mascota o sus subclases (sin objeto)
+
         switch (opcionMascota) {
             case 1:
-                Canino canino = new Canino();
-                canino.datosMascota();
-                System.out.println(canino.toString());
+                mascota = new Canino(); //se asigna un objeto canino a mascota
+                mascota.datosMascota();
+                System.out.println(mascota.toString());
                 break;
             
             case 2:
-                Felino felino = new Felino();
-                felino.datosMascota();
-                System.out.println(felino.toString());
+                mascota = new Felino();
+                mascota.datosMascota();
+                System.out.println(mascota.toString());
                 break;
 
             case 3:
-                Felino ave = new Felino();
-                ave.datosMascota();
-                System.out.println(ave.toString());
+                mascota = new Felino();
+                mascota.datosMascota();
+                System.out.println(mascota.toString());
                 break;
 
             case 4:
-                Felino reptil = new Felino();
-                reptil.datosMascota();
-                System.out.println(reptil.toString());
+                mascota = new Felino();
+                mascota.datosMascota();
+                System.out.println(mascota.toString());
                 break;
 
             case 5:
@@ -66,9 +68,7 @@ public class Adopcion {
         scAdoptar.close();
     }
 
-    public void menuAdopcion(){
 
-    }
     
     public String generarTicket() {
         // Implementación del ticket

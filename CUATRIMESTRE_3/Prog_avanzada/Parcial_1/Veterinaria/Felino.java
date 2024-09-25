@@ -1,8 +1,6 @@
 package CUATRIMESTRE_3.Prog_avanzada.Parcial_1.Veterinaria;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class Felino extends Mascota {
@@ -36,39 +34,11 @@ public class Felino extends Mascota {
         this.raza = raza;
     }
 
-    public void datosMascota() {
-        Scanner scM = new Scanner(System.in);
-
-        System.out.println("Ingrese los datos del felino");
-        System.out.println("Nombre: ");
-        String nombreFelino = scM.nextLine(); //probar si funciona asi
-        this.setNombre(nombreFelino);
-
-        System.out.println("Peso: ");
-        double pesoFelino = scM.nextInt();
-        this.setPeso(pesoFelino);
-        scM.nextLine();
-
-        System.out.println("Fecha de nacimiento (formato yyyy-MM-dd): ");
-        LocalDate fechaNacimientoFelino = leerFechaNacimiento(scM);
-        this.setFechaNacimiento(fechaNacimientoFelino);
-
+    @Override
+    public void datosEspeficicos(Scanner scM) {
         System.out.println("Raza: ");
-        String razaFelino = scM.nextLine();
-        this.setRaza(razaFelino);
-
-        scM.close();
-    }
-
-        //metodo para leer la fecha de nacimiento
-    public static LocalDate leerFechaNacimiento(Scanner scM) throws DateTimeParseException {
-        String fechaEntrada = scM.nextLine();
-        
-        try {
-            return LocalDate.parse(fechaEntrada, DateTimeFormatter.ISO_LOCAL_DATE);
-        } catch (DateTimeParseException e) {
-            throw new DateTimeParseException("Formato de fecha inválido. Asegúrate de usar el formato yyyy-MM-dd.", fechaEntrada, e.getErrorIndex());
-        }
+        String raza = scM.nextLine();
+        this.setRaza(raza);
     }
 
     public void cuidadosRecomendacion() {
@@ -78,4 +48,6 @@ public class Felino extends Mascota {
     public String toString(){
         return "Nombre: " + nombre + ", Fecha de nacimiento: " + fechaNacimiento + ", Peso: " + peso + ", Raza: " + raza;
     }
+
+    
 }
