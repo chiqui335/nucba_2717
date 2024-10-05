@@ -34,7 +34,7 @@ public class Canino extends Mascota  {
     
 
     public String toString() {
-        return "Datos del Canino" + "\n" +
+        return "Datos del Canino: " + "\n" +
                 "Nombre:" + nombre + "\n" +
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + " kg" + "\n" +

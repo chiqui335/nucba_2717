@@ -57,7 +57,7 @@ public class Adoptante {
 
     @Override
     public String toString() {
-        return "Datos del Adoptante" + "\n" +
+        return "Datos del Adoptante: " + "\n" +
                 "Nombre:" + nombre + "\n" +
                 "Edad: " + edad + "\n" +
                 "Direccion:" + direccion + "\n";

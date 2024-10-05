@@ -52,7 +52,7 @@ public abstract class Mascota {
 
     @Override
     public String toString() {
-        return "Datos de la Mascota" + "\n" +
+        return "Datos de la Mascota: " + "\n" +
                 "Nombre:" + nombre + "\n" +
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + " kg" +"\n" +

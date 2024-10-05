@@ -6,8 +6,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Adopcion {
-
-
     private Adoptante adoptante;
     private Mascota mascota;
     private Empleado empleado;

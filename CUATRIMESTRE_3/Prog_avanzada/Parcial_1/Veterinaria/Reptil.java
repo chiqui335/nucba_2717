@@ -32,7 +32,7 @@ public class Reptil extends Mascota {
     
 
     public String toString() {
-        return "Datos del Reptil" + "\n" +
+        return "Datos del Reptil: " + "\n" +
                 "Nombre:" + nombre + "\n" +
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + " kg" + "\n" +

@@ -33,13 +33,11 @@ public class Felino extends Mascota {
     
 
     public String toString() {
-        return "Datos del Felino" + "\n" +
+        return "Datos del Felino: " + "\n" +
                 "Nombre:" + nombre + "\n" +
                 "Fecha de Nacimiento: " + fechaNacimiento + "\n" +
                 "Peso: " + peso + " kg" + "\n" +
                 "Especie: " + especie + "\n" +
                 "Recomendaciones de " + cuidadosRecomendacion() + "\n";
-    }
-
-    
+    } 
 }

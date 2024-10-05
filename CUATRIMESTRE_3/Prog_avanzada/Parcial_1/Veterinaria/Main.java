@@ -13,9 +13,5 @@ public class Main {
         adopcion.generarTicket();
 
         sc.close();
-
-
-
-
     }
 }
