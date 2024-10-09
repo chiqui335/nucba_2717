@@ -17,31 +17,17 @@ public class Moto extends Vehiculo{ //realizamos herencia de Vehiculo sobre Moto
         this.cilindrada = cilindrada;
     }
 
-    //setters y getters 
+    //getters 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getCilindrada() {
         return cilindrada;
     }
 
-    public void setCilindrada(int cilindrada) {
-        this.cilindrada = cilindrada;
-    }
-
-    // Metodo para retornar el numero maximo de ruedas
-    public int maxRuedas() {
-        return 2; // Moto tiene 2 ruedas maximo
-    }
-
-
     // Metodo toString
     public String toString() {
-        return "Moto - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Cilindrada: " + cilindrada + '\n';
+        return "Moto - Marca: " + marca + ", Kilometraje: " + kilometraje + ", Cilindrada: " + cilindrada + '\n';
     }
 }

@@ -17,29 +17,17 @@ public class Coche extends Vehiculo { //realizamos herencia de Vehiculo sobre Co
         this.nroPuertas = nroPuertas;
     }
 
-    //setters y getters 
+    //getters 
     public int getId() {
         return id;
-    }
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getNroPuertas() {
         return nroPuertas;
     }
 
-    public void setNroPuertas(int nroPuertas) {
-        this.nroPuertas = nroPuertas;
-    }
-
-    // Metodo para retornar el numero maximo de ruedas
-    public int maxRuedas() {
-        return 4; // Coche tiene 4 ruedas maximo
-    }
-
     // Metodo toString
     public String toString() {
-        return "Coche - Marca: " + marca + ", Kilometraje: " + Kilometraje + ", Puertas: " + nroPuertas + '\n';
+        return "Coche - Marca: " + marca + ", Kilometraje: " + kilometraje + ", Puertas: " + nroPuertas + '\n';
     }
 }
