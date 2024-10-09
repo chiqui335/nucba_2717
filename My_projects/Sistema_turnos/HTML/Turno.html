@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <!-- Enlaza Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 100px;
+            max-width: 400px;
+        }
+        .btn-custom {
+            width: 100%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="dateTurno">Elija fecha del turno: </label>
+                <input type="date" class="form-control" id="dateTurno" name="dateTurno" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="timeTurno">Elija la hora del turno: </label>
+                <select class="form-control" name="timeTurno" id="timeTurno">
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Ubicacion: </label>
+                <select class="form-control" name="location" id="location">
+                    <option value="consul1">Consultorio 1 (Casita de July)</option>
+                    <option value="consul2">Consultorio 2 (25 de mayo)</option>
+                </select> 
+            </div>
+
+            <div class="form-group">
+                <textarea name="description" id="description" rows="4" cols="47" placeholder="Descripción (opcional)"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-custom">Enviar</button>
+            <div class="text-center mt-3">
+                <a href="../Index.html" class="btn btn-secondary">Volver al inicio</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Enlaza Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
