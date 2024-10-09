@@ -1,6 +1,6 @@
 <?php
 
-class opciones {
+class Entrada {
     private $conn;
 
     public function __construct($conn) {
@@ -19,7 +19,7 @@ class opciones {
         }
     }
 
-    public function actualizaEntrada($id, $titulo, $contenido, $categoria, $autor){
+    public function actualizarEntrada($id, $titulo, $contenido, $categoria, $autor){
         $sql = "UPDATE entradas SET titulo=?, contenido=?, categoria=?, autor=? WHERE id=?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ssssii", $titulo, $contenido, $categoria, $autor, $id);
@@ -44,6 +44,7 @@ class opciones {
         }
     }
 
+    //mostrar las entradas
     public function listarEntrada(){
         $sql = "SELECT id, titulo, contenido, categoria, autor, fecha FROM entradas";
         $result = $this->conn->query($sql);
@@ -57,8 +58,9 @@ class opciones {
         return $entrada;
     }
 
+    
     public function obtenerEntradaPorId($id){
-        $sql = "SELECT * FROM enradas WHERE id = ?";
+        $sql = "SELECT * FROM entradas WHERE id = ?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("i", $id);
         $stmt->execute();
